@@ -25,7 +25,7 @@
 class DemoState : public PlayState {
 
 public:
-  DemoState(Cone* _cone, ofxIlda::Frame* _ildaFrame) : PlayState(_cone, _ildaFrame) {};
+  DemoState(Cone* _cone, ofxIlda::Frame* _ildaFrame, bool _map) : PlayState(_cone, _ildaFrame, _map) {};
   
 private:
   void drawSynths();

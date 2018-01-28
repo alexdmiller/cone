@@ -20,7 +20,7 @@ void ofApp::setup() {
     cone = Cone::createCone(CODE_RADIUS);
   }
   
-  state = new DemoState(cone, &ildaFrame);    
+  state = new PlayState(cone, &ildaFrame, etherdream.stateIsFound());
 }
 
 void ofApp::draw() {  
@@ -47,7 +47,12 @@ void ofApp::keyPressed(int key){
   
   if (key == ' ') {
     delete state;
-    state = new PlayState(cone, &ildaFrame);
+    state = new PlayState(cone, &ildaFrame, etherdream.stateIsFound());
+  }
+  
+  if (key == 'd') {
+    delete state;
+    state = new DemoState(cone, &ildaFrame, etherdream.stateIsFound());
   }
     
   state->keyPressed(key);

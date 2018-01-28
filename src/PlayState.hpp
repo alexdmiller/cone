@@ -24,9 +24,9 @@
 class PlayState : public AppState {
 
 public:
-  PlayState(Cone* _cone, ofxIlda::Frame* _ildaFrame);
+  PlayState(Cone* _cone, ofxIlda::Frame* _ildaFrame, bool _map);
   void draw();
-  void setMap(bool map);
+  void keyPressed(int key);
   
 protected:
   virtual void drawSynths();

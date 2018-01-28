@@ -12,7 +12,7 @@
 #include "Pulser.hpp"
 #include "Bath.hpp"
 
-PlayState::PlayState(Cone* _cone, ofxIlda::Frame* _ildaFrame): cone(_cone), ildaFrame(_ildaFrame) {
+PlayState::PlayState(Cone* _cone, ofxIlda::Frame* _ildaFrame, bool _map): cone(_cone), ildaFrame(_ildaFrame), map(_map) {
   canvas.allocate(cone->getRadius() * 2, cone->getRadius() * 2);
   canvas.begin();
   ofClear(0, 0, 0);
@@ -22,10 +22,6 @@ PlayState::PlayState(Cone* _cone, ofxIlda::Frame* _ildaFrame): cone(_cone), ilda
   synths.push_back(new Bath());
   
   receiver.setup(12345);
-}
-
-void PlayState::setMap(bool map) {
-  this->map = map;
 }
 
 void PlayState::draw() {
@@ -104,5 +100,11 @@ void PlayState::draw() {
 void PlayState::drawSynths() {
   for (auto synth : synths) {
     synth->draw(cone, ildaFrame);
+  }
+}
+
+void PlayState::keyPressed(int key) {
+  if (key == 'm') {
+    map = !map;
   }
 }
