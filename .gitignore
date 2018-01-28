@@ -7,3 +7,4 @@ Makefile
 openFrameworks-Info.plist
 Project.xcconfig
 sound
+*.qbs

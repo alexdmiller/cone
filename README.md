@@ -16,7 +16,7 @@
 
     ```
     git init
-    git remote add origin git@github.com:alexdmiller/cactus.git
+    git remote add origin git@github.com:alexdmiller/cone.git
     git pull
     ```
 
