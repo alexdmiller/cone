@@ -3,7 +3,6 @@
 #include "ofMain.h"
 #include "AppState.hpp"
 #include "Cone.hpp"
-#include "ControllerThread.hpp"
 
 #ifndef ether
 #define ether
@@ -20,12 +19,10 @@ public:
   void mouseDragged(int x, int y, int button);
   void mousePressed(int x, int y, int button);
   void mouseReleased(int x, int y, int button);
-  ControllerThread* getController();
 
 private:
   Cone* cone;
   ofxEtherdream etherdream;
   ofxIlda::Frame ildaFrame;
   AppState* state;
-  ControllerThread controller;
 };

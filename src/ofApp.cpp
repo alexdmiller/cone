@@ -2,6 +2,7 @@
 #include "LaserEditState.hpp"
 #include "ProjectorEditState.hpp"
 #include "PlayState.hpp"
+#include "DemoState.hpp"
 #include "Cone.hpp"
 
 #define CONE_FILE "cone_data.csv"
@@ -19,13 +20,7 @@ void ofApp::setup() {
     cone = Cone::createCone(CODE_RADIUS);
   }
   
-  state = new PlayState(cone, &ildaFrame, &controller);
-    
-//  controller.startThread(true);
-}
-
-ControllerThread* ofApp::getController() {
-  return &controller;
+  state = new DemoState(cone, &ildaFrame);    
 }
 
 void ofApp::draw() {  
@@ -52,7 +47,7 @@ void ofApp::keyPressed(int key){
   
   if (key == ' ') {
     delete state;
-    state = new PlayState(cone, &ildaFrame, &controller);
+    state = new PlayState(cone, &ildaFrame);
   }
     
   state->keyPressed(key);

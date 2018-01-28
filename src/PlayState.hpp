@@ -13,7 +13,6 @@
 #include "AppState.hpp"
 #include "ofMain.h"
 #include "Cone.hpp"
-#include "ControllerThread.hpp"
 #include "VizSynth.h"
 #include "ofxOsc.h"
 
@@ -25,23 +24,21 @@
 class PlayState : public AppState {
 
 public:
-  PlayState(Cone* _cone, ofxIlda::Frame* _ildaFrame, ControllerThread* _controller);
+  PlayState(Cone* _cone, ofxIlda::Frame* _ildaFrame);
   void draw();
-  void keyPressed(int key);
   void setMap(bool map);
   
-private:
-  void drawSynths();
-  
-  vector<VizSynth*> synths;
+protected:
+  virtual void drawSynths();
+
   ofFbo canvas;
   ofxIlda::Frame* ildaFrame;
   Cone* cone;
-  ControllerThread* controller;
-  bool map = true;
-  int mode = 0;
-  float t = 0;
+  
+private:
+  vector<VizSynth*> synths;
   ofxOscReceiver receiver;
+  bool map = true;
 };
 
 #endif /* PlayState_hpp */
