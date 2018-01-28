@@ -1,7 +1,8 @@
 bin
 cone.xcodeproj
+addons.make
 config.make
 Makefile
 openFrameworks-Info.plist
-Project.xconfig
+Project.xcconfig
 sound
