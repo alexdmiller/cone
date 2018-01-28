@@ -22,7 +22,14 @@
 
 7.  Edit `.gitignore` and add any project configuration files that the project generator added for you.
 
-8.  Compile and run. Hit the `p` to switch to projector calibration mode and hit `l` to switch to laser calibration mode. You should see graphics drawn to the screen for each mode.
+8.  Compile and run.
+
+## Keyboard shortcuts
+
+- `p`: Projector calibration mode
+- `l`: Laser calibration mode
+- `d`: Demo animation mode
+- `space`: Run generators and listen for OSC messages
 
 [1]: http://openframeworks.cc/
 [2]: https://github.com/memo/ofxEtherdream
