@@ -1,0 +1,7 @@
+bin
+cone.xcodeproj
+config.make
+Makefile
+openFrameworks-Info.plist
+Project.xconfig
+sound

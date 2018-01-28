@@ -1,0 +1,4 @@
+ofxChoreograph
+ofxEtherdream
+ofxIlda
+ofxOsc
