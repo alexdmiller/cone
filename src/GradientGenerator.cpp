@@ -1,14 +1,6 @@
-//
-//  Bath.cpp
-//  myInnocentSketch
-//
-//  Created by Alex on 1/27/18.
-//
-//
+#include "GradientGenerator.hpp"
 
-#include "Bath.hpp"
-
-void Bath::draw(Cone* cone, ofxIlda::Frame* ildaFrame) {
+void GradientGenerator::draw(Cone* cone, ofxIlda::Frame* ildaFrame) {
   cone->getUnmappedMesh()->clearColors();
   cone->getUnmappedMesh()->addColor(ofFloatColor(innerBrightness));
   
@@ -20,10 +12,10 @@ void Bath::draw(Cone* cone, ofxIlda::Frame* ildaFrame) {
   cone->getUnmappedMesh()->draw();
 }
 
-void Bath::onOscMessage(ofxOscMessage* message) {
-  if (message->getAddress() == "/bath/inner") {
+void GradientGenerator::onOscMessage(ofxOscMessage* message) {
+  if (message->getAddress() == "/gradient/inner") {
     innerBrightness = message->getArgAsFloat(0);
-  } else if (message->getAddress() == "/bath/outer") {
+  } else if (message->getAddress() == "/gradient/outer") {
     outerBrightness = message->getArgAsFloat(0);
   }
 }

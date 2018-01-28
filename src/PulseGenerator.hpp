@@ -10,9 +10,9 @@
 #define Pulser_hpp
 
 #include <stdio.h>
-#include "VizSynth.h"
+#include "Generator.hpp"
 
-class Pulser : public VizSynth {
+class PulseGenerator : public Generator {
 public:
   void draw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
   void onOscMessage(ofxOscMessage* message);

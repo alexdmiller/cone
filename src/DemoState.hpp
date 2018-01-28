@@ -13,7 +13,6 @@
 #include "AppState.hpp"
 #include "ofMain.h"
 #include "Cone.hpp"
-#include "VizSynth.h"
 #include "ofxOsc.h"
 #include "PlayState.hpp"
 

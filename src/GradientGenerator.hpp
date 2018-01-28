@@ -10,9 +10,9 @@
 #define Bath_hpp
 
 #include <stdio.h>
-#include "VizSynth.h"
+#include "Generator.hpp"
 
-class Bath : public VizSynth {
+class GradientGenerator : public Generator {
 public:
   void draw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
   void onOscMessage(ofxOscMessage* message);

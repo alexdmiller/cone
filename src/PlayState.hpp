@@ -1,11 +1,3 @@
-//
-//  PlayState.hpp
-//  myInnocentSketch
-//
-//  Created by Alex on 12/4/17.
-//
-//
-
 #ifndef PlayState_hpp
 #define PlayState_hpp
 
@@ -13,7 +5,7 @@
 #include "AppState.hpp"
 #include "ofMain.h"
 #include "Cone.hpp"
-#include "VizSynth.h"
+#include "Generator.hpp"
 #include "ofxOsc.h"
 
 #ifndef ether
@@ -36,7 +28,7 @@ protected:
   Cone* cone;
   
 private:
-  vector<VizSynth*> synths;
+  vector<Generator*> generators;
   ofxOscReceiver receiver;
   bool map = true;
 };

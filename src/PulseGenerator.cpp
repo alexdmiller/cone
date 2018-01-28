@@ -1,6 +1,6 @@
-#include "Pulser.hpp"
+#include "PulseGenerator.hpp"
 
-void Pulser::draw(Cone* cone, ofxIlda::Frame* ildaFrame) {
+void PulseGenerator::draw(Cone* cone, ofxIlda::Frame* ildaFrame) {
 //  ildaFrame->params.output.color = color;
   for (int i = pulses.size() - 1; i >= 0; i--) {
     if (pulses[i] > cone->getRadius()) {
@@ -12,13 +12,12 @@ void Pulser::draw(Cone* cone, ofxIlda::Frame* ildaFrame) {
   }
 }
 
-void Pulser::onOscMessage(ofxOscMessage* message) {
-  if (message->getAddress() == "/pulser/pulse") {
-    cout << "PULSE\n";
+void PulseGenerator::onOscMessage(ofxOscMessage* message) {
+  if (message->getAddress() == "/pulse/new") {
     pulses.push_back(0);
-  } else if (message->getAddress() == "/pulser/speed") {
+  } else if (message->getAddress() == "/pulse/speed") {
     pulseSpeed = message->getArgAsFloat(0);
-  } else if (message->getAddress() == "/pulser/color") {
+  } else if (message->getAddress() == "/pulse/color") {
     color = ofColor::fromHex(message->getArgAsRgbaColor(0));
   }
 }

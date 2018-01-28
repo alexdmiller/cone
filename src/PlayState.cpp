@@ -1,16 +1,8 @@
-//
-//  PlayState.cpp
-//  myInnocentSketch
-//
-//  Created by Alex on 12/4/17.
-//
-//
-
 #include "PlayState.hpp"
 #include "ofMain.h"
 #include "mapping.hpp"
-#include "Pulser.hpp"
-#include "Bath.hpp"
+#include "PulseGenerator.hpp"
+#include "GradientGenerator.hpp"
 
 PlayState::PlayState(Cone* _cone, ofxIlda::Frame* _ildaFrame, bool _map): cone(_cone), ildaFrame(_ildaFrame), map(_map) {
   canvas.allocate(cone->getRadius() * 2, cone->getRadius() * 2);
@@ -18,8 +10,8 @@ PlayState::PlayState(Cone* _cone, ofxIlda::Frame* _ildaFrame, bool _map): cone(_
   ofClear(0, 0, 0);
   canvas.end();
   
-  synths.push_back(new Pulser());
-  synths.push_back(new Bath());
+  generators.push_back(new PulseGenerator());
+  generators.push_back(new GradientGenerator());
   
   receiver.setup(12345);
 }
@@ -29,25 +21,37 @@ void PlayState::draw() {
     ofxOscMessage message;
     receiver.getNextMessage(&message);
 
-    for (auto synth : synths) {
-      synth->onOscMessage(&message);
+    for (auto generator : generators) {
+      generator->onOscMessage(&message);
     }
   }
   
   ofBackground(0, 0, 0);
   ildaFrame->clear();
 
+  // If mapping is turned on, both the projected image and the
+  // point sent to the laser interface need to be transformed
+  // according to the cone's projected mesh.
   if (map) {
+    // Draw to the canvas FBO
     canvas.begin();
+    
     ofBackground(0, 0, 0);
+    
+    // Render all the visual synths. Synths can draw to both the
+    // projector and the laser.
     drawSynths();
+    
     canvas.end();
     
+    // Draw the canvas as a texture on the cone's projected mesh
+    // This warps the image so it projection maps the cone
     canvas.getTexture().bind();
     cone->getProjectedMesh()->draw();
     canvas.getTexture().unbind();
     
-    // Map laser points triangle to triangle
+    // Transform the points sent to the laser from unprojected space
+    // to projected space
     for (auto it = ildaFrame->getPolys().begin(); it != ildaFrame->getPolys().end(); it++) {
       auto vertices = &it->getVertices();
       for (auto v = vertices->begin(); v != vertices->end(); v++) {
@@ -98,8 +102,8 @@ void PlayState::draw() {
 }
 
 void PlayState::drawSynths() {
-  for (auto synth : synths) {
-    synth->draw(cone, ildaFrame);
+  for (auto generator : generators) {
+    generator->draw(cone, ildaFrame);
   }
 }
 
