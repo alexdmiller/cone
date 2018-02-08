@@ -1,13 +1,5 @@
-//
-//  Bath.hpp
-//  myInnocentSketch
-//
-//  Created by Alex on 1/27/18.
-//
-//
-
-#ifndef Bath_hpp
-#define Bath_hpp
+#ifndef GradientGenerator_hpp
+#define GradientGenerator_hpp
 
 #include <stdio.h>
 #include "Generator.hpp"
@@ -23,4 +15,4 @@ private:
 };
 
 
-#endif /* Bath_hpp */
+#endif /* GradientGenerator_hpp */

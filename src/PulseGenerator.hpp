@@ -1,13 +1,5 @@
-//
-//  Pulser.hpp
-//  myInnocentSketch
-//
-//  Created by Alex on 1/25/18.
-//
-//
-
-#ifndef Pulser_hpp
-#define Pulser_hpp
+#ifndef PulseGenerator_hpp
+#define PulseGenerator_hpp
 
 #include <stdio.h>
 #include "Generator.hpp"
@@ -23,4 +15,4 @@ private:
   ofColor color;
 };
 
-#endif /* Pulser_hpp */
+#endif /* PulseGenerator_hpp */
