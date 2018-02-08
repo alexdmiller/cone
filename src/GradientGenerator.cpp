@@ -1,15 +1,17 @@
 #include "GradientGenerator.hpp"
 
 void GradientGenerator::draw(Cone* cone, ofxIlda::Frame* ildaFrame) {
-  cone->getUnmappedMesh()->clearColors();
-  cone->getUnmappedMesh()->addColor(ofFloatColor(innerBrightness));
-  
-  for (int i = 1; i < cone->getUnmappedMesh()->getNumVertices(); i++) {
-    ofVec3f p = cone->getUnmappedMesh()->getVertex(i);
-    cone->getUnmappedMesh()->addColor(ofFloatColor(outerBrightness));
+  if (innerBrightness > 0 || outerBrightness > 0) {
+    cone->getUnmappedMesh()->clearColors();
+    cone->getUnmappedMesh()->addColor(ofFloatColor(1,1,1,innerBrightness));
+    
+    for (int i = 1; i < cone->getUnmappedMesh()->getNumVertices(); i++) {
+      ofVec3f p = cone->getUnmappedMesh()->getVertex(i);
+      cone->getUnmappedMesh()->addColor(ofFloatColor(1,1,1,outerBrightness));
+    }
+    
+    cone->getUnmappedMesh()->draw();
   }
-  
-  cone->getUnmappedMesh()->draw();
 }
 
 void GradientGenerator::onOscMessage(ofxOscMessage* message) {

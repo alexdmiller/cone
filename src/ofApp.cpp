@@ -6,7 +6,7 @@
 #include "Cone.hpp"
 
 #define CONE_FILE "cone_data.csv"
-#define CODE_RADIUS 400
+#define CODE_RADIUS 700
 
 void ofApp::setup() {
   etherdream.setup();

@@ -1,5 +1,6 @@
 .DS_Store
-bin
+*.app
+cone_data.csv
 cone.xcodeproj
 addons.make
 config.make

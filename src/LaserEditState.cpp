@@ -17,11 +17,15 @@ void LaserEditState::keyPressed(int key) {
 }
 
 void LaserEditState::mouseDragged(float x, float y, int button) {
-  EditMeshState::mouseDragged(x / ofGetWidth(), y / ofGetHeight(), button);
+  //EditMeshState::mouseDragged(x / ofGetWidth(), y / ofGetHeight(), button);
 }
 
 void LaserEditState::mousePressed(float x, float y, int button) {
-  EditMeshState::mousePressed(x / ofGetWidth(), y / ofGetHeight(), button, 0.05);
+  //EditMeshState::mousePressed(x / ofGetWidth(), y / ofGetHeight(), button, 0.05);
+  
+  if (visibleIndex >= 0) {
+    mesh->setVertex(visibleIndex, ofPoint(x / ofGetWidth(), y / ofGetHeight(), 0));
+  }
 }
 
 void LaserEditState::draw() {

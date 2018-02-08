@@ -3,6 +3,7 @@
 #include "mapping.hpp"
 #include "PulseGenerator.hpp"
 #include "GradientGenerator.hpp"
+#include "ShaderGenerator.hpp"
 
 PlayState::PlayState(Cone* _cone, ofxIlda::Frame* _ildaFrame, bool _map): cone(_cone), ildaFrame(_ildaFrame), map(_map) {
   canvas.allocate(cone->getRadius() * 2, cone->getRadius() * 2);
@@ -10,6 +11,7 @@ PlayState::PlayState(Cone* _cone, ofxIlda::Frame* _ildaFrame, bool _map): cone(_
   ofClear(0, 0, 0);
   canvas.end();
   
+  generators.push_back(new ShaderGenerator());
   generators.push_back(new PulseGenerator());
   generators.push_back(new GradientGenerator());
   
