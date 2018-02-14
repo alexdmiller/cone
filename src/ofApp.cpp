@@ -9,6 +9,16 @@
 #define CODE_RADIUS 700
 
 void ofApp::setup() {
+  soundStream.printDeviceList();
+  soundStream.setDeviceID(2);
+  
+  sampleRate = 44100;
+  bufferSize = 256;
+  channels = 2;
+  
+  soundStream.setup(this, 0, channels, sampleRate, bufferSize, 4);
+  audioAnalyzer.setup(sampleRate, bufferSize, channels);
+
   etherdream.setup();
   etherdream.setPPS(30000);
   
@@ -20,7 +30,11 @@ void ofApp::setup() {
     cone = Cone::createCone(CODE_RADIUS);
   }
   
-  state = new PlayState(cone, &ildaFrame, etherdream.stateIsFound());
+  state = new PlayState(cone, &ildaFrame, etherdream.stateIsFound(), &audioAnalyzer);
+}
+
+void ofApp::audioIn(ofSoundBuffer &buffer) {
+  audioAnalyzer.analyze(buffer);
 }
 
 void ofApp::draw() {  
@@ -47,12 +61,12 @@ void ofApp::keyPressed(int key){
   
   if (key == ' ') {
     delete state;
-    state = new PlayState(cone, &ildaFrame, etherdream.stateIsFound());
+    state = new PlayState(cone, &ildaFrame, etherdream.stateIsFound(), &audioAnalyzer);
   }
   
   if (key == 'd') {
     delete state;
-    state = new DemoState(cone, &ildaFrame, etherdream.stateIsFound());
+    state = new DemoState(cone, &ildaFrame, etherdream.stateIsFound(), &audioAnalyzer);
   }
     
   state->keyPressed(key);
@@ -69,6 +83,7 @@ void ofApp::mousePressed(int x, int y, int button) {
 void ofApp::mouseReleased(int x, int y, int button){
   state->mouseReleased((float) x, (float) y, button);
 }
+
 
 void ofApp::exit() {
   cone->save(CONE_FILE);

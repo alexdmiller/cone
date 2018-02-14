@@ -1,4 +1,7 @@
+ofxAudioAnalyzer
+ofxAudioDecoder
 ofxChoreograph
 ofxEtherdream
+ofxFX
 ofxIlda
 ofxOsc

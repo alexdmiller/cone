@@ -7,6 +7,7 @@
 #include "Cone.hpp"
 #include "Generator.hpp"
 #include "ofxOsc.h"
+#include "ofxAudioAnalyzer.h"
 
 #ifndef ether
 #define ether
@@ -16,7 +17,11 @@
 class PlayState : public AppState {
 
 public:
-  PlayState(Cone* _cone, ofxIlda::Frame* _ildaFrame, bool _map);
+  PlayState(
+            Cone* _cone,
+            ofxIlda::Frame* _ildaFrame,
+            bool _map,
+            ofxAudioAnalyzer* audioAnalyzer);
   void draw();
   void keyPressed(int key);
   
@@ -30,6 +35,7 @@ protected:
 private:
   vector<Generator*> generators;
   ofxOscReceiver receiver;
+  ofxAudioAnalyzer* audioAnalyzer;
   bool map = true;
 };
 

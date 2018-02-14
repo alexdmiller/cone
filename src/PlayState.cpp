@@ -4,21 +4,34 @@
 #include "PulseGenerator.hpp"
 #include "GradientGenerator.hpp"
 #include "ShaderGenerator.hpp"
+#include "SoundReactiveGenerator.hpp"
 
-PlayState::PlayState(Cone* _cone, ofxIlda::Frame* _ildaFrame, bool _map): cone(_cone), ildaFrame(_ildaFrame), map(_map) {
+PlayState::PlayState(
+                     Cone* _cone,
+                     ofxIlda::Frame* _ildaFrame,
+                     bool _map,
+                     ofxAudioAnalyzer* _audioAnalyzer):
+      cone(_cone),
+      ildaFrame(_ildaFrame),
+      map(_map),
+      audioAnalyzer(_audioAnalyzer) {
   canvas.allocate(cone->getRadius() * 2, cone->getRadius() * 2);
   canvas.begin();
   ofClear(0, 0, 0);
   canvas.end();
   
-  generators.push_back(new ShaderGenerator());
-  generators.push_back(new PulseGenerator());
-  generators.push_back(new GradientGenerator());
+  generators.push_back(new SoundReactiveGenerator(audioAnalyzer));
+
+//  generators.push_back(new ShaderGenerator());
+//  generators.push_back(new PulseGenerator());
+//  generators.push_back(new GradientGenerator());
   
   receiver.setup(12345);
 }
 
 void PlayState::draw() {
+  cout << audioAnalyzer->getValue(RMS, 0) << "\n";
+  
   while (receiver.hasWaitingMessages()) {
     ofxOscMessage message;
     receiver.getNextMessage(&message);
