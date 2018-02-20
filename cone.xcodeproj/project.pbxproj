@@ -1,0 +1,1738 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00B97CA960DCC143823AE4E2 /* audiodecodercoreaudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 874414FEA168D3E5700B4369 /* audiodecodercoreaudio.cpp */; };
+		049ABCDF9E05D33ADAFF33F2 /* Timeline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E5BCA24E7CCA4F61CF4C2CF /* Timeline.cpp */; };
+		095C41621D5F473440190C4E /* ofxAAOnsetsAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B002FCE252BD110A8BD6FAD9 /* ofxAAOnsetsAlgorithm.cpp */; };
+		0AE948E6CF3F094A5DFCB7F8 /* SoundReactiveGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE82C94DA173CE73BE9873DD /* SoundReactiveGenerator.cpp */; };
+		0B271F292050FABFA7BBC215 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9047C93DA422FCA65C82842 /* UdpSocket.cpp */; };
+		0E50C5A7BF564C8ADF1F5EA1 /* ofxLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE9A97F4BCF6B380C4CEE1F2 /* ofxLabel.cpp */; };
+		12FD93178A84B684E2590518 /* ofxOscSender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24D3F5485C5A6D49333BD461 /* ofxOscSender.cpp */; };
+		172C10EA45E4A85BF1CFDB66 /* ofSoundPlayerExtended.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3331484FF194683D2365AB7E /* ofSoundPlayerExtended.cpp */; };
+		1AF706799014D2D928D844C5 /* OscPrintReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAFB05AE3A73B88C3ED47C01 /* OscPrintReceivedElements.cpp */; };
+		1B2D622875E359AF55540532 /* MotionGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDC63F65B41087D22CFEBA95 /* MotionGroup.cpp */; };
+		1D5CD982EF365FCF403CF46A /* ofxAAMultiPitchKlapuriAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2C45341BE0795D68F85DFA0B /* ofxAAMultiPitchKlapuriAlgorithm.cpp */; };
+		214B774729C376EECA5B35F8 /* GradientGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16D535A0D739F86ECFB2D84F /* GradientGenerator.cpp */; };
+		223C919C705610D47606FB7C /* ofxOscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2473B7435B769861E7D5932B /* ofxOscMessage.cpp */; };
+		2D6845539281E884707DDCE7 /* ofxAudioAnalyzerUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 12BB247E93D84CA1CA07D4E9 /* ofxAudioAnalyzerUnit.cpp */; };
+		2FB5B98754FD3018B27CD79C /* LaserEditState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E820A77B3E4391ADEFF1D72 /* LaserEditState.cpp */; };
+		2FCE1626E543781233C2E1BB /* mapping.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C63EE7EDA12B7D84435496DC /* mapping.cpp */; };
+		361FBBA0F8DD19C00B8297A3 /* EditMeshState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD110DF5F724CC9404A73717 /* EditMeshState.cpp */; };
+		3A134F4E01D92B3CEF179509 /* ofxOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82E8A30C0CBE6A53AC538D88 /* ofxOscReceiver.cpp */; };
+		4B96D886F681F80F6ABDB2C5 /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78F1FB18A1BD1AB910F1DA06 /* ofxButton.cpp */; };
+		530DFDCB51277AF868566AF9 /* DemoState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AA3FE57740C9D0724734C977 /* DemoState.cpp */; };
+		53FC97C3509677469E6264CF /* ofxAudioDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 710F558870927F1A4D01DFA8 /* ofxAudioDecoder.cpp */; };
+		5C17A462ACA8604873BAC800 /* Cue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E8E4420A5BF798FA4F923697 /* Cue.cpp */; };
+		5E8372419354DC91ACF64158 /* ofxPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E00894D9E32E58010713B6EE /* ofxPanel.cpp */; };
+		61168EA192FF3DC12EEFB30F /* ofxAudioAnalyzerAlgorithms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DFB874FD8360B58E73DDC1E /* ofxAudioAnalyzerAlgorithms.cpp */; };
+		61DAAE6E571DD7D17E510650 /* TimelineItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 869F1B5BF55EC4A168E88D22 /* TimelineItem.cpp */; };
+		680102FC95C07F9E0B3861C5 /* PlayState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08596196B1CE04166FEFFF2F /* PlayState.cpp */; };
+		681ACCE7E5E3E65458E90EAD /* ShaderGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C06ADC4DFE87308C2B1A42AA /* ShaderGenerator.cpp */; };
+		682AA5C3321CBC2AAD6462EA /* etherdream.c in Sources */ = {isa = PBXBuildFile; fileRef = 36CB2E007B8DB9736AF88AC0 /* etherdream.c */; };
+		7B8878B96364B4281D040334 /* ofxGuiGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BFEAAD4C3497DAA24786C01 /* ofxGuiGroup.cpp */; };
+		7D5E1E199EFB03223EF46095 /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24CA40C8B3A094FD03FDEC05 /* NetworkingUtils.cpp */; };
+		83288C5273A7C8A4AE831955 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0E4E4B88F236053F50ED064 /* OscTypes.cpp */; };
+		83B94A37DA2AE2B8562845A7 /* GeneratorTestBedState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 431095918583EEAF07D63ED3 /* GeneratorTestBedState.cpp */; };
+		8622E35967DA5C1D1304C268 /* ofxOscBundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA11B6A08362067C100D1B88 /* ofxOscBundle.cpp */; };
+		86DB2512D93A40CC26FD5300 /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81456414F9BABF4D1F7A1852 /* ofxSliderGroup.cpp */; };
+		8FB36D5B121AE9E8C1F636DB /* ofxEtherdream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 710F41A550F880EBDBDE49E0 /* ofxEtherdream.cpp */; };
+		9408F328FCACFB0B0CA0C735 /* PulseGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66E2BAFE654A0007499C3ACA /* PulseGenerator.cpp */; };
+		96B82021C036C28F4E9272BC /* testMapping.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 047A776676753F86DE5DE927 /* testMapping.cpp */; };
+		9D72A0B4BAED5487D5CD7538 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1B275EC347E41C380E1179 /* OpenAL.framework */; };
+		9F3E34C6E9C79775EB915198 /* ofxOscParameterSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2486AADD9BBACB53DF8CE93B /* ofxOscParameterSync.cpp */; };
+		A5788E7CD271D49289483766 /* ofxAudioAnalyzer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 58969509CE8D713302C7B650 /* ofxAudioAnalyzer.cpp */; };
+		AC6D5BBB17E1D09ABFC9E04D /* OscOutboundPacketStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F6DF459BD01B2A47ED3583A /* OscOutboundPacketStream.cpp */; };
+		B1B03A76EAC1C4090957C201 /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = C04BFFAE18A7BA4072B5C6B9 /* test.c */; };
+		C144FF1EFA82ED04A8ABF4FF /* ofxFXObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09EA58AA4EFEA4945AF9CACC /* ofxFXObject.cpp */; };
+		CCCE87582520E4832F15C342 /* ProjectorEditState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 218611AE897D6A358C4FFF80 /* ProjectorEditState.cpp */; };
+		DB56DE6A271653B7BDD6A38D /* Cone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C2A7821E86493C47B39B9 /* Cone.cpp */; };
+		DF0EED927FAB55076942E95B /* IpEndpointName.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6438FF73945762D014C5B7AD /* IpEndpointName.cpp */; };
+		E0212F3890DEFDC15BBDF0C6 /* ofxBaseGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA613057D1309446CBC440B4 /* ofxBaseGui.cpp */; };
+		E405DE8B79A0F03CDB37CD34 /* ControllerThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB69290628C99820B9397FD5 /* ControllerThread.cpp */; };
+		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
+		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
+		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
+		E899023F8F156CC86A350A4B /* audiodecoderbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A1F40209FEC2D8D43C26A97A /* audiodecoderbase.cpp */; };
+		EA0FEA95DC03ACE3DB82A901 /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6776555F75F3344CA51F8CFD /* ofxSlider.cpp */; };
+		EBEAA6AAB36ADDF4AE522D7F /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE145E22B3364A622580590E /* ofxToggle.cpp */; };
+		F817904347E7A7C5A6CF7FDA /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91CC98424F6DDD5FC5078737 /* OscReceivedElements.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4328147138ABC890047C5CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4B27C1510CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+		E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0018D2C7C4FD0D8B6CA87D25 /* CADebugMacros.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CADebugMacros.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/include/apple/CADebugMacros.h; sourceTree = SOURCE_ROOT; };
+		009A6EAC56E6D6853F43D3D6 /* ofxPanel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxPanel.h; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxPanel.h; sourceTree = SOURCE_ROOT; };
+		0284B959DE4F29528B5BF3AB /* audiodecodercoreaudio.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = audiodecodercoreaudio.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/include/audiodecodercoreaudio.h; sourceTree = SOURCE_ROOT; };
+		02951F96AA7655BAB9647A76 /* ofxAbsDiff.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxAbsDiff.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/operations/ofxAbsDiff.h; sourceTree = SOURCE_ROOT; };
+		033A5FD515CA2FC2D6A981F2 /* ofxSliderGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSliderGroup.h; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxSliderGroup.h; sourceTree = SOURCE_ROOT; };
+		038A4E49AB7E4D1E4ED37FA6 /* vectoroutput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = vectoroutput.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms/vectoroutput.h; sourceTree = SOURCE_ROOT; };
+		041217185A94686DF435F466 /* ofxOscSender.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscSender.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/src/ofxOscSender.h; sourceTree = SOURCE_ROOT; };
+		047A776676753F86DE5DE927 /* testMapping.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = testMapping.cpp; path = src/testMapping.cpp; sourceTree = SOURCE_ROOT; };
+		06A5D63AB9A189F07C9DC053 /* TimerListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TimerListener.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/TimerListener.h; sourceTree = SOURCE_ROOT; };
+		06CBFE4F722A9375DDBA3043 /* threading.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = threading.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/threading.h; sourceTree = SOURCE_ROOT; };
+		08596196B1CE04166FEFFF2F /* PlayState.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PlayState.cpp; path = src/PlayState.cpp; sourceTree = SOURCE_ROOT; };
+		087FEFDA0257634627402D52 /* SoundReactiveGenerator.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SoundReactiveGenerator.hpp; path = src/SoundReactiveGenerator.hpp; sourceTree = SOURCE_ROOT; };
+		089421FE7446F4CC89E447BD /* audiodecoderbase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = audiodecoderbase.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/include/audiodecoderbase.h; sourceTree = SOURCE_ROOT; };
+		08DEA654A5C67D402A34382B /* betools.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = betools.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/betools.h; sourceTree = SOURCE_ROOT; };
+		08F10233C417DE637AB5D94A /* ofxIldaRenderTarget.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxIldaRenderTarget.h; path = ../of_v0.9.8_osx_release/addons/ofxIlda/src/ofxIldaRenderTarget.h; sourceTree = SOURCE_ROOT; };
+		09738ED8AC49E40A40DB53AE /* sndfile.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = sndfile.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/include/sndfile.h; sourceTree = SOURCE_ROOT; };
+		09EA58AA4EFEA4945AF9CACC /* ofxFXObject.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxFXObject.cpp; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/ofxFXObject.cpp; sourceTree = SOURCE_ROOT; };
+		0D59F5E40E0AC583E094132A /* ofxAAMultiPitchKlapuriAlgorithm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxAAMultiPitchKlapuriAlgorithm.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src/ofxAAMultiPitchKlapuriAlgorithm.h; sourceTree = SOURCE_ROOT; };
+		0E35BEDCD23327ECD33B3B1A /* ofxInverse.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxInverse.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/filters/ofxInverse.h; sourceTree = SOURCE_ROOT; };
+		0F22AF03FA6E0716C5B5E338 /* ofxBlend.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBlend.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/composers/ofxBlend.h; sourceTree = SOURCE_ROOT; };
+		0F74A3D9120E80194DBCEE76 /* TimeType.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TimeType.h; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/TimeType.h; sourceTree = SOURCE_ROOT; };
+		1069CD34A36B7808D1843F8A /* algorithmfactory_impl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = algorithmfactory_impl.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/algorithmfactory_impl.h; sourceTree = SOURCE_ROOT; };
+		12BB247E93D84CA1CA07D4E9 /* ofxAudioAnalyzerUnit.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxAudioAnalyzerUnit.cpp; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src/ofxAudioAnalyzerUnit.cpp; sourceTree = SOURCE_ROOT; };
+		12D683A58C88B922DD940E57 /* tnt_fortran_array3d.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_fortran_array3d.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_fortran_array3d.h; sourceTree = SOURCE_ROOT; };
+		12D8A583E8480BAFFDEDE0D6 /* algorithmfactory.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = algorithmfactory.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/algorithmfactory.h; sourceTree = SOURCE_ROOT; };
+		13DCC102FB2171B92075C4B0 /* OFSpecialization.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OFSpecialization.h; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/src/specialization/OFSpecialization.h; sourceTree = SOURCE_ROOT; };
+		1520B69A8025FB0994FC6006 /* NetworkingUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = NetworkingUtils.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/NetworkingUtils.h; sourceTree = SOURCE_ROOT; };
+		16990F462E9420BC25A070E2 /* Choreograph.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Choreograph.h; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/Choreograph.h; sourceTree = SOURCE_ROOT; };
+		169A8DCA7998312838C30BE9 /* ringbufferoutput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ringbufferoutput.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms/ringbufferoutput.h; sourceTree = SOURCE_ROOT; };
+		16D535A0D739F86ECFB2D84F /* GradientGenerator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = GradientGenerator.cpp; path = src/GradientGenerator.cpp; sourceTree = SOURCE_ROOT; };
+		1888648A1DE0B40A4586FFAC /* asciidag.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = asciidag.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/asciidag.h; sourceTree = SOURCE_ROOT; };
+		1A4ED017F26DDCF0F2278B8C /* audiodecoder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = audiodecoder.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/include/audiodecoder.h; sourceTree = SOURCE_ROOT; };
+		1AB26A171E516B179AE797A5 /* ofxBlur.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBlur.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/filters/ofxBlur.h; sourceTree = SOURCE_ROOT; };
+		1BE7A658B3E85DD6DE929895 /* ofxGrayscale.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGrayscale.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/filters/ofxGrayscale.h; sourceTree = SOURCE_ROOT; };
+		1C797B7EB7277036AA5CA6F5 /* ofxBaseGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBaseGui.h; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxBaseGui.h; sourceTree = SOURCE_ROOT; };
+		1D1B275EC347E41C380E1179 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = /System/Library/Frameworks/OpenAL.framework; sourceTree = "<group>"; };
+		1DA11627A90CE92EA019F238 /* OscOutboundPacketStream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscOutboundPacketStream.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.h; sourceTree = SOURCE_ROOT; };
+		1DDC5DE521B97D231D3C92A3 /* Motion.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Motion.hpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/Motion.hpp; sourceTree = SOURCE_ROOT; };
+		218611AE897D6A358C4FFF80 /* ProjectorEditState.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ProjectorEditState.cpp; path = src/ProjectorEditState.cpp; sourceTree = SOURCE_ROOT; };
+		221BCE65E73681AB61B40797 /* tnt_stopwatch.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_stopwatch.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_stopwatch.h; sourceTree = SOURCE_ROOT; };
+		224525B3D9128D815D048B72 /* source.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = source.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/source.h; sourceTree = SOURCE_ROOT; };
+		2263526F132670665EAF5528 /* PlayState.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PlayState.hpp; path = src/PlayState.hpp; sourceTree = SOURCE_ROOT; };
+		23FF6292669942C5D8162758 /* AppState.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = AppState.hpp; path = src/AppState.hpp; sourceTree = SOURCE_ROOT; };
+		2473B7435B769861E7D5932B /* ofxOscMessage.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscMessage.cpp; path = ../of_v0.9.8_osx_release/addons/ofxOsc/src/ofxOscMessage.cpp; sourceTree = SOURCE_ROOT; };
+		2486AADD9BBACB53DF8CE93B /* ofxOscParameterSync.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscParameterSync.cpp; path = ../of_v0.9.8_osx_release/addons/ofxOsc/src/ofxOscParameterSync.cpp; sourceTree = SOURCE_ROOT; };
+		24CA40C8B3A094FD03FDEC05 /* NetworkingUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = NetworkingUtils.cpp; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix/NetworkingUtils.cpp; sourceTree = SOURCE_ROOT; };
+		24D3F5485C5A6D49333BD461 /* ofxOscSender.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscSender.cpp; path = ../of_v0.9.8_osx_release/addons/ofxOsc/src/ofxOscSender.cpp; sourceTree = SOURCE_ROOT; };
+		2674AF806AB57F2C6A7D6D75 /* range.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = range.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/range.h; sourceTree = SOURCE_ROOT; };
+		2723A32B58294B3D633F8349 /* tnt_array2d_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_array2d_utils.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_array2d_utils.h; sourceTree = SOURCE_ROOT; };
+		27D065F7878B44B28650E210 /* ofxThreshold.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxThreshold.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/operations/ofxThreshold.h; sourceTree = SOURCE_ROOT; };
+		287B287A3726DB1A26C6EDEF /* streamutil.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = streamutil.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streamutil.h; sourceTree = SOURCE_ROOT; };
+		29314705F468C82FD718BD30 /* ofxDisplacePixels.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDisplacePixels.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/operations/ofxDisplacePixels.h; sourceTree = SOURCE_ROOT; };
+		2A6BCF0486D0BE3CA29B227F /* sinkproxy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = sinkproxy.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/sinkproxy.h; sourceTree = SOURCE_ROOT; };
+		2BFEAAD4C3497DAA24786C01 /* ofxGuiGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxGuiGroup.cpp; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxGuiGroup.cpp; sourceTree = SOURCE_ROOT; };
+		2C45341BE0795D68F85DFA0B /* ofxAAMultiPitchKlapuriAlgorithm.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxAAMultiPitchKlapuriAlgorithm.cpp; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src/ofxAAMultiPitchKlapuriAlgorithm.cpp; sourceTree = SOURCE_ROOT; };
+		2DF3736C692F03BA9B15BB6B /* Timeline.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Timeline.h; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/Timeline.h; sourceTree = SOURCE_ROOT; };
+		2E439E9A2233D06250582647 /* ofxSwapBuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSwapBuffer.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/ofxSwapBuffer.h; sourceTree = SOURCE_ROOT; };
+		2E612DCAE5A4897ED4A4D89B /* ofxMultiTexture.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxMultiTexture.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/composers/ofxMultiTexture.h; sourceTree = SOURCE_ROOT; };
+		2E7C2A7821E86493C47B39B9 /* Cone.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Cone.cpp; path = src/Cone.cpp; sourceTree = SOURCE_ROOT; };
+		2F8F85A76403D31AE049B285 /* ffmpegapi.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ffmpegapi.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/ffmpegapi.h; sourceTree = SOURCE_ROOT; };
+		303098F6072C6988D560BF35 /* audiocontext.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = audiocontext.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/audiocontext.h; sourceTree = SOURCE_ROOT; };
+		30AE4A9EFAB5F074715EDD2F /* ofxOscBundle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscBundle.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/src/ofxOscBundle.h; sourceTree = SOURCE_ROOT; };
+		3291E92867684DAB392909D9 /* sinkbase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = sinkbase.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/sinkbase.h; sourceTree = SOURCE_ROOT; };
+		3331484FF194683D2365AB7E /* ofSoundPlayerExtended.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofSoundPlayerExtended.cpp; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src/ofSoundPlayerExtended.cpp; sourceTree = SOURCE_ROOT; };
+		36031ABA1606D48C48C72314 /* protocol.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = protocol.h; path = ../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/common/protocol.h; sourceTree = SOURCE_ROOT; };
+		36CB2E007B8DB9736AF88AC0 /* etherdream.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = etherdream.c; path = ../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/driver/libetherdream/etherdream.c; sourceTree = SOURCE_ROOT; };
+		371A0FB16BF73E56F500179A /* algorithm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = algorithm.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/algorithm.h; sourceTree = SOURCE_ROOT; };
+		3E3293E69D4D27D135F7098B /* connector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = connector.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/connector.h; sourceTree = SOURCE_ROOT; };
+		3FB2D8E7E04D1BB22B421361 /* config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = config.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/config.h; sourceTree = SOURCE_ROOT; };
+		431095918583EEAF07D63ED3 /* GeneratorTestBedState.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = GeneratorTestBedState.cpp; path = src/GeneratorTestBedState.cpp; sourceTree = SOURCE_ROOT; };
+		4596AC55FA700286B71BCEB2 /* accumulatoralgorithm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = accumulatoralgorithm.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/accumulatoralgorithm.h; sourceTree = SOURCE_ROOT; };
+		4608A1F0ED200F62F5247182 /* jama_cholesky.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = jama_cholesky.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/jama_cholesky.h; sourceTree = SOURCE_ROOT; };
+		4616FB11617C9D9AA8C947AB /* types.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = types.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/types.h; sourceTree = SOURCE_ROOT; };
+		4682EA8C6A9B89BFF518AC5F /* ofxLabel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxLabel.h; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxLabel.h; sourceTree = SOURCE_ROOT; };
+		470147F5ACD52F28384876BA /* OscTypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscTypes.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h; sourceTree = SOURCE_ROOT; };
+		485DA4ABCE7B1FD8C8D0EAE2 /* EditMeshState.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = EditMeshState.hpp; path = src/EditMeshState.hpp; sourceTree = SOURCE_ROOT; };
+		4985502E071ED715BABED848 /* tnt.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt.h; sourceTree = SOURCE_ROOT; };
+		49AE7D44B271573DCD96FD08 /* tnt_fortran_array1d.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_fortran_array1d.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_fortran_array1d.h; sourceTree = SOURCE_ROOT; };
+		4BCB51F2848D79E1B338DF0C /* ofxBounce.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBounce.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/operations/ofxBounce.h; sourceTree = SOURCE_ROOT; };
+		4CF4E965FE64F6D897CFC4B4 /* mapping.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = mapping.hpp; path = src/mapping.hpp; sourceTree = SOURCE_ROOT; };
+		4CFCDE9127912B274C179251 /* multiratebuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = multiratebuffer.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/multiratebuffer.h; sourceTree = SOURCE_ROOT; };
+		4D1CC3E41900B75FDC4FAEA0 /* ofxOsc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOsc.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/src/ofxOsc.h; sourceTree = SOURCE_ROOT; };
+		4D34C2E2DF08B6AB06DCE3BF /* ProjectorEditState.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ProjectorEditState.hpp; path = src/ProjectorEditState.hpp; sourceTree = SOURCE_ROOT; };
+		4D7516D8E2D94037E1735C3E /* roguevector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = roguevector.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/roguevector.h; sourceTree = SOURCE_ROOT; };
+		4DD9E0652C3690330510B84A /* ringbuffervectoroutput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ringbuffervectoroutput.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms/ringbuffervectoroutput.h; sourceTree = SOURCE_ROOT; };
+		4DE5E984C17436EDE0126B41 /* iotypewrappers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = iotypewrappers.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/iotypewrappers.h; sourceTree = SOURCE_ROOT; };
+		4E55B8F15BAE1A15820B7F5B /* LaserEditState.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = LaserEditState.hpp; path = src/LaserEditState.hpp; sourceTree = SOURCE_ROOT; };
+		4F6DF459BD01B2A47ED3583A /* OscOutboundPacketStream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscOutboundPacketStream.cpp; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.cpp; sourceTree = SOURCE_ROOT; };
+		50E3578E46795402B7840241 /* tnt_array1d_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_array1d_utils.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_array1d_utils.h; sourceTree = SOURCE_ROOT; };
+		511553D03987BAD9DE650978 /* OscPrintReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPrintReceivedElements.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.h; sourceTree = SOURCE_ROOT; };
+		51220026DA4FA83BC8306214 /* phantombuffer_impl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = phantombuffer_impl.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/phantombuffer_impl.h; sourceTree = SOURCE_ROOT; };
+		53DA57D6FD7DF761787F997B /* vectorinput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = vectorinput.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms/vectorinput.h; sourceTree = SOURCE_ROOT; };
+		58969509CE8D713302C7B650 /* ofxAudioAnalyzer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxAudioAnalyzer.cpp; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src/ofxAudioAnalyzer.cpp; sourceTree = SOURCE_ROOT; };
+		59A281E517480A7C128ED452 /* synth_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = synth_utils.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/synth_utils.h; sourceTree = SOURCE_ROOT; };
+		5B94E608BA2E6171D20F33DC /* OscPacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPacketListener.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h; sourceTree = SOURCE_ROOT; };
+		5BCE8D58676C0CE8BFCEFB16 /* Easing.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Easing.h; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/Easing.h; sourceTree = SOURCE_ROOT; };
+		5D34AB0770CABEB27A930446 /* tnt_array2d.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_array2d.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_array2d.h; sourceTree = SOURCE_ROOT; };
+		5F7D189A7366CFCE704BA587 /* ofxFXObject.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxFXObject.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/ofxFXObject.h; sourceTree = SOURCE_ROOT; };
+		627DD0A58D9012D7B039027B /* debugging.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = debugging.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/debugging.h; sourceTree = SOURCE_ROOT; };
+		62F5637C45F7FD2C97CA693E /* ofxEdgeDetect.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxEdgeDetect.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/operations/ofxEdgeDetect.h; sourceTree = SOURCE_ROOT; };
+		63D57C25A297D2A71AA60542 /* jama_eig.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = jama_eig.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/jama_eig.h; sourceTree = SOURCE_ROOT; };
+		6438FF73945762D014C5B7AD /* IpEndpointName.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = IpEndpointName.cpp; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.cpp; sourceTree = SOURCE_ROOT; };
+		6480C409FD3CDB886066FF35 /* ringbufferimpl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ringbufferimpl.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/ringbufferimpl.h; sourceTree = SOURCE_ROOT; };
+		65282951FCAD924CB00F2424 /* ofxGaussianBlur.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGaussianBlur.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/filters/ofxGaussianBlur.h; sourceTree = SOURCE_ROOT; };
+		66AEBB562C36415CBB629FF1 /* tnt_i_refvec.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_i_refvec.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_i_refvec.h; sourceTree = SOURCE_ROOT; };
+		66E2BAFE654A0007499C3ACA /* PulseGenerator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = PulseGenerator.cpp; path = src/PulseGenerator.cpp; sourceTree = SOURCE_ROOT; };
+		6776555F75F3344CA51F8CFD /* ofxSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSlider.cpp; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxSlider.cpp; sourceTree = SOURCE_ROOT; };
+		684102362DC1D2E717324627 /* ofxOscMessage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscMessage.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/src/ofxOscMessage.h; sourceTree = SOURCE_ROOT; };
+		6948FE75B045134FF53B671E /* DemoState.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = DemoState.hpp; path = src/DemoState.hpp; sourceTree = SOURCE_ROOT; };
+		697E9CC089FFB58330F7D496 /* ofxContrast.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxContrast.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/filters/ofxContrast.h; sourceTree = SOURCE_ROOT; };
+		6B2523C66BC60184857E39A7 /* pool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = pool.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/pool.h; sourceTree = SOURCE_ROOT; };
+		6B98AA169D5C323E1662240C /* jama_svd.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = jama_svd.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/jama_svd.h; sourceTree = SOURCE_ROOT; };
+		6BB1560DEF45D6B4A5BFCE54 /* phantombuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = phantombuffer.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/phantombuffer.h; sourceTree = SOURCE_ROOT; };
+		6CE1688C49DA473905EC8C2E /* jama_lu.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = jama_lu.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/jama_lu.h; sourceTree = SOURCE_ROOT; };
+		6F6360CDC91D52D81AAF133F /* jama_qr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = jama_qr.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/jama_qr.h; sourceTree = SOURCE_ROOT; };
+		710F41A550F880EBDBDE49E0 /* ofxEtherdream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxEtherdream.cpp; path = ../of_v0.9.8_osx_release/addons/ofxEtherdream/src/ofxEtherdream.cpp; sourceTree = SOURCE_ROOT; };
+		710F558870927F1A4D01DFA8 /* ofxAudioDecoder.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxAudioDecoder.cpp; path = ../of_v0.9.8_osx_release/addons/ofxAudioDecoder/src/ofxAudioDecoder.cpp; sourceTree = SOURCE_ROOT; };
+		71C7A2EB9AFEBE44FC5B4A40 /* streamingalgorithmwrapper.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = streamingalgorithmwrapper.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/streamingalgorithmwrapper.h; sourceTree = SOURCE_ROOT; };
+		7211A3603F05F5E2AA6685C2 /* CinderSpecialization.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CinderSpecialization.hpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/specialization/CinderSpecialization.hpp; sourceTree = SOURCE_ROOT; };
+		72A3CE32F05AA938FDE8913A /* version.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = version.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/version.h; sourceTree = SOURCE_ROOT; };
+		73B76CAFE7D2855FDB340962 /* yamlast.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = yamlast.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/yamlast.h; sourceTree = SOURCE_ROOT; };
+		73D5514D95BBC2C379B56D94 /* network.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = network.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/scheduler/network.h; sourceTree = SOURCE_ROOT; };
+		73E05C4ECC9B6F3AD94EC219 /* parameter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = parameter.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/parameter.h; sourceTree = SOURCE_ROOT; };
+		742BBB31A91AD261E1E46DA9 /* MotionGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MotionGroup.h; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/MotionGroup.h; sourceTree = SOURCE_ROOT; };
+		747FD8F61575E2C8DF7F7701 /* diskwriter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = diskwriter.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms/diskwriter.h; sourceTree = SOURCE_ROOT; };
+		774582B974DDDAE0D1197D5B /* copy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = copy.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms/copy.h; sourceTree = SOURCE_ROOT; };
+		78F1FB18A1BD1AB910F1DA06 /* ofxButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxButton.cpp; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxButton.cpp; sourceTree = SOURCE_ROOT; };
+		7913882BE96D4A25FCB31FED /* ofxAudioAnalyzer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxAudioAnalyzer.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src/ofxAudioAnalyzer.h; sourceTree = SOURCE_ROOT; };
+		7C1BF5C0BA93BAB875487E18 /* tnt_fortran_array2d.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_fortran_array2d.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_fortran_array2d.h; sourceTree = SOURCE_ROOT; };
+		7C37DF14457BC29A3FFE9990 /* Generator.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Generator.hpp; path = src/Generator.hpp; sourceTree = SOURCE_ROOT; };
+		7CF9AD90C85B22B7CA68A091 /* iotypewrappers_impl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = iotypewrappers_impl.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/iotypewrappers_impl.h; sourceTree = SOURCE_ROOT; };
+		7D0D68CA6ABB6EBD07141019 /* fileoutput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = fileoutput.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms/fileoutput.h; sourceTree = SOURCE_ROOT; };
+		7DD617475DA91820E6A2DB86 /* Procedural.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Procedural.hpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/phrase/Procedural.hpp; sourceTree = SOURCE_ROOT; };
+		7DE190A96F3DBC927B9437BC /* tnt_fortran_array1d_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_fortran_array1d_utils.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_fortran_array1d_utils.h; sourceTree = SOURCE_ROOT; };
+		7EDD385835D888FF94D65FF0 /* OscReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscReceivedElements.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h; sourceTree = SOURCE_ROOT; };
+		7FBF5BFF9A916A8C736AB835 /* ofxIldaPoint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxIldaPoint.h; path = ../of_v0.9.8_osx_release/addons/ofxIlda/src/ofxIldaPoint.h; sourceTree = SOURCE_ROOT; };
+		7FC0CC06B7ACD0DF009A9321 /* ofxChromaAb.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxChromaAb.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/filters/ofxChromaAb.h; sourceTree = SOURCE_ROOT; };
+		81456414F9BABF4D1F7A1852 /* ofxSliderGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSliderGroup.cpp; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxSliderGroup.cpp; sourceTree = SOURCE_ROOT; };
+		8274F1DB0AFFBDDC7A10E75B /* sourcebase.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = sourcebase.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/sourcebase.h; sourceTree = SOURCE_ROOT; };
+		82E71C08118D5FEB68159179 /* ofxOscReceiver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscReceiver.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/src/ofxOscReceiver.h; sourceTree = SOURCE_ROOT; };
+		82E8A30C0CBE6A53AC538D88 /* ofxOscReceiver.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscReceiver.cpp; path = ../of_v0.9.8_osx_release/addons/ofxOsc/src/ofxOscReceiver.cpp; sourceTree = SOURCE_ROOT; };
+		836DBDD6ACEBB2680472B404 /* ofxFX.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxFX.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/ofxFX.h; sourceTree = SOURCE_ROOT; };
+		84782092D2A5761F6C398F9E /* ofxBokeh.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBokeh.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/filters/ofxBokeh.h; sourceTree = SOURCE_ROOT; };
+		8487B5B77A3BB190C2921141 /* ofxGuiGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGuiGroup.h; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxGuiGroup.h; sourceTree = SOURCE_ROOT; };
+		8662EF4A5D1D36DE9C83BC67 /* ofxIldaPoly.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxIldaPoly.h; path = ../of_v0.9.8_osx_release/addons/ofxIlda/src/ofxIldaPoly.h; sourceTree = SOURCE_ROOT; };
+		8679F0FD83473A4139BD2090 /* MessageMappingOscPacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MessageMappingOscPacketListener.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc/MessageMappingOscPacketListener.h; sourceTree = SOURCE_ROOT; };
+		868AEB17697F2547BA776014 /* ofxSubstract.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSubstract.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/operations/ofxSubstract.h; sourceTree = SOURCE_ROOT; };
+		869F1B5BF55EC4A168E88D22 /* TimelineItem.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = TimelineItem.cpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/TimelineItem.cpp; sourceTree = SOURCE_ROOT; };
+		871458D6C49C45DFAA586472 /* ofxOldTv.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOldTv.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/filters/ofxOldTv.h; sourceTree = SOURCE_ROOT; };
+		874414FEA168D3E5700B4369 /* audiodecodercoreaudio.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = audiodecodercoreaudio.cpp; path = ../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/src/audiodecodercoreaudio.cpp; sourceTree = SOURCE_ROOT; };
+		888BC7E4A2CB96CDEBA1333D /* ofxFlow.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxFlow.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/operations/ofxFlow.h; sourceTree = SOURCE_ROOT; };
+		8BB6AFB8490FE5ACD36EAECD /* ofxGlow.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGlow.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/filters/ofxGlow.h; sourceTree = SOURCE_ROOT; };
+		8CC747CE34F2ECD5C08664CE /* tnt_fortran_array2d_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_fortran_array2d_utils.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_fortran_array2d_utils.h; sourceTree = SOURCE_ROOT; };
+		8CDE144933C8868072E15D48 /* ofxAudioDecoder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxAudioDecoder.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioDecoder/src/ofxAudioDecoder.h; sourceTree = SOURCE_ROOT; };
+		8E0228E707A5A4FBA01DFF70 /* TimelineOptions.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TimelineOptions.hpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/TimelineOptions.hpp; sourceTree = SOURCE_ROOT; };
+		8E5BCA24E7CCA4F61CF4C2CF /* Timeline.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Timeline.cpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/Timeline.cpp; sourceTree = SOURCE_ROOT; };
+		8E820A77B3E4391ADEFF1D72 /* LaserEditState.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LaserEditState.cpp; path = src/LaserEditState.cpp; sourceTree = SOURCE_ROOT; };
+		8F7B87257F1C7A7B28002CE5 /* etherdream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = etherdream.h; path = ../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/driver/libetherdream/etherdream.h; sourceTree = SOURCE_ROOT; };
+		8FF690CF0623E047D020568D /* ofxAudioAnalyzerAlgorithms.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxAudioAnalyzerAlgorithms.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src/ofxAudioAnalyzerAlgorithms.h; sourceTree = SOURCE_ROOT; };
+		90DFECFF0753376A9FC36B1F /* tnt_sparse_matrix_csr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_sparse_matrix_csr.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_sparse_matrix_csr.h; sourceTree = SOURCE_ROOT; };
+		910B575514298FB05D7CBFD1 /* Phrase.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Phrase.hpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/Phrase.hpp; sourceTree = SOURCE_ROOT; };
+		9150FB49D7A3524D8CFE8706 /* Retime.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Retime.hpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/phrase/Retime.hpp; sourceTree = SOURCE_ROOT; };
+		91CC98424F6DDD5FC5078737 /* OscReceivedElements.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscReceivedElements.cpp; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.cpp; sourceTree = SOURCE_ROOT; };
+		9364D9F267009D401EE4842A /* TimelineItem.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TimelineItem.h; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/TimelineItem.h; sourceTree = SOURCE_ROOT; };
+		94DC657110D4D1A0223945A0 /* Cone.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Cone.hpp; path = src/Cone.hpp; sourceTree = SOURCE_ROOT; };
+		95E181F074AE692E90B444FA /* tnt_cmat.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_cmat.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_cmat.h; sourceTree = SOURCE_ROOT; };
+		96233D3948F41C369C203253 /* graphutils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = graphutils.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/scheduler/graphutils.h; sourceTree = SOURCE_ROOT; };
+		97541D231FFE15AF0CCDF2BB /* VectorManipulation.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = VectorManipulation.hpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/detail/VectorManipulation.hpp; sourceTree = SOURCE_ROOT; };
+		98A8B71EEAE2B4DC679BA079 /* Cue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Cue.h; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/Cue.h; sourceTree = SOURCE_ROOT; };
+		9A7347B782665EC7151120AC /* ofxFBM.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxFBM.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/generative/ofxFBM.h; sourceTree = SOURCE_ROOT; };
+		9AB164FF20B52C0773E4A59A /* Hold.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Hold.hpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/phrase/Hold.hpp; sourceTree = SOURCE_ROOT; };
+		9BABBE36C344317B86C30DC9 /* tnt_array1d.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_array1d.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_array1d.h; sourceTree = SOURCE_ROOT; };
+		9DFB874FD8360B58E73DDC1E /* ofxAudioAnalyzerAlgorithms.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxAudioAnalyzerAlgorithms.cpp; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src/ofxAudioAnalyzerAlgorithms.cpp; sourceTree = SOURCE_ROOT; };
+		9E7E79DBF983352DB1CD1A0D /* jsonconvert.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = jsonconvert.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/jsonconvert.h; sourceTree = SOURCE_ROOT; };
+		9F6C1555A78950E5D0FBBDDB /* tnt2vector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt2vector.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt2vector.h; sourceTree = SOURCE_ROOT; };
+		A01CD242BF17A57A99DCB82B /* metadatautils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = metadatautils.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/metadatautils.h; sourceTree = SOURCE_ROOT; };
+		A0E4E4B88F236053F50ED064 /* OscTypes.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscTypes.cpp; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscTypes.cpp; sourceTree = SOURCE_ROOT; };
+		A19DF214C229765CCB1147DD /* stringutil.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = stringutil.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/stringutil.h; sourceTree = SOURCE_ROOT; };
+		A1F40209FEC2D8D43C26A97A /* audiodecoderbase.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = audiodecoderbase.cpp; path = ../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/src/audiodecoderbase.cpp; sourceTree = SOURCE_ROOT; };
+		A26C090029E3DDB5CF6D47D7 /* ofxGrayScott.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGrayScott.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/generative/ofxGrayScott.h; sourceTree = SOURCE_ROOT; };
+		A72A195386E82DE26FAE39E7 /* ofxButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxButton.h; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxButton.h; sourceTree = SOURCE_ROOT; };
+		A76329C9E06A28EAD8758BC7 /* bpfutil.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = bpfutil.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/bpfutil.h; sourceTree = SOURCE_ROOT; };
+		A91FFD285A50209D7CFAC61B /* peak.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = peak.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/peak.h; sourceTree = SOURCE_ROOT; };
+		AA3FE57740C9D0724734C977 /* DemoState.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = DemoState.cpp; path = src/DemoState.cpp; sourceTree = SOURCE_ROOT; };
+		AA76551A0359DD5F8048DD66 /* poolstorage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = poolstorage.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms/poolstorage.h; sourceTree = SOURCE_ROOT; };
+		AB76EFCCD61D13303D598855 /* ofxNoise.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNoise.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/generative/ofxNoise.h; sourceTree = SOURCE_ROOT; };
+		AD0EC506117873B84AFB62DE /* streamingalgorithm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = streamingalgorithm.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/streamingalgorithm.h; sourceTree = SOURCE_ROOT; };
+		AD64849722F9CE3D07D09248 /* IpEndpointName.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IpEndpointName.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.h; sourceTree = SOURCE_ROOT; };
+		AE9A97F4BCF6B380C4CEE1F2 /* ofxLabel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxLabel.cpp; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxLabel.cpp; sourceTree = SOURCE_ROOT; };
+		B002FCE252BD110A8BD6FAD9 /* ofxAAOnsetsAlgorithm.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxAAOnsetsAlgorithm.cpp; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src/ofxAAOnsetsAlgorithm.cpp; sourceTree = SOURCE_ROOT; };
+		B0832258268CF538A71E9173 /* testMapping.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = testMapping.hpp; path = src/testMapping.hpp; sourceTree = SOURCE_ROOT; };
+		B0EA388D34138D75095DD1CC /* ofxClone.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxClone.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/composers/ofxClone.h; sourceTree = SOURCE_ROOT; };
+		B2A8878E07595A05EA0C484B /* ofxAAOnsetsAlgorithm.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxAAOnsetsAlgorithm.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src/ofxAAOnsetsAlgorithm.h; sourceTree = SOURCE_ROOT; };
+		B30807EBD476C7D179DBF47B /* ofxFire.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxFire.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/generative/ofxFire.h; sourceTree = SOURCE_ROOT; };
+		B40C481018F1A85C7415947A /* Output.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Output.hpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/Output.hpp; sourceTree = SOURCE_ROOT; };
+		B60F2D9536DBA402A8B77300 /* Sugar.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Sugar.hpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/phrase/Sugar.hpp; sourceTree = SOURCE_ROOT; };
+		B8588726553BADB9AC9D8121 /* ofxIldaPolyProcessor.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxIldaPolyProcessor.h; path = ../of_v0.9.8_osx_release/addons/ofxIlda/src/ofxIldaPolyProcessor.h; sourceTree = SOURCE_ROOT; };
+		B858F0F4EE36E95B5C030DAA /* tnt_version.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_version.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_version.h; sourceTree = SOURCE_ROOT; };
+		B912E0F46B73CCDF7CFD64EF /* ofxBarrelChromaAb.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBarrelChromaAb.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/filters/ofxBarrelChromaAb.h; sourceTree = SOURCE_ROOT; };
+		B9A040312EB91A67202EDA11 /* GradientGenerator.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = GradientGenerator.hpp; path = src/GradientGenerator.hpp; sourceTree = SOURCE_ROOT; };
+		BA11B6A08362067C100D1B88 /* ofxOscBundle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscBundle.cpp; path = ../of_v0.9.8_osx_release/addons/ofxOsc/src/ofxOscBundle.cpp; sourceTree = SOURCE_ROOT; };
+		BA613057D1309446CBC440B4 /* ofxBaseGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxBaseGui.cpp; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxBaseGui.cpp; sourceTree = SOURCE_ROOT; };
+		BAFB05AE3A73B88C3ED47C01 /* OscPrintReceivedElements.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscPrintReceivedElements.cpp; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.cpp; sourceTree = SOURCE_ROOT; };
+		BB4050A878DD63C6706B6AAB /* sourceproxy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = sourceproxy.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/sourceproxy.h; sourceTree = SOURCE_ROOT; };
+		BF5126892AD812F55363A489 /* streamconnector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = streamconnector.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streamconnector.h; sourceTree = SOURCE_ROOT; };
+		C04BFFAE18A7BA4072B5C6B9 /* test.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 30; name = test.c; path = ../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/driver/libetherdream/test.c; sourceTree = SOURCE_ROOT; };
+		C06ADC4DFE87308C2B1A42AA /* ShaderGenerator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ShaderGenerator.cpp; path = src/ShaderGenerator.cpp; sourceTree = SOURCE_ROOT; };
+		C16520844B2F2C138022447D /* Sequence.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Sequence.hpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/Sequence.hpp; sourceTree = SOURCE_ROOT; };
+		C1B248E3C3B7AFC32EEEAE1A /* ControllerThread.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ControllerThread.hpp; path = src/ControllerThread.hpp; sourceTree = SOURCE_ROOT; };
+		C24397344E8FE75CF50CC1E2 /* ofxOscArg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscArg.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/src/ofxOscArg.h; sourceTree = SOURCE_ROOT; };
+		C274357DA830C233E555BC1E /* ofxIldaFrame.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxIldaFrame.h; path = ../of_v0.9.8_osx_release/addons/ofxIlda/src/ofxIldaFrame.h; sourceTree = SOURCE_ROOT; };
+		C356B791027AF96C951B7CE0 /* asciidagparser.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = asciidagparser.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/asciidagparser.h; sourceTree = SOURCE_ROOT; };
+		C63EE7EDA12B7D84435496DC /* mapping.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = mapping.cpp; path = src/mapping.cpp; sourceTree = SOURCE_ROOT; };
+		C9651D51CF110EC49DABB730 /* ofSoundPlayerExtended.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofSoundPlayerExtended.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src/ofSoundPlayerExtended.h; sourceTree = SOURCE_ROOT; };
+		C9BB351CB11724E98667ECAB /* ShaderGenerator.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ShaderGenerator.hpp; path = src/ShaderGenerator.hpp; sourceTree = SOURCE_ROOT; };
+		C9CA417CB93CE9662EBE5607 /* ofxNormals.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxNormals.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/operations/ofxNormals.h; sourceTree = SOURCE_ROOT; };
+		CAB5F5C1BFB7B3047868D7F8 /* atomic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = atomic.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/atomic.h; sourceTree = SOURCE_ROOT; };
+		CABB86BCA2EB34E79EE5B7F3 /* streamingalgorithmcomposite.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = streamingalgorithmcomposite.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/streamingalgorithmcomposite.h; sourceTree = SOURCE_ROOT; };
+		CAD73C706099DAE72208BD92 /* ringbufferinput.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ringbufferinput.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms/ringbufferinput.h; sourceTree = SOURCE_ROOT; };
+		CB69290628C99820B9397FD5 /* ControllerThread.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ControllerThread.cpp; path = src/ControllerThread.cpp; sourceTree = SOURCE_ROOT; };
+		CD110DF5F724CC9404A73717 /* EditMeshState.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = EditMeshState.cpp; path = src/EditMeshState.cpp; sourceTree = SOURCE_ROOT; };
+		CE4E46227322EED066E9F66A /* ofxToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxToggle.h; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxToggle.h; sourceTree = SOURCE_ROOT; };
+		CFD0EEB7941A86B061CED7AC /* ofxRipples.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxRipples.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/operations/ofxRipples.h; sourceTree = SOURCE_ROOT; };
+		D0CC13B430AF7C47FDFB6679 /* ofxOscParameterSync.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscParameterSync.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/src/ofxOscParameterSync.h; sourceTree = SOURCE_ROOT; };
+		D3AACF02C0DF9C216CB32DAA /* MakeUnique.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MakeUnique.hpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/detail/MakeUnique.hpp; sourceTree = SOURCE_ROOT; };
+		D65E4127529FEC17D0854A7E /* OscException.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscException.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscException.h; sourceTree = SOURCE_ROOT; };
+		D6E82E8DB2580ED14AB68BB7 /* ofxMedian.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxMedian.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/filters/ofxMedian.h; sourceTree = SOURCE_ROOT; };
+		D9468C0A93DCF3E03F1825A7 /* ofxGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxGui.h; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxGui.h; sourceTree = SOURCE_ROOT; };
+		DAC75A626B221357FF3CBEB4 /* tnt_subscript.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_subscript.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_subscript.h; sourceTree = SOURCE_ROOT; };
+		DBBE949EF7462F6C97C6C423 /* ofxAudioAnalyzerUnit.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxAudioAnalyzerUnit.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src/ofxAudioAnalyzerUnit.h; sourceTree = SOURCE_ROOT; };
+		DC2BE99D40298E0CDF4543DF /* ofxChoreograph.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxChoreograph.h; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/src/ofxChoreograph.h; sourceTree = SOURCE_ROOT; };
+		DC75FC2F3007071E8A4A6151 /* tnt_fortran_array3d_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_fortran_array3d_utils.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_fortran_array3d_utils.h; sourceTree = SOURCE_ROOT; };
+		DDB163CA81DD5DB3266B81C8 /* ofxBloom.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxBloom.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/filters/ofxBloom.h; sourceTree = SOURCE_ROOT; };
+		DDF69F851D9E1E70D0436145 /* ofxChromaGlitch.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxChromaGlitch.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/filters/ofxChromaGlitch.h; sourceTree = SOURCE_ROOT; };
+		DFF21A6BA5BAECA3B6714F17 /* fftw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = fftw3.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/include/fftw3.h; sourceTree = SOURCE_ROOT; };
+		E00894D9E32E58010713B6EE /* ofxPanel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxPanel.cpp; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxPanel.cpp; sourceTree = SOURCE_ROOT; };
+		E01DE8AD0B268874348E7B35 /* ofxSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSlider.h; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxSlider.h; sourceTree = SOURCE_ROOT; };
+		E07EB6FEA4C0C454924DDEDA /* ofxTint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxTint.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/generative/ofxTint.h; sourceTree = SOURCE_ROOT; };
+		E1F5C8221F5F7FFD96835A2C /* output.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = output.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/output.h; sourceTree = SOURCE_ROOT; };
+		E1F7F94D44CF5DB3B0FFF869 /* essentiamath.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = essentiamath.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/essentiamath.h; sourceTree = SOURCE_ROOT; };
+		E220D2226E4809F7D5F457A8 /* tnt_array3d_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_array3d_utils.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_array3d_utils.h; sourceTree = SOURCE_ROOT; };
+		E2DA6B61FB3103997988884A /* Combine.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Combine.hpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/phrase/Combine.hpp; sourceTree = SOURCE_ROOT; };
+		E3CFBB1F383F5839F04CBCD1 /* PacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PacketListener.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/PacketListener.h; sourceTree = SOURCE_ROOT; };
+		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../of_v0.9.8_osx_release/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E481A05FAF4966F512136879 /* configurable.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = configurable.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/configurable.h; sourceTree = SOURCE_ROOT; };
+		E4B69B5B0A3A1756003C02F2 /* coneDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coneDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
+		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../of_v0.9.8_osx_release/libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
+		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		E8B2B5727B03CCF2FBD38132 /* tnt_array3d.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_array3d.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_array3d.h; sourceTree = SOURCE_ROOT; };
+		E8E4420A5BF798FA4F923697 /* Cue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = Cue.cpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/Cue.cpp; sourceTree = SOURCE_ROOT; };
+		E9047C93DA422FCA65C82842 /* UdpSocket.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = UdpSocket.cpp; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix/UdpSocket.cpp; sourceTree = SOURCE_ROOT; };
+		EA695073C8FD77DD98158182 /* tnt_vec.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_vec.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_vec.h; sourceTree = SOURCE_ROOT; };
+		EA77D40FD0890FF6AEB00A4B /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CAStreamBasicDescription.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/include/apple/CAStreamBasicDescription.h; sourceTree = SOURCE_ROOT; };
+		EB38B31C6E99E85B47C240A1 /* OscHostEndianness.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscHostEndianness.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc/OscHostEndianness.h; sourceTree = SOURCE_ROOT; };
+		ED6E670EA3CDCCFEF6FC592C /* Ramp.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = Ramp.hpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/phrase/Ramp.hpp; sourceTree = SOURCE_ROOT; };
+		EDC8496A936FF67A36A07567 /* PulseGenerator.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PulseGenerator.hpp; path = src/PulseGenerator.hpp; sourceTree = SOURCE_ROOT; };
+		EE145E22B3364A622580590E /* ofxToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxToggle.cpp; path = ../of_v0.9.8_osx_release/addons/ofxGui/src/ofxToggle.cpp; sourceTree = SOURCE_ROOT; };
+		EF9C1094F8AEDE7EE07C4D1D /* ofxMask.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxMask.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/composers/ofxMask.h; sourceTree = SOURCE_ROOT; };
+		F030B8E6B108A22F7E1F9B37 /* ofxLUT.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxLUT.h; path = ../of_v0.9.8_osx_release/addons/ofxFX/src/filters/ofxLUT.h; sourceTree = SOURCE_ROOT; };
+		F065B8E4F5E9759983BB7480 /* sink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = sink.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/sink.h; sourceTree = SOURCE_ROOT; };
+		F0C4D786E3A2A2A41EF688A9 /* tnt_math_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt_math_utils.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_math_utils.h; sourceTree = SOURCE_ROOT; };
+		F1AD3B55C3B9B3B29799AFEB /* MersenneTwister.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MersenneTwister.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/MersenneTwister.h; sourceTree = SOURCE_ROOT; };
+		F6232571D43733681E3B0D01 /* networkparser.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = networkparser.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/scheduler/networkparser.h; sourceTree = SOURCE_ROOT; };
+		F6AD0EE7AA5D6E9C54E2340C /* devnull.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = devnull.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms/devnull.h; sourceTree = SOURCE_ROOT; };
+		F6EECECE86D4F62DCF7415C6 /* UdpSocket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = UdpSocket.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/UdpSocket.h; sourceTree = SOURCE_ROOT; };
+		F9FA4FE4B4EA75F290532192 /* essentiautil.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = essentiautil.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/essentiautil.h; sourceTree = SOURCE_ROOT; };
+		FBEC2EF1534C973E9E7B00F9 /* tnt2essentiautils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = tnt2essentiautils.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt2essentiautils.h; sourceTree = SOURCE_ROOT; };
+		FC9139A443989593CCF88ADE /* bpmutil.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = bpmutil.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/bpmutil.h; sourceTree = SOURCE_ROOT; };
+		FD002241D6A68C65AD5CCC9D /* ofxEtherdream.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxEtherdream.h; path = ../of_v0.9.8_osx_release/addons/ofxEtherdream/src/ofxEtherdream.h; sourceTree = SOURCE_ROOT; };
+		FD26AF48F01E75D74037BCE2 /* GeneratorTestBedState.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = GeneratorTestBedState.hpp; path = src/GeneratorTestBedState.hpp; sourceTree = SOURCE_ROOT; };
+		FDC63F65B41087D22CFEBA95 /* MotionGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = MotionGroup.cpp; path = ../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/MotionGroup.cpp; sourceTree = SOURCE_ROOT; };
+		FE1270A54C15030B7204B8CF /* essentia.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = essentia.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/essentia.h; sourceTree = SOURCE_ROOT; };
+		FE82C94DA173CE73BE9873DD /* SoundReactiveGenerator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = SoundReactiveGenerator.cpp; path = src/SoundReactiveGenerator.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4B69B590A3A1756003C02F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
+				9D72A0B4BAED5487D5CD7538 /* OpenAL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07D82F005CC2972BE2922F4B /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				A7536DDCB866AC5AACDAAE3D /* essentia */,
+				BF203EEF5B7540F7CDE156C8 /* fftw3f */,
+				9E4032E9D5449942AD40D131 /* sndfile */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		0973F5322B74DBB70BEE2030 /* specialization */ = {
+			isa = PBXGroup;
+			children = (
+				13DCC102FB2171B92075C4B0 /* OFSpecialization.h */,
+			);
+			name = specialization;
+			sourceTree = "<group>";
+		};
+		0D22F8A7486446F7D3418EBF /* ofxEtherdream */ = {
+			isa = PBXGroup;
+			children = (
+				B36A58EBE073A47929A7AE2B /* src */,
+				1A81CF97B29EC5F0C1FB97AF /* libs */,
+			);
+			name = ofxEtherdream;
+			sourceTree = "<group>";
+		};
+		1A81CF97B29EC5F0C1FB97AF /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				F42C9F215CDA39097280C5D9 /* common */,
+				C245F26D982DB984E2CEFDD0 /* driver */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		1F142D0F8E79BB09B959B6D0 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				DFF21A6BA5BAECA3B6714F17 /* fftw3.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		29184E6D07FD7D2651458351 /* specialization */ = {
+			isa = PBXGroup;
+			children = (
+				7211A3603F05F5E2AA6685C2 /* CinderSpecialization.hpp */,
+			);
+			name = specialization;
+			sourceTree = "<group>";
+		};
+		30CB364908817057B430D528 /* osc */ = {
+			isa = PBXGroup;
+			children = (
+				8679F0FD83473A4139BD2090 /* MessageMappingOscPacketListener.h */,
+				D65E4127529FEC17D0854A7E /* OscException.h */,
+				EB38B31C6E99E85B47C240A1 /* OscHostEndianness.h */,
+				4F6DF459BD01B2A47ED3583A /* OscOutboundPacketStream.cpp */,
+				1DA11627A90CE92EA019F238 /* OscOutboundPacketStream.h */,
+				5B94E608BA2E6171D20F33DC /* OscPacketListener.h */,
+				BAFB05AE3A73B88C3ED47C01 /* OscPrintReceivedElements.cpp */,
+				511553D03987BAD9DE650978 /* OscPrintReceivedElements.h */,
+				91CC98424F6DDD5FC5078737 /* OscReceivedElements.cpp */,
+				7EDD385835D888FF94D65FF0 /* OscReceivedElements.h */,
+				A0E4E4B88F236053F50ED064 /* OscTypes.cpp */,
+				470147F5ACD52F28384876BA /* OscTypes.h */,
+			);
+			name = osc;
+			sourceTree = "<group>";
+		};
+		37EEAF5BE699F2C7DD676270 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E7FE87AA9AE5CA7BE8DFA759 /* composers */,
+				389FE9FFF8F20EA90A671145 /* filters */,
+				C959CBA3130BE8E72D38F769 /* generative */,
+				836DBDD6ACEBB2680472B404 /* ofxFX.h */,
+				09EA58AA4EFEA4945AF9CACC /* ofxFXObject.cpp */,
+				5F7D189A7366CFCE704BA587 /* ofxFXObject.h */,
+				2E439E9A2233D06250582647 /* ofxSwapBuffer.h */,
+				44AC956B7DDEB3EA3AA33B00 /* operations */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		38871A5825686AE018EC2BF0 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				86D2677079A3AF4A5A88E29A /* oscpack */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		389FE9FFF8F20EA90A671145 /* filters */ = {
+			isa = PBXGroup;
+			children = (
+				B912E0F46B73CCDF7CFD64EF /* ofxBarrelChromaAb.h */,
+				DDB163CA81DD5DB3266B81C8 /* ofxBloom.h */,
+				1AB26A171E516B179AE797A5 /* ofxBlur.h */,
+				84782092D2A5761F6C398F9E /* ofxBokeh.h */,
+				7FC0CC06B7ACD0DF009A9321 /* ofxChromaAb.h */,
+				DDF69F851D9E1E70D0436145 /* ofxChromaGlitch.h */,
+				697E9CC089FFB58330F7D496 /* ofxContrast.h */,
+				65282951FCAD924CB00F2424 /* ofxGaussianBlur.h */,
+				8BB6AFB8490FE5ACD36EAECD /* ofxGlow.h */,
+				1BE7A658B3E85DD6DE929895 /* ofxGrayscale.h */,
+				0E35BEDCD23327ECD33B3B1A /* ofxInverse.h */,
+				F030B8E6B108A22F7E1F9B37 /* ofxLUT.h */,
+				D6E82E8DB2580ED14AB68BB7 /* ofxMedian.h */,
+				871458D6C49C45DFAA586472 /* ofxOldTv.h */,
+			);
+			name = filters;
+			sourceTree = "<group>";
+		};
+		38BDCD9E6A577AD8255FE30C /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				BDEFCD97632FC7CD5284F00B /* Choreograph */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		43F3552C039E8CB9C7C56DA6 /* choreograph */ = {
+			isa = PBXGroup;
+			children = (
+				16990F462E9420BC25A070E2 /* Choreograph.h */,
+				E8E4420A5BF798FA4F923697 /* Cue.cpp */,
+				98A8B71EEAE2B4DC679BA079 /* Cue.h */,
+				A1EF91DBA995EB56DAE53F24 /* detail */,
+				5BCE8D58676C0CE8BFCEFB16 /* Easing.h */,
+				1DDC5DE521B97D231D3C92A3 /* Motion.hpp */,
+				FDC63F65B41087D22CFEBA95 /* MotionGroup.cpp */,
+				742BBB31A91AD261E1E46DA9 /* MotionGroup.h */,
+				B40C481018F1A85C7415947A /* Output.hpp */,
+				98DD8C725A3506AA67291399 /* phrase */,
+				910B575514298FB05D7CBFD1 /* Phrase.hpp */,
+				C16520844B2F2C138022447D /* Sequence.hpp */,
+				29184E6D07FD7D2651458351 /* specialization */,
+				8E5BCA24E7CCA4F61CF4C2CF /* Timeline.cpp */,
+				2DF3736C692F03BA9B15BB6B /* Timeline.h */,
+				869F1B5BF55EC4A168E88D22 /* TimelineItem.cpp */,
+				9364D9F267009D401EE4842A /* TimelineItem.h */,
+				8E0228E707A5A4FBA01DFF70 /* TimelineOptions.hpp */,
+				0F74A3D9120E80194DBCEE76 /* TimeType.h */,
+			);
+			name = choreograph;
+			sourceTree = "<group>";
+		};
+		44AC956B7DDEB3EA3AA33B00 /* operations */ = {
+			isa = PBXGroup;
+			children = (
+				02951F96AA7655BAB9647A76 /* ofxAbsDiff.h */,
+				4BCB51F2848D79E1B338DF0C /* ofxBounce.h */,
+				29314705F468C82FD718BD30 /* ofxDisplacePixels.h */,
+				62F5637C45F7FD2C97CA693E /* ofxEdgeDetect.h */,
+				888BC7E4A2CB96CDEBA1333D /* ofxFlow.h */,
+				C9CA417CB93CE9662EBE5607 /* ofxNormals.h */,
+				CFD0EEB7941A86B061CED7AC /* ofxRipples.h */,
+				868AEB17697F2547BA776014 /* ofxSubstract.h */,
+				27D065F7878B44B28650E210 /* ofxThreshold.h */,
+			);
+			name = operations;
+			sourceTree = "<group>";
+		};
+		480A780D8D0308AE4A368801 /* ofxGui */ = {
+			isa = PBXGroup;
+			children = (
+				A763ED608B35AE3310251DEE /* src */,
+			);
+			name = ofxGui;
+			sourceTree = "<group>";
+		};
+		4EDBECDFC0C3B15FFD842D4E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3331484FF194683D2365AB7E /* ofSoundPlayerExtended.cpp */,
+				C9651D51CF110EC49DABB730 /* ofSoundPlayerExtended.h */,
+				2C45341BE0795D68F85DFA0B /* ofxAAMultiPitchKlapuriAlgorithm.cpp */,
+				0D59F5E40E0AC583E094132A /* ofxAAMultiPitchKlapuriAlgorithm.h */,
+				B002FCE252BD110A8BD6FAD9 /* ofxAAOnsetsAlgorithm.cpp */,
+				B2A8878E07595A05EA0C484B /* ofxAAOnsetsAlgorithm.h */,
+				58969509CE8D713302C7B650 /* ofxAudioAnalyzer.cpp */,
+				7913882BE96D4A25FCB31FED /* ofxAudioAnalyzer.h */,
+				9DFB874FD8360B58E73DDC1E /* ofxAudioAnalyzerAlgorithms.cpp */,
+				8FF690CF0623E047D020568D /* ofxAudioAnalyzerAlgorithms.h */,
+				12BB247E93D84CA1CA07D4E9 /* ofxAudioAnalyzerUnit.cpp */,
+				DBBE949EF7462F6C97C6C423 /* ofxAudioAnalyzerUnit.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		526C0E0654F6F87F802EBE13 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				A133AE7383B29E66D684559A /* include */,
+				58047649A01E9261E74AC1C4 /* src */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		58047649A01E9261E74AC1C4 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A1F40209FEC2D8D43C26A97A /* audiodecoderbase.cpp */,
+				874414FEA168D3E5700B4369 /* audiodecodercoreaudio.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		641362CA659FAFEE4E81001B /* posix */ = {
+			isa = PBXGroup;
+			children = (
+				24CA40C8B3A094FD03FDEC05 /* NetworkingUtils.cpp */,
+				E9047C93DA422FCA65C82842 /* UdpSocket.cpp */,
+			);
+			name = posix;
+			sourceTree = "<group>";
+		};
+		6894321556B8D4EBFB6234C4 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C274357DA830C233E555BC1E /* ofxIldaFrame.h */,
+				7FBF5BFF9A916A8C736AB835 /* ofxIldaPoint.h */,
+				8662EF4A5D1D36DE9C83BC67 /* ofxIldaPoly.h */,
+				B8588726553BADB9AC9D8121 /* ofxIldaPolyProcessor.h */,
+				08F10233C417DE637AB5D94A /* ofxIldaRenderTarget.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		6948EE371B920CB800B5AC1A /* local_addons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = local_addons;
+			sourceTree = "<group>";
+		};
+		69EA4EEFE27955C695DB2D99 /* ofxAudioAnalyzer */ = {
+			isa = PBXGroup;
+			children = (
+				4EDBECDFC0C3B15FFD842D4E /* src */,
+				07D82F005CC2972BE2922F4B /* libs */,
+				87A314AE652156FB064F80BF /* frameworks */,
+			);
+			name = ofxAudioAnalyzer;
+			sourceTree = "<group>";
+		};
+		73C740B7373AE8CE7BE43B7A /* libetherdream */ = {
+			isa = PBXGroup;
+			children = (
+				36CB2E007B8DB9736AF88AC0 /* etherdream.c */,
+				8F7B87257F1C7A7B28002CE5 /* etherdream.h */,
+				C04BFFAE18A7BA4072B5C6B9 /* test.c */,
+			);
+			name = libetherdream;
+			sourceTree = "<group>";
+		};
+		74BF76B6B715867196E32211 /* streaming */ = {
+			isa = PBXGroup;
+			children = (
+				4596AC55FA700286B71BCEB2 /* accumulatoralgorithm.h */,
+				DD25005F3FA39556C5A8B60D /* algorithms */,
+				4CFCDE9127912B274C179251 /* multiratebuffer.h */,
+				6BB1560DEF45D6B4A5BFCE54 /* phantombuffer.h */,
+				51220026DA4FA83BC8306214 /* phantombuffer_impl.h */,
+				F065B8E4F5E9759983BB7480 /* sink.h */,
+				3291E92867684DAB392909D9 /* sinkbase.h */,
+				2A6BCF0486D0BE3CA29B227F /* sinkproxy.h */,
+				224525B3D9128D815D048B72 /* source.h */,
+				8274F1DB0AFFBDDC7A10E75B /* sourcebase.h */,
+				BB4050A878DD63C6706B6AAB /* sourceproxy.h */,
+				AD0EC506117873B84AFB62DE /* streamingalgorithm.h */,
+				CABB86BCA2EB34E79EE5B7F3 /* streamingalgorithmcomposite.h */,
+				71C7A2EB9AFEBE44FC5B4A40 /* streamingalgorithmwrapper.h */,
+			);
+			name = streaming;
+			sourceTree = "<group>";
+		};
+		7977BD28B0325C8FE56A2B4F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				43F3552C039E8CB9C7C56DA6 /* choreograph */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		7B6000368EEEA5C3AC677E70 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				88593FA31C5A93A5DD7FE9DA /* essentia */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		7CC31D7FE19CDD3BF2698015 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				09738ED8AC49E40A40DB53AE /* sndfile.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		8147F44D8E1384EFC607CC71 /* ofxIlda */ = {
+			isa = PBXGroup;
+			children = (
+				6894321556B8D4EBFB6234C4 /* src */,
+			);
+			name = ofxIlda;
+			sourceTree = "<group>";
+		};
+		86D2677079A3AF4A5A88E29A /* oscpack */ = {
+			isa = PBXGroup;
+			children = (
+				D27B2221A225CA523C019676 /* src */,
+			);
+			name = oscpack;
+			sourceTree = "<group>";
+		};
+		87A314AE652156FB064F80BF /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D1B275EC347E41C380E1179 /* OpenAL.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
+		88593FA31C5A93A5DD7FE9DA /* essentia */ = {
+			isa = PBXGroup;
+			children = (
+				371A0FB16BF73E56F500179A /* algorithm.h */,
+				12D8A583E8480BAFFDEDE0D6 /* algorithmfactory.h */,
+				1069CD34A36B7808D1843F8A /* algorithmfactory_impl.h */,
+				3FB2D8E7E04D1BB22B421361 /* config.h */,
+				E481A05FAF4966F512136879 /* configurable.h */,
+				3E3293E69D4D27D135F7098B /* connector.h */,
+				627DD0A58D9012D7B039027B /* debugging.h */,
+				FE1270A54C15030B7204B8CF /* essentia.h */,
+				E1F7F94D44CF5DB3B0FFF869 /* essentiamath.h */,
+				F9FA4FE4B4EA75F290532192 /* essentiautil.h */,
+				4DE5E984C17436EDE0126B41 /* iotypewrappers.h */,
+				7CF9AD90C85B22B7CA68A091 /* iotypewrappers_impl.h */,
+				73E05C4ECC9B6F3AD94EC219 /* parameter.h */,
+				6B2523C66BC60184857E39A7 /* pool.h */,
+				2674AF806AB57F2C6A7D6D75 /* range.h */,
+				4D7516D8E2D94037E1735C3E /* roguevector.h */,
+				BF3D7E24AAC8F092F7883977 /* scheduler */,
+				BF5126892AD812F55363A489 /* streamconnector.h */,
+				74BF76B6B715867196E32211 /* streaming */,
+				287B287A3726DB1A26C6EDEF /* streamutil.h */,
+				A19DF214C229765CCB1147DD /* stringutil.h */,
+				06CBFE4F722A9375DDBA3043 /* threading.h */,
+				4616FB11617C9D9AA8C947AB /* types.h */,
+				9F2895C4BB1AA8E3586F82E0 /* utils */,
+				72A3CE32F05AA938FDE8913A /* version.h */,
+			);
+			name = essentia;
+			sourceTree = "<group>";
+		};
+		92E528A9DEEBED1AFEDC17AD /* apple */ = {
+			isa = PBXGroup;
+			children = (
+				0018D2C7C4FD0D8B6CA87D25 /* CADebugMacros.h */,
+				EA77D40FD0890FF6AEB00A4B /* CAStreamBasicDescription.h */,
+			);
+			name = apple;
+			sourceTree = "<group>";
+		};
+		98DD8C725A3506AA67291399 /* phrase */ = {
+			isa = PBXGroup;
+			children = (
+				E2DA6B61FB3103997988884A /* Combine.hpp */,
+				9AB164FF20B52C0773E4A59A /* Hold.hpp */,
+				7DD617475DA91820E6A2DB86 /* Procedural.hpp */,
+				ED6E670EA3CDCCFEF6FC592C /* Ramp.hpp */,
+				9150FB49D7A3524D8CFE8706 /* Retime.hpp */,
+				B60F2D9536DBA402A8B77300 /* Sugar.hpp */,
+			);
+			name = phrase;
+			sourceTree = "<group>";
+		};
+		9E4032E9D5449942AD40D131 /* sndfile */ = {
+			isa = PBXGroup;
+			children = (
+				7CC31D7FE19CDD3BF2698015 /* include */,
+			);
+			name = sndfile;
+			sourceTree = "<group>";
+		};
+		9F2895C4BB1AA8E3586F82E0 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				1888648A1DE0B40A4586FFAC /* asciidag.h */,
+				C356B791027AF96C951B7CE0 /* asciidagparser.h */,
+				CAB5F5C1BFB7B3047868D7F8 /* atomic.h */,
+				303098F6072C6988D560BF35 /* audiocontext.h */,
+				08DEA654A5C67D402A34382B /* betools.h */,
+				A76329C9E06A28EAD8758BC7 /* bpfutil.h */,
+				FC9139A443989593CCF88ADE /* bpmutil.h */,
+				2F8F85A76403D31AE049B285 /* ffmpegapi.h */,
+				9E7E79DBF983352DB1CD1A0D /* jsonconvert.h */,
+				F1AD3B55C3B9B3B29799AFEB /* MersenneTwister.h */,
+				A01CD242BF17A57A99DCB82B /* metadatautils.h */,
+				E1F5C8221F5F7FFD96835A2C /* output.h */,
+				A91FFD285A50209D7CFAC61B /* peak.h */,
+				6480C409FD3CDB886066FF35 /* ringbufferimpl.h */,
+				59A281E517480A7C128ED452 /* synth_utils.h */,
+				C58D07B63A52259C86D0E699 /* tnt */,
+				73B76CAFE7D2855FDB340962 /* yamlast.h */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		A133AE7383B29E66D684559A /* include */ = {
+			isa = PBXGroup;
+			children = (
+				92E528A9DEEBED1AFEDC17AD /* apple */,
+				1A4ED017F26DDCF0F2278B8C /* audiodecoder.h */,
+				089421FE7446F4CC89E447BD /* audiodecoderbase.h */,
+				0284B959DE4F29528B5BF3AB /* audiodecodercoreaudio.h */,
+			);
+			name = include;
+			sourceTree = "<group>";
+		};
+		A1EF91DBA995EB56DAE53F24 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				D3AACF02C0DF9C216CB32DAA /* MakeUnique.hpp */,
+				97541D231FFE15AF0CCDF2BB /* VectorManipulation.hpp */,
+			);
+			name = detail;
+			sourceTree = "<group>";
+		};
+		A5F870D5915B31AB56254EA7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				710F558870927F1A4D01DFA8 /* ofxAudioDecoder.cpp */,
+				8CDE144933C8868072E15D48 /* ofxAudioDecoder.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		A7536DDCB866AC5AACDAAE3D /* essentia */ = {
+			isa = PBXGroup;
+			children = (
+				7B6000368EEEA5C3AC677E70 /* include */,
+			);
+			name = essentia;
+			sourceTree = "<group>";
+		};
+		A763ED608B35AE3310251DEE /* src */ = {
+			isa = PBXGroup;
+			children = (
+				BA613057D1309446CBC440B4 /* ofxBaseGui.cpp */,
+				1C797B7EB7277036AA5CA6F5 /* ofxBaseGui.h */,
+				78F1FB18A1BD1AB910F1DA06 /* ofxButton.cpp */,
+				A72A195386E82DE26FAE39E7 /* ofxButton.h */,
+				D9468C0A93DCF3E03F1825A7 /* ofxGui.h */,
+				2BFEAAD4C3497DAA24786C01 /* ofxGuiGroup.cpp */,
+				8487B5B77A3BB190C2921141 /* ofxGuiGroup.h */,
+				AE9A97F4BCF6B380C4CEE1F2 /* ofxLabel.cpp */,
+				4682EA8C6A9B89BFF518AC5F /* ofxLabel.h */,
+				E00894D9E32E58010713B6EE /* ofxPanel.cpp */,
+				009A6EAC56E6D6853F43D3D6 /* ofxPanel.h */,
+				6776555F75F3344CA51F8CFD /* ofxSlider.cpp */,
+				E01DE8AD0B268874348E7B35 /* ofxSlider.h */,
+				81456414F9BABF4D1F7A1852 /* ofxSliderGroup.cpp */,
+				033A5FD515CA2FC2D6A981F2 /* ofxSliderGroup.h */,
+				EE145E22B3364A622580590E /* ofxToggle.cpp */,
+				CE4E46227322EED066E9F66A /* ofxToggle.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		B36A58EBE073A47929A7AE2B /* src */ = {
+			isa = PBXGroup;
+			children = (
+				710F41A550F880EBDBDE49E0 /* ofxEtherdream.cpp */,
+				FD002241D6A68C65AD5CCC9D /* ofxEtherdream.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		B68D52E7A99A8C2199C32459 /* ofxChoreograph */ = {
+			isa = PBXGroup;
+			children = (
+				DD6FE84E2D8AC7725BCA78AC /* src */,
+				38BDCD9E6A577AD8255FE30C /* libs */,
+			);
+			name = ofxChoreograph;
+			sourceTree = "<group>";
+		};
+		BB4B014C10F69532006C3DED /* addons */ = {
+			isa = PBXGroup;
+			children = (
+				69EA4EEFE27955C695DB2D99 /* ofxAudioAnalyzer */,
+				E57BA9F5B131DD75E7F6B1AC /* ofxAudioDecoder */,
+				B68D52E7A99A8C2199C32459 /* ofxChoreograph */,
+				0D22F8A7486446F7D3418EBF /* ofxEtherdream */,
+				CABF1A23B637491112B10A00 /* ofxFX */,
+				480A780D8D0308AE4A368801 /* ofxGui */,
+				8147F44D8E1384EFC607CC71 /* ofxIlda */,
+				E6053AB7FEC63D5F83825B88 /* ofxOsc */,
+			);
+			name = addons;
+			sourceTree = "<group>";
+		};
+		BD2F1A9F8D0C05EDB29122D0 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4D1CC3E41900B75FDC4FAEA0 /* ofxOsc.h */,
+				C24397344E8FE75CF50CC1E2 /* ofxOscArg.h */,
+				BA11B6A08362067C100D1B88 /* ofxOscBundle.cpp */,
+				30AE4A9EFAB5F074715EDD2F /* ofxOscBundle.h */,
+				2473B7435B769861E7D5932B /* ofxOscMessage.cpp */,
+				684102362DC1D2E717324627 /* ofxOscMessage.h */,
+				2486AADD9BBACB53DF8CE93B /* ofxOscParameterSync.cpp */,
+				D0CC13B430AF7C47FDFB6679 /* ofxOscParameterSync.h */,
+				82E8A30C0CBE6A53AC538D88 /* ofxOscReceiver.cpp */,
+				82E71C08118D5FEB68159179 /* ofxOscReceiver.h */,
+				24D3F5485C5A6D49333BD461 /* ofxOscSender.cpp */,
+				041217185A94686DF435F466 /* ofxOscSender.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		BDEFCD97632FC7CD5284F00B /* Choreograph */ = {
+			isa = PBXGroup;
+			children = (
+				7977BD28B0325C8FE56A2B4F /* src */,
+			);
+			name = Choreograph;
+			sourceTree = "<group>";
+		};
+		BF203EEF5B7540F7CDE156C8 /* fftw3f */ = {
+			isa = PBXGroup;
+			children = (
+				1F142D0F8E79BB09B959B6D0 /* include */,
+			);
+			name = fftw3f;
+			sourceTree = "<group>";
+		};
+		BF3D7E24AAC8F092F7883977 /* scheduler */ = {
+			isa = PBXGroup;
+			children = (
+				96233D3948F41C369C203253 /* graphutils.h */,
+				73D5514D95BBC2C379B56D94 /* network.h */,
+				F6232571D43733681E3B0D01 /* networkparser.h */,
+			);
+			name = scheduler;
+			sourceTree = "<group>";
+		};
+		C245F26D982DB984E2CEFDD0 /* driver */ = {
+			isa = PBXGroup;
+			children = (
+				73C740B7373AE8CE7BE43B7A /* libetherdream */,
+			);
+			name = driver;
+			sourceTree = "<group>";
+		};
+		C58D07B63A52259C86D0E699 /* tnt */ = {
+			isa = PBXGroup;
+			children = (
+				4608A1F0ED200F62F5247182 /* jama_cholesky.h */,
+				63D57C25A297D2A71AA60542 /* jama_eig.h */,
+				6CE1688C49DA473905EC8C2E /* jama_lu.h */,
+				6F6360CDC91D52D81AAF133F /* jama_qr.h */,
+				6B98AA169D5C323E1662240C /* jama_svd.h */,
+				4985502E071ED715BABED848 /* tnt.h */,
+				FBEC2EF1534C973E9E7B00F9 /* tnt2essentiautils.h */,
+				9F6C1555A78950E5D0FBBDDB /* tnt2vector.h */,
+				9BABBE36C344317B86C30DC9 /* tnt_array1d.h */,
+				50E3578E46795402B7840241 /* tnt_array1d_utils.h */,
+				5D34AB0770CABEB27A930446 /* tnt_array2d.h */,
+				2723A32B58294B3D633F8349 /* tnt_array2d_utils.h */,
+				E8B2B5727B03CCF2FBD38132 /* tnt_array3d.h */,
+				E220D2226E4809F7D5F457A8 /* tnt_array3d_utils.h */,
+				95E181F074AE692E90B444FA /* tnt_cmat.h */,
+				49AE7D44B271573DCD96FD08 /* tnt_fortran_array1d.h */,
+				7DE190A96F3DBC927B9437BC /* tnt_fortran_array1d_utils.h */,
+				7C1BF5C0BA93BAB875487E18 /* tnt_fortran_array2d.h */,
+				8CC747CE34F2ECD5C08664CE /* tnt_fortran_array2d_utils.h */,
+				12D683A58C88B922DD940E57 /* tnt_fortran_array3d.h */,
+				DC75FC2F3007071E8A4A6151 /* tnt_fortran_array3d_utils.h */,
+				66AEBB562C36415CBB629FF1 /* tnt_i_refvec.h */,
+				F0C4D786E3A2A2A41EF688A9 /* tnt_math_utils.h */,
+				90DFECFF0753376A9FC36B1F /* tnt_sparse_matrix_csr.h */,
+				221BCE65E73681AB61B40797 /* tnt_stopwatch.h */,
+				DAC75A626B221357FF3CBEB4 /* tnt_subscript.h */,
+				EA695073C8FD77DD98158182 /* tnt_vec.h */,
+				B858F0F4EE36E95B5C030DAA /* tnt_version.h */,
+			);
+			name = tnt;
+			sourceTree = "<group>";
+		};
+		C6A84B80203BB565007E3AEF /* states */ = {
+			isa = PBXGroup;
+			children = (
+				08596196B1CE04166FEFFF2F /* PlayState.cpp */,
+				2263526F132670665EAF5528 /* PlayState.hpp */,
+				23FF6292669942C5D8162758 /* AppState.hpp */,
+				AA3FE57740C9D0724734C977 /* DemoState.cpp */,
+				6948FE75B045134FF53B671E /* DemoState.hpp */,
+				CD110DF5F724CC9404A73717 /* EditMeshState.cpp */,
+				485DA4ABCE7B1FD8C8D0EAE2 /* EditMeshState.hpp */,
+				431095918583EEAF07D63ED3 /* GeneratorTestBedState.cpp */,
+				FD26AF48F01E75D74037BCE2 /* GeneratorTestBedState.hpp */,
+				8E820A77B3E4391ADEFF1D72 /* LaserEditState.cpp */,
+				4E55B8F15BAE1A15820B7F5B /* LaserEditState.hpp */,
+				218611AE897D6A358C4FFF80 /* ProjectorEditState.cpp */,
+				4D34C2E2DF08B6AB06DCE3BF /* ProjectorEditState.hpp */,
+			);
+			name = states;
+			sourceTree = "<group>";
+		};
+		C6A84B81203BB573007E3AEF /* cone */ = {
+			isa = PBXGroup;
+			children = (
+				2E7C2A7821E86493C47B39B9 /* Cone.cpp */,
+				94DC657110D4D1A0223945A0 /* Cone.hpp */,
+				C63EE7EDA12B7D84435496DC /* mapping.cpp */,
+				4CF4E965FE64F6D897CFC4B4 /* mapping.hpp */,
+				047A776676753F86DE5DE927 /* testMapping.cpp */,
+				B0832258268CF538A71E9173 /* testMapping.hpp */,
+			);
+			name = cone;
+			sourceTree = "<group>";
+		};
+		C6A84B82203BB587007E3AEF /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				CB69290628C99820B9397FD5 /* ControllerThread.cpp */,
+				C1B248E3C3B7AFC32EEEAE1A /* ControllerThread.hpp */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		C6A84B83203BB595007E3AEF /* generator */ = {
+			isa = PBXGroup;
+			children = (
+				7C37DF14457BC29A3FFE9990 /* Generator.hpp */,
+				16D535A0D739F86ECFB2D84F /* GradientGenerator.cpp */,
+				B9A040312EB91A67202EDA11 /* GradientGenerator.hpp */,
+				66E2BAFE654A0007499C3ACA /* PulseGenerator.cpp */,
+				EDC8496A936FF67A36A07567 /* PulseGenerator.hpp */,
+				C06ADC4DFE87308C2B1A42AA /* ShaderGenerator.cpp */,
+				C9BB351CB11724E98667ECAB /* ShaderGenerator.hpp */,
+				FE82C94DA173CE73BE9873DD /* SoundReactiveGenerator.cpp */,
+				087FEFDA0257634627402D52 /* SoundReactiveGenerator.hpp */,
+			);
+			name = generator;
+			sourceTree = "<group>";
+		};
+		C959CBA3130BE8E72D38F769 /* generative */ = {
+			isa = PBXGroup;
+			children = (
+				9A7347B782665EC7151120AC /* ofxFBM.h */,
+				B30807EBD476C7D179DBF47B /* ofxFire.h */,
+				A26C090029E3DDB5CF6D47D7 /* ofxGrayScott.h */,
+				AB76EFCCD61D13303D598855 /* ofxNoise.h */,
+				E07EB6FEA4C0C454924DDEDA /* ofxTint.h */,
+			);
+			name = generative;
+			sourceTree = "<group>";
+		};
+		CABF1A23B637491112B10A00 /* ofxFX */ = {
+			isa = PBXGroup;
+			children = (
+				37EEAF5BE699F2C7DD676270 /* src */,
+			);
+			name = ofxFX;
+			sourceTree = "<group>";
+		};
+		D27B2221A225CA523C019676 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FF8CDF57858E9B94E3237115 /* ip */,
+				30CB364908817057B430D528 /* osc */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		DD25005F3FA39556C5A8B60D /* algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				774582B974DDDAE0D1197D5B /* copy.h */,
+				F6AD0EE7AA5D6E9C54E2340C /* devnull.h */,
+				747FD8F61575E2C8DF7F7701 /* diskwriter.h */,
+				7D0D68CA6ABB6EBD07141019 /* fileoutput.h */,
+				AA76551A0359DD5F8048DD66 /* poolstorage.h */,
+				CAD73C706099DAE72208BD92 /* ringbufferinput.h */,
+				169A8DCA7998312838C30BE9 /* ringbufferoutput.h */,
+				4DD9E0652C3690330510B84A /* ringbuffervectoroutput.h */,
+				53DA57D6FD7DF761787F997B /* vectorinput.h */,
+				038A4E49AB7E4D1E4ED37FA6 /* vectoroutput.h */,
+			);
+			name = algorithms;
+			sourceTree = "<group>";
+		};
+		DD6FE84E2D8AC7725BCA78AC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DC2BE99D40298E0CDF4543DF /* ofxChoreograph.h */,
+				0973F5322B74DBB70BEE2030 /* specialization */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		E4328144138ABC890047C5CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4328148138ABC890047C5CB /* openFrameworksDebug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4B69B4A0A3A1720003C02F2 = {
+			isa = PBXGroup;
+			children = (
+				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
+				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				E4B69E1C0A3A1BDC003C02F2 /* src */,
+				E4EEC9E9138DF44700A80321 /* openFrameworks */,
+				BB4B014C10F69532006C3DED /* addons */,
+				6948EE371B920CB800B5AC1A /* local_addons */,
+				E4B69B5B0A3A1756003C02F2 /* coneDebug.app */,
+			);
+			sourceTree = "<group>";
+		};
+		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C6A84B82203BB587007E3AEF /* controller */,
+				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
+				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
+				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				C6A84B80203BB565007E3AEF /* states */,
+				C6A84B81203BB573007E3AEF /* cone */,
+				C6A84B83203BB595007E3AEF /* generator */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		E4EEC9E9138DF44700A80321 /* openFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */,
+				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
+			);
+			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+		E57BA9F5B131DD75E7F6B1AC /* ofxAudioDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				A5F870D5915B31AB56254EA7 /* src */,
+				526C0E0654F6F87F802EBE13 /* libs */,
+			);
+			name = ofxAudioDecoder;
+			sourceTree = "<group>";
+		};
+		E6053AB7FEC63D5F83825B88 /* ofxOsc */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F1A9F8D0C05EDB29122D0 /* src */,
+				38871A5825686AE018EC2BF0 /* libs */,
+			);
+			name = ofxOsc;
+			sourceTree = "<group>";
+		};
+		E7FE87AA9AE5CA7BE8DFA759 /* composers */ = {
+			isa = PBXGroup;
+			children = (
+				0F22AF03FA6E0716C5B5E338 /* ofxBlend.h */,
+				B0EA388D34138D75095DD1CC /* ofxClone.h */,
+				EF9C1094F8AEDE7EE07C4D1D /* ofxMask.h */,
+				2E612DCAE5A4897ED4A4D89B /* ofxMultiTexture.h */,
+			);
+			name = composers;
+			sourceTree = "<group>";
+		};
+		F42C9F215CDA39097280C5D9 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				36031ABA1606D48C48C72314 /* protocol.h */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		FF8CDF57858E9B94E3237115 /* ip */ = {
+			isa = PBXGroup;
+			children = (
+				6438FF73945762D014C5B7AD /* IpEndpointName.cpp */,
+				AD64849722F9CE3D07D09248 /* IpEndpointName.h */,
+				1520B69A8025FB0994FC6006 /* NetworkingUtils.h */,
+				E3CFBB1F383F5839F04CBCD1 /* PacketListener.h */,
+				641362CA659FAFEE4E81001B /* posix */,
+				06A5D63AB9A189F07C9DC053 /* TimerListener.h */,
+				F6EECECE86D4F62DCF7415C6 /* UdpSocket.h */,
+			);
+			name = ip;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4B69B5A0A3A1756003C02F2 /* cone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "cone" */;
+			buildPhases = (
+				E4B69B580A3A1756003C02F2 /* Sources */,
+				E4B69B590A3A1756003C02F2 /* Frameworks */,
+				E4B6FFFD0C3F9AB9008CF71C /* ShellScript */,
+				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
+			);
+			name = cone;
+			productName = myOFApp;
+			productReference = E4B69B5B0A3A1756003C02F2 /* coneDebug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "cone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = E4B69B4A0A3A1720003C02F2;
+			productRefGroup = E4B69B4A0A3A1720003C02F2;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E4328144138ABC890047C5CB /* Products */;
+					ProjectRef = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E4B69B5A0A3A1756003C02F2 /* cone */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E4328148138ABC890047C5CB /* openFrameworksDebug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = openFrameworksDebug.a;
+			remoteRef = E4328147138ABC890047C5CB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E4B6FFFD0C3F9AB9008CF71C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n# Copy default icon file into App/Resources\nrsync -aved \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n# Copy libfmod and change install directory for fmod to run\nrsync -aved ../of_v0.9.8_osx_release/libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\";\ninstall_name_tool -change @executable_path/libfmodex.dylib @executable_path/../Frameworks/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\n# Copy GLUT framework (must remove for AppStore submissions)\nrsync -aved ../of_v0.9.8_osx_release/libs/glut/lib/osx/GLUT.framework \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4B69B580A3A1756003C02F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				DB56DE6A271653B7BDD6A38D /* Cone.cpp in Sources */,
+				E405DE8B79A0F03CDB37CD34 /* ControllerThread.cpp in Sources */,
+				530DFDCB51277AF868566AF9 /* DemoState.cpp in Sources */,
+				361FBBA0F8DD19C00B8297A3 /* EditMeshState.cpp in Sources */,
+				83B94A37DA2AE2B8562845A7 /* GeneratorTestBedState.cpp in Sources */,
+				214B774729C376EECA5B35F8 /* GradientGenerator.cpp in Sources */,
+				2FB5B98754FD3018B27CD79C /* LaserEditState.cpp in Sources */,
+				2FCE1626E543781233C2E1BB /* mapping.cpp in Sources */,
+				680102FC95C07F9E0B3861C5 /* PlayState.cpp in Sources */,
+				CCCE87582520E4832F15C342 /* ProjectorEditState.cpp in Sources */,
+				9408F328FCACFB0B0CA0C735 /* PulseGenerator.cpp in Sources */,
+				681ACCE7E5E3E65458E90EAD /* ShaderGenerator.cpp in Sources */,
+				0AE948E6CF3F094A5DFCB7F8 /* SoundReactiveGenerator.cpp in Sources */,
+				96B82021C036C28F4E9272BC /* testMapping.cpp in Sources */,
+				172C10EA45E4A85BF1CFDB66 /* ofSoundPlayerExtended.cpp in Sources */,
+				1D5CD982EF365FCF403CF46A /* ofxAAMultiPitchKlapuriAlgorithm.cpp in Sources */,
+				095C41621D5F473440190C4E /* ofxAAOnsetsAlgorithm.cpp in Sources */,
+				A5788E7CD271D49289483766 /* ofxAudioAnalyzer.cpp in Sources */,
+				61168EA192FF3DC12EEFB30F /* ofxAudioAnalyzerAlgorithms.cpp in Sources */,
+				2D6845539281E884707DDCE7 /* ofxAudioAnalyzerUnit.cpp in Sources */,
+				53FC97C3509677469E6264CF /* ofxAudioDecoder.cpp in Sources */,
+				E899023F8F156CC86A350A4B /* audiodecoderbase.cpp in Sources */,
+				00B97CA960DCC143823AE4E2 /* audiodecodercoreaudio.cpp in Sources */,
+				5C17A462ACA8604873BAC800 /* Cue.cpp in Sources */,
+				1B2D622875E359AF55540532 /* MotionGroup.cpp in Sources */,
+				049ABCDF9E05D33ADAFF33F2 /* Timeline.cpp in Sources */,
+				61DAAE6E571DD7D17E510650 /* TimelineItem.cpp in Sources */,
+				8FB36D5B121AE9E8C1F636DB /* ofxEtherdream.cpp in Sources */,
+				682AA5C3321CBC2AAD6462EA /* etherdream.c in Sources */,
+				B1B03A76EAC1C4090957C201 /* test.c in Sources */,
+				C144FF1EFA82ED04A8ABF4FF /* ofxFXObject.cpp in Sources */,
+				E0212F3890DEFDC15BBDF0C6 /* ofxBaseGui.cpp in Sources */,
+				4B96D886F681F80F6ABDB2C5 /* ofxButton.cpp in Sources */,
+				7B8878B96364B4281D040334 /* ofxGuiGroup.cpp in Sources */,
+				0E50C5A7BF564C8ADF1F5EA1 /* ofxLabel.cpp in Sources */,
+				5E8372419354DC91ACF64158 /* ofxPanel.cpp in Sources */,
+				EA0FEA95DC03ACE3DB82A901 /* ofxSlider.cpp in Sources */,
+				86DB2512D93A40CC26FD5300 /* ofxSliderGroup.cpp in Sources */,
+				EBEAA6AAB36ADDF4AE522D7F /* ofxToggle.cpp in Sources */,
+				8622E35967DA5C1D1304C268 /* ofxOscBundle.cpp in Sources */,
+				223C919C705610D47606FB7C /* ofxOscMessage.cpp in Sources */,
+				9F3E34C6E9C79775EB915198 /* ofxOscParameterSync.cpp in Sources */,
+				3A134F4E01D92B3CEF179509 /* ofxOscReceiver.cpp in Sources */,
+				12FD93178A84B684E2590518 /* ofxOscSender.cpp in Sources */,
+				DF0EED927FAB55076942E95B /* IpEndpointName.cpp in Sources */,
+				7D5E1E199EFB03223EF46095 /* NetworkingUtils.cpp in Sources */,
+				0B271F292050FABFA7BBC215 /* UdpSocket.cpp in Sources */,
+				AC6D5BBB17E1D09ABFC9E04D /* OscOutboundPacketStream.cpp in Sources */,
+				1AF706799014D2D928D844C5 /* OscPrintReceivedElements.cpp in Sources */,
+				F817904347E7A7C5A6CF7FDA /* OscReceivedElements.cpp in Sources */,
+				83288C5273A7C8A4AE831955 /* OscTypes.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4EEB9AC138B136A00A80321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openFrameworks;
+			targetProxy = E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/scheduler,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/lib,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/lib/osx,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/lib,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/lib/osx,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/lib,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/lib/osx,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/include/apple,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/src,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/src,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/detail,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/phrase,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/specialization,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/src,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/src/specialization,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/common,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/driver,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/driver/libetherdream,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/src,
+					../of_v0.9.8_osx_release/addons/ofxFX/src,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/composers,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/filters,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/generative,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/operations,
+					../of_v0.9.8_osx_release/addons/ofxGui/src,
+					../of_v0.9.8_osx_release/addons/ofxIlda/src,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/win32,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc,
+					../of_v0.9.8_osx_release/addons/ofxOsc/src,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-mtune=native",
+				);
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(OF_CORE_LIBS)",
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/lib/osx/libessentia.a,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/lib/osx/libfftw3f.a,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/lib/osx/libsndfile.a,
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E4B69B4F0A3A1720003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/scheduler,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/lib,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/lib/osx,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/lib,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/lib/osx,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/lib,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/lib/osx,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/include/apple,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/src,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/src,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/detail,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/phrase,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/specialization,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/src,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/src/specialization,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/common,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/driver,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/driver/libetherdream,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/src,
+					../of_v0.9.8_osx_release/addons/ofxFX/src,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/composers,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/filters,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/generative,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/operations,
+					../of_v0.9.8_osx_release/addons/ofxGui/src,
+					../of_v0.9.8_osx_release/addons/ofxIlda/src,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/win32,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc,
+					../of_v0.9.8_osx_release/addons/ofxOsc/src,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-mtune=native",
+				);
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(OF_CORE_LIBS)",
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/lib/osx/libessentia.a,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/lib/osx/libfftw3f.a,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/lib/osx/libsndfile.a,
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E4B69B600A3A1757003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					/System/Library/Frameworks,
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../of_v0.9.8_osx_release/libs/glut/lib/osx\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/scheduler,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/lib,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/lib/osx,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/lib,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/lib/osx,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/lib,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/lib/osx,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/include/apple,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/src,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/src,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/detail,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/phrase,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/specialization,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/src,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/src/specialization,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/common,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/driver,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/driver/libetherdream,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/src,
+					../of_v0.9.8_osx_release/addons/ofxFX/src,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/composers,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/filters,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/generative,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/operations,
+					../of_v0.9.8_osx_release/addons/ofxGui/src,
+					../of_v0.9.8_osx_release/addons/ofxIlda/src,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/win32,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc,
+					../of_v0.9.8_osx_release/addons/ofxOsc/src,
+				);
+				ICON = "$(ICON_NAME_DEBUG)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = /Applications;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(OF_CORE_LIBS)",
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/lib/osx/libessentia.a,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/lib/osx/libfftw3f.a,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/lib/osx/libsndfile.a,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)Debug";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E4B69B610A3A1757003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					/System/Library/Frameworks,
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../of_v0.9.8_osx_release/libs/glut/lib/osx\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/scheduler,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/lib,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/lib/osx,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/lib,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/lib/osx,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/lib,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/lib/osx,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/include,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/include/apple,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/libs/src,
+					../of_v0.9.8_osx_release/addons/ofxAudioDecoder/src,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/detail,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/phrase,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/libs/Choreograph/src/choreograph/specialization,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/src,
+					../of_v0.9.8_osx_release/addons/ofxChoreograph/src/specialization,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/common,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/driver,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/libs/driver/libetherdream,
+					../of_v0.9.8_osx_release/addons/ofxEtherdream/src,
+					../of_v0.9.8_osx_release/addons/ofxFX/src,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/composers,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/filters,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/generative,
+					../of_v0.9.8_osx_release/addons/ofxFX/src/operations,
+					../of_v0.9.8_osx_release/addons/ofxGui/src,
+					../of_v0.9.8_osx_release/addons/ofxIlda/src,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/posix,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/ip/win32,
+					../of_v0.9.8_osx_release/addons/ofxOsc/libs/oscpack/src/osc,
+					../of_v0.9.8_osx_release/addons/ofxOsc/src,
+				);
+				ICON = "$(ICON_NAME_RELEASE)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = /Applications;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(OF_CORE_LIBS)",
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/lib/osx/libessentia.a,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/fftw3f/lib/osx/libfftw3f.a,
+					../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/sndfile/lib/osx/libsndfile.a,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "cone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B4E0A3A1720003C02F2 /* Debug */,
+				E4B69B4F0A3A1720003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "cone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B600A3A1757003C02F2 /* Debug */,
+				E4B69B610A3A1757003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4B69B4C0A3A1720003C02F2 /* Project object */;
+}
