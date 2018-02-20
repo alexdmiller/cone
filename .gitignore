@@ -1,11 +1,5 @@
 .DS_Store
 *.app
 cone_data.csv
-cone.xcodeproj
-addons.make
-config.make
-Makefile
-openFrameworks-Info.plist
-Project.xcconfig
 sound
 *.qbs

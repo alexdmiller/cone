@@ -14,6 +14,11 @@ class ProjectorEditState : public EditMeshState {
 public:
   ProjectorEditState(ofMesh* _mesh) : EditMeshState(_mesh) {}
   void draw();
+  
+  std::string getName() {
+    return "projector calibration";
+  }
+
 };
 
 #endif /* projectorEditState_hpp */

@@ -4,6 +4,7 @@
 #include "AppState.hpp"
 #include "Cone.hpp"
 #include "ofxAudioAnalyzer.h"
+#include "Generator.hpp"
 
 #ifndef ether
 #define ether
@@ -22,9 +23,11 @@ public:
   void mousePressed(int x, int y, int button);
   void mouseReleased(int x, int y, int button);
   void audioIn(ofSoundBuffer &buffer);
+  void buttonPressed();
   
 private:
   Cone* cone;
+  vector<Generator*> generators;
   ofxEtherdream etherdream;
   ofxIlda::Frame ildaFrame;
   AppState* state;

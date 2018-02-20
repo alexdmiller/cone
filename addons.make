@@ -3,5 +3,6 @@ ofxAudioDecoder
 ofxChoreograph
 ofxEtherdream
 ofxFX
+ofxGui
 ofxIlda
 ofxOsc

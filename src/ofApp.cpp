@@ -4,6 +4,11 @@
 #include "PlayState.hpp"
 #include "DemoState.hpp"
 #include "Cone.hpp"
+#include "SoundReactiveGenerator.hpp"
+#include "ShaderGenerator.hpp"
+#include "PulseGenerator.hpp"
+#include "GradientGenerator.hpp"
+#include "GeneratorTestBedState.hpp"
 
 #define CONE_FILE "cone_data.csv"
 #define CODE_RADIUS 700
@@ -24,21 +29,31 @@ void ofApp::setup() {
   
   ofToggleFullscreen();
   
+  
+  generators.push_back(new SoundReactiveGenerator(&audioAnalyzer));
+  generators.push_back(new ShaderGenerator());
+  generators.push_back(new PulseGenerator());
+  generators.push_back(new GradientGenerator());
+    
   if (ofFile::doesFileExist(CONE_FILE)) {
     cone = Cone::fromFile(CONE_FILE);
   } else {
     cone = Cone::createCone(CODE_RADIUS);
   }
   
-  state = new PlayState(cone, &ildaFrame, etherdream.stateIsFound(), &audioAnalyzer);
+  state = new GeneratorTestBedState(cone, &generators, &ildaFrame, etherdream.stateIsFound(), &audioAnalyzer);
 }
 
 void ofApp::audioIn(ofSoundBuffer &buffer) {
   audioAnalyzer.analyze(buffer);
 }
 
-void ofApp::draw() {  
-  state->draw();
+void ofApp::draw() {
+  if (state != nil) {
+    state->draw();
+    ofDrawBitmapString("current state: " + state->getName(), 10, ofGetHeight() - 30);
+    ofDrawBitmapString("T: test bed / [SPACE]: run / P: projector calibration / L: laser calibration / D: demo", 10, ofGetHeight() - 10);
+  }
   
   if (etherdream.stateIsFound()) {
     etherdream.setPoints(ildaFrame);
@@ -48,7 +63,12 @@ void ofApp::draw() {
   }
 }
 
-void ofApp::keyPressed(int key){
+void ofApp::keyPressed(int key) {
+  if (key == 't') {
+    delete state;
+    state = new GeneratorTestBedState(cone, &generators, &ildaFrame, etherdream.stateIsFound(), &audioAnalyzer);
+  }
+  
   if (key == 'p') {
     delete state;
     state = new ProjectorEditState(cone->getProjectedMesh());
@@ -61,27 +81,35 @@ void ofApp::keyPressed(int key){
   
   if (key == ' ') {
     delete state;
-    state = new PlayState(cone, &ildaFrame, etherdream.stateIsFound(), &audioAnalyzer);
+    state = new PlayState(cone, &generators, &ildaFrame, etherdream.stateIsFound(), &audioAnalyzer);
   }
   
   if (key == 'd') {
     delete state;
     state = new DemoState(cone, &ildaFrame, etherdream.stateIsFound(), &audioAnalyzer);
   }
-    
-  state->keyPressed(key);
+  
+  if (state != nil) {
+    state->keyPressed(key);
+  }
 }
 
 void ofApp::mouseDragged(int x, int y, int button) {
-  state->mouseDragged((float) x, (float) y, button);
+  if (state != nil) {
+    state->mouseDragged((float) x, (float) y, button);
+  }
 }
 
 void ofApp::mousePressed(int x, int y, int button) {
-  state->mousePressed((float) x, (float) y, button);
+  if (state != nil) {
+    state->mousePressed((float) x, (float) y, button);
+  }
 }
 
 void ofApp::mouseReleased(int x, int y, int button){
-  state->mouseReleased((float) x, (float) y, button);
+  if (state != nil) {
+    state->mouseReleased((float) x, (float) y, button);
+  }
 }
 
 

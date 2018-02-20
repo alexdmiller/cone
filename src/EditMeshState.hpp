@@ -17,7 +17,10 @@ public:
   void mouseDragged(float x, float y, int button);
   void mousePressed(float x, float y, int button);
   void mouseReleased(float x, float y, int button);
-  
+  string getName() {
+    return "edit mesh";
+  }
+
 protected:
   void mousePressed(float x, float y, int button, float radius);
 

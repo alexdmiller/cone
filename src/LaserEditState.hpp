@@ -26,6 +26,10 @@ public:
   void mouseDragged(float x, float y, int button);
   void mousePressed(float x, float y, int button);
   void keyPressed(int key);
+  
+  string getName() {
+    return "laser calibration";
+  }
 
 private:
   ofxIlda::Frame* ildaFrame;

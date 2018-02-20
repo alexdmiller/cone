@@ -19,11 +19,16 @@ class PlayState : public AppState {
 public:
   PlayState(
             Cone* _cone,
+            vector<Generator*>* generators,
             ofxIlda::Frame* _ildaFrame,
             bool _map,
             ofxAudioAnalyzer* audioAnalyzer);
   void draw();
   void keyPressed(int key);
+  
+  string getName() {
+    return "run";
+  }
   
 protected:
   virtual void drawSynths();
@@ -31,11 +36,11 @@ protected:
   ofFbo canvas;
   ofxIlda::Frame* ildaFrame;
   Cone* cone;
-  
-private:
-  vector<Generator*> generators;
-  ofxOscReceiver receiver;
   ofxAudioAnalyzer* audioAnalyzer;
+  vector<Generator*>* generators;
+
+private:
+  ofxOscReceiver receiver;
   bool map = true;
 };
 

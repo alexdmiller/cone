@@ -1,5 +1,10 @@
 #include "GradientGenerator.hpp"
 
+GradientGenerator::GradientGenerator() : Generator("gradient") {
+  addParameter(innerBrightness.set("inner_brightness", 0, 0, 1));
+  addParameter(outerBrightness.set("outer_brightness", 0, 0, 1));
+};
+
 void GradientGenerator::draw(Cone* cone, ofxIlda::Frame* ildaFrame) {
   if (innerBrightness > 0 || outerBrightness > 0) {
     cone->getUnmappedMesh()->clearColors();

@@ -24,8 +24,15 @@
 class DemoState : public PlayState {
 
 public:
-  DemoState(Cone* _cone, ofxIlda::Frame* _ildaFrame, bool _map, ofxAudioAnalyzer* _audioAnalyzer) : PlayState(_cone, _ildaFrame, _map, _audioAnalyzer) {};
+  DemoState(Cone* _cone,
+            ofxIlda::Frame* _ildaFrame,
+            bool _map,
+            ofxAudioAnalyzer* _audioAnalyzer) : PlayState(_cone, nil, _ildaFrame, _map, _audioAnalyzer) {};
   
+  string getName() {
+    return "demo";
+  }
+
 private:
   void drawSynths();
   int mode = 0;

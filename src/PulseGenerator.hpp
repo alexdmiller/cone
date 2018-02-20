@@ -6,6 +6,7 @@
 
 class PulseGenerator : public Generator {
 public:
+  PulseGenerator() : Generator("pulses") {};
   void draw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
   void onOscMessage(ofxOscMessage* message);
 

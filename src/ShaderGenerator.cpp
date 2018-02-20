@@ -1,6 +1,6 @@
 #include "ShaderGenerator.hpp"
 
-ShaderGenerator::ShaderGenerator() {
+ShaderGenerator::ShaderGenerator() : Generator("shader") {
   shader.load("shaders/test_shader");
 }
 
