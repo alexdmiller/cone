@@ -9,6 +9,7 @@ class ofApp;
 class AppState {
 
 public:
+  virtual ~AppState() {}
   virtual void draw() {};
   virtual void mouseMoved(float x, float y) {};
   virtual void mouseDragged(float x, float y, int button) {};

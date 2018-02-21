@@ -10,7 +10,3 @@ void ShaderGenerator::draw(Cone* cone, ofxIlda::Frame* ildaFrame) {
   cone->getUnmappedMesh()->draw();
   shader.end();
 }
-
-void ShaderGenerator::onOscMessage(ofxOscMessage* message) {
-
-}

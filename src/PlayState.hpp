@@ -40,8 +40,8 @@ protected:
   vector<Generator*>* generators;
 
 private:
-  ofxOscReceiver receiver;
   bool map = true;
+
 };
 
 #endif /* PlayState_hpp */

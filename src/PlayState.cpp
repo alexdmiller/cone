@@ -17,20 +17,9 @@ PlayState::PlayState(
   canvas.begin();
   ofClear(0, 0, 0);
   canvas.end();
-  
-  receiver.setup(12345);
 }
 
 void PlayState::draw() {
-  while (receiver.hasWaitingMessages()) {
-    ofxOscMessage message;
-    receiver.getNextMessage(&message);
-
-    for (auto generator : (*generators)) {
-      generator->onOscMessage(&message);
-    }
-  }
-  
   ofBackground(0, 0, 0);
   ildaFrame->clear();
 

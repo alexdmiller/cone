@@ -23,6 +23,7 @@ public:
             ofxIlda::Frame* _ildaFrame,
             bool _map,
             ofxAudioAnalyzer* audioAnalyzer);
+  ~GeneratorTestBedState();
   void draw();
   void keyPressed(int key);
   void drawSynths();
@@ -32,12 +33,9 @@ public:
 
 private:
   int selectedGenerator;
-  
-  // gui
   ofxPanel generatorPanel;
   ofxGuiGroup generatorList;
   ofxPanel parameterPanel;
-
   vector<ofxLabel*> labels;
   
   void selectGenerator(int index);

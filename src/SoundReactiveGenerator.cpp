@@ -18,7 +18,3 @@ void SoundReactiveGenerator::draw(Cone* cone, ofxIlda::Frame* ildaFrame) {
   
   cone->getUnmappedMesh()->draw();
 }
-
-void SoundReactiveGenerator::onOscMessage(ofxOscMessage* message) {
-  
-}

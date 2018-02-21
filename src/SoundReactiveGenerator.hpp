@@ -9,7 +9,7 @@ class SoundReactiveGenerator : public Generator {
 public:
   SoundReactiveGenerator(ofxAudioAnalyzer* _audioAnalyzer);
   void draw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
-  void onOscMessage(ofxOscMessage* message);
+
 private:
   ofxAudioAnalyzer* audioAnalyzer;
 };

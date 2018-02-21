@@ -8,7 +8,6 @@ class GradientGenerator : public Generator {
 public:
   GradientGenerator();
   void draw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
-  void onOscMessage(ofxOscMessage* message);
 
 private:
   ofParameter<float> innerBrightness = 0;

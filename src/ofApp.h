@@ -5,6 +5,7 @@
 #include "Cone.hpp"
 #include "ofxAudioAnalyzer.h"
 #include "Generator.hpp"
+#include "OscRemoteControl.hpp"
 
 #ifndef ether
 #define ether
@@ -26,6 +27,7 @@ public:
   void buttonPressed();
   
 private:
+  OscRemoteControl remote;
   Cone* cone;
   vector<Generator*> generators;
   ofxEtherdream etherdream;

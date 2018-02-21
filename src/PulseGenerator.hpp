@@ -6,14 +6,15 @@
 
 class PulseGenerator : public Generator {
 public:
-  PulseGenerator() : Generator("pulses") {};
+  PulseGenerator();
   void draw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
-  void onOscMessage(ofxOscMessage* message);
-
+  void onPulse(bool & value);
+  
 private:
   vector<float> pulses;
-  float pulseSpeed = 1;
-  ofColor color;
+  ofParameter<float> pulseSpeed = 1;
+  ofParameter<ofColor> color;
+  ofParameter<bool> pulse;
 };
 
 #endif /* PulseGenerator_hpp */

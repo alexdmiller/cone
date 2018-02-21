@@ -19,10 +19,3 @@ void GradientGenerator::draw(Cone* cone, ofxIlda::Frame* ildaFrame) {
   }
 }
 
-void GradientGenerator::onOscMessage(ofxOscMessage* message) {
-  if (message->getAddress() == "/gradient/inner") {
-    innerBrightness = message->getArgAsFloat(0);
-  } else if (message->getAddress() == "/gradient/outer") {
-    outerBrightness = message->getArgAsFloat(0);
-  }
-}

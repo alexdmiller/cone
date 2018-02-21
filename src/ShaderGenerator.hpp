@@ -8,7 +8,6 @@ class ShaderGenerator : public Generator {
 public:
   ShaderGenerator();
   void draw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
-  void onOscMessage(ofxOscMessage* message);
   
 private:
   ofShader shader;

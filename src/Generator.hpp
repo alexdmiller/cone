@@ -22,8 +22,8 @@ public:
     return name;
   }
   
-  ofParameterGroup getParameters() {
-    return parameters;
+  ofParameterGroup* getParameters() {
+    return &parameters;
   }
   
   void addParameter(ofAbstractParameter & param) {
@@ -31,7 +31,6 @@ public:
   }
   
   virtual void draw(Cone* _cone, ofxIlda::Frame* _ildaFrame) {};
-  virtual void onOscMessage(ofxOscMessage* message) {};
   
 private:
   string name;

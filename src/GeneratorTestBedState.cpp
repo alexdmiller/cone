@@ -26,6 +26,16 @@ GeneratorTestBedState::GeneratorTestBedState(
   selectGenerator(0);
 }
 
+GeneratorTestBedState::~GeneratorTestBedState() {
+  generatorPanel.unregisterMouseEvents();
+  generatorList.unregisterMouseEvents();
+  parameterPanel.unregisterMouseEvents();
+
+  for (auto label : labels) {
+    delete label;
+  }
+}
+
 void GeneratorTestBedState::draw() {
   PlayState::draw();
   generatorPanel.draw();
@@ -50,7 +60,6 @@ void GeneratorTestBedState::selectGenerator(int index) {
     label->setBackgroundColor(ofFloatColor(0));
   }
   
-  parameterPanel.add(generators->at(selectedGenerator)->getParameters());
-  
+  parameterPanel.add(*generators->at(selectedGenerator)->getParameters());
   generatorList.getControl(index)->setBackgroundColor(ofFloatColor(0.5));
 }

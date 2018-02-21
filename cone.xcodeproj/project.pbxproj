@@ -50,6 +50,8 @@
 		AC6D5BBB17E1D09ABFC9E04D /* OscOutboundPacketStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F6DF459BD01B2A47ED3583A /* OscOutboundPacketStream.cpp */; };
 		B1B03A76EAC1C4090957C201 /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = C04BFFAE18A7BA4072B5C6B9 /* test.c */; };
 		C144FF1EFA82ED04A8ABF4FF /* ofxFXObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09EA58AA4EFEA4945AF9CACC /* ofxFXObject.cpp */; };
+		C617359B203DE537006392F0 /* OscRemoteControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6173599203DE537006392F0 /* OscRemoteControl.cpp */; };
+		C617359D203DEEE7006392F0 /* utils.h in Sources */ = {isa = PBXBuildFile; fileRef = C617359C203DEEE7006392F0 /* utils.h */; };
 		CCCE87582520E4832F15C342 /* ProjectorEditState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 218611AE897D6A358C4FFF80 /* ProjectorEditState.cpp */; };
 		DB56DE6A271653B7BDD6A38D /* Cone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C2A7821E86493C47B39B9 /* Cone.cpp */; };
 		DF0EED927FAB55076942E95B /* IpEndpointName.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6438FF73945762D014C5B7AD /* IpEndpointName.cpp */; };
@@ -306,6 +308,9 @@
 		C24397344E8FE75CF50CC1E2 /* ofxOscArg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscArg.h; path = ../of_v0.9.8_osx_release/addons/ofxOsc/src/ofxOscArg.h; sourceTree = SOURCE_ROOT; };
 		C274357DA830C233E555BC1E /* ofxIldaFrame.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxIldaFrame.h; path = ../of_v0.9.8_osx_release/addons/ofxIlda/src/ofxIldaFrame.h; sourceTree = SOURCE_ROOT; };
 		C356B791027AF96C951B7CE0 /* asciidagparser.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = asciidagparser.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/asciidagparser.h; sourceTree = SOURCE_ROOT; };
+		C6173599203DE537006392F0 /* OscRemoteControl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OscRemoteControl.cpp; sourceTree = "<group>"; };
+		C617359A203DE537006392F0 /* OscRemoteControl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OscRemoteControl.hpp; sourceTree = "<group>"; };
+		C617359C203DEEE7006392F0 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 		C63EE7EDA12B7D84435496DC /* mapping.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = mapping.cpp; path = src/mapping.cpp; sourceTree = SOURCE_ROOT; };
 		C9651D51CF110EC49DABB730 /* ofSoundPlayerExtended.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofSoundPlayerExtended.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src/ofSoundPlayerExtended.h; sourceTree = SOURCE_ROOT; };
 		C9BB351CB11724E98667ECAB /* ShaderGenerator.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ShaderGenerator.hpp; path = src/ShaderGenerator.hpp; sourceTree = SOURCE_ROOT; };
@@ -1118,13 +1123,16 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C6A84B81203BB573007E3AEF /* cone */,
 				C6A84B82203BB587007E3AEF /* controller */,
+				C6A84B83203BB595007E3AEF /* generator */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				C6173599203DE537006392F0 /* OscRemoteControl.cpp */,
+				C617359A203DE537006392F0 /* OscRemoteControl.hpp */,
 				C6A84B80203BB565007E3AEF /* states */,
-				C6A84B81203BB573007E3AEF /* cone */,
-				C6A84B83203BB595007E3AEF /* generator */,
+				C617359C203DEEE7006392F0 /* utils.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -1282,6 +1290,7 @@
 				E405DE8B79A0F03CDB37CD34 /* ControllerThread.cpp in Sources */,
 				530DFDCB51277AF868566AF9 /* DemoState.cpp in Sources */,
 				361FBBA0F8DD19C00B8297A3 /* EditMeshState.cpp in Sources */,
+				C617359D203DEEE7006392F0 /* utils.h in Sources */,
 				83B94A37DA2AE2B8562845A7 /* GeneratorTestBedState.cpp in Sources */,
 				214B774729C376EECA5B35F8 /* GradientGenerator.cpp in Sources */,
 				2FB5B98754FD3018B27CD79C /* LaserEditState.cpp in Sources */,
@@ -1307,6 +1316,7 @@
 				61DAAE6E571DD7D17E510650 /* TimelineItem.cpp in Sources */,
 				8FB36D5B121AE9E8C1F636DB /* ofxEtherdream.cpp in Sources */,
 				682AA5C3321CBC2AAD6462EA /* etherdream.c in Sources */,
+				C617359B203DE537006392F0 /* OscRemoteControl.cpp in Sources */,
 				B1B03A76EAC1C4090957C201 /* test.c in Sources */,
 				C144FF1EFA82ED04A8ABF4FF /* ofxFXObject.cpp in Sources */,
 				E0212F3890DEFDC15BBDF0C6 /* ofxBaseGui.cpp in Sources */,

@@ -9,6 +9,7 @@
 #include "PulseGenerator.hpp"
 #include "GradientGenerator.hpp"
 #include "GeneratorTestBedState.hpp"
+#include "ofParameter.h"
 
 #define CONE_FILE "cone_data.csv"
 #define CODE_RADIUS 700
@@ -27,14 +28,22 @@ void ofApp::setup() {
   etherdream.setup();
   etherdream.setPPS(30000);
   
-  ofToggleFullscreen();
+  remote.setup(9999);
   
+  ofToggleFullscreen();
   
   generators.push_back(new SoundReactiveGenerator(&audioAnalyzer));
   generators.push_back(new ShaderGenerator());
   generators.push_back(new PulseGenerator());
   generators.push_back(new GradientGenerator());
-    
+  
+  for (auto generator : generators) {
+    ofParameterGroup* group = generator->getParameters();
+    for (auto parameter : *group) {
+      remote.add("/" + group->getName() + "/" + parameter->getName(), parameter.get());
+    }
+  }
+  
   if (ofFile::doesFileExist(CONE_FILE)) {
     cone = Cone::fromFile(CONE_FILE);
   } else {
@@ -49,6 +58,8 @@ void ofApp::audioIn(ofSoundBuffer &buffer) {
 }
 
 void ofApp::draw() {
+  remote.update();
+  
   if (state != nil) {
     state->draw();
     ofDrawBitmapString("current state: " + state->getName(), 10, ofGetHeight() - 30);
