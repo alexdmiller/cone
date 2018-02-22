@@ -4,7 +4,7 @@ PulseGenerator::PulseGenerator() : Generator("pulse") {
   addParameter(pulseSpeed.set("speed", 5, 0, 10));
   addParameter(color.set("color", ofColor(100), ofColor(0), ofColor(255)));
   addParameter(pulse.set("pulse", "pulse"));
-  
+
   pulse.addListener(this, &PulseGenerator::onPulse);
 };
 

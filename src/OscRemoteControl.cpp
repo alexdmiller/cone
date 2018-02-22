@@ -19,8 +19,16 @@ void OscRemoteControl::update() {
     receiver.getNextMessage(&message);
     std::string address = message.getAddress();
     ofAbstractParameter* parameter = addressToParameter[address];
-    if (parameter->type() == typeid(ofParameter<float>).name()) {
-      parameter->cast<float>() = message.getArgAsFloat(0);
+    if (parameter != nil ) {
+      if (parameter->type() == typeid(ofParameter<float>).name()) {
+        parameter->cast<float>() = message.getArgAsFloat(0);
+      } else if (parameter->type() == typeid(ofParameter<bool>).name()) {
+        parameter->cast<bool>() = message.getArgAsBool(0);
+      } else if (parameter->type() == typeid(ofParameter<int>).name()) {
+        parameter->cast<int>() = message.getArgAsInt(0);
+      }
+    } else {
+      cout << "cannot find parameter for address " << address;
     }
   }
 }
