@@ -7,7 +7,9 @@
 class GradientGenerator : public Generator {
 public:
   GradientGenerator();
-  void draw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
+  
+protected:
+  void doDraw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
 
 private:
   ofParameter<float> innerBrightness = 0;

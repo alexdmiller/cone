@@ -7,7 +7,9 @@
 class ShaderGenerator : public Generator {
 public:
   ShaderGenerator();
-  void draw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
+  
+protected:
+  void doDraw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
   
 private:
   ofShader shader;

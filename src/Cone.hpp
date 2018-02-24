@@ -1,11 +1,3 @@
-//
-//  Cone.hpp
-//  myInnocentSketch
-//
-//  Created by Alex on 12/4/17.
-//
-//
-
 #ifndef Cone_hpp
 #define Cone_hpp
 

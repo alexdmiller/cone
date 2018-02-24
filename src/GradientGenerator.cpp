@@ -5,7 +5,7 @@ GradientGenerator::GradientGenerator() : Generator("gradient") {
   addParameter(outerBrightness.set("outer_brightness", 0, 0, 1));
 };
 
-void GradientGenerator::draw(Cone* cone, ofxIlda::Frame* ildaFrame) {
+void GradientGenerator::doDraw(Cone* cone, ofxIlda::Frame* ildaFrame) {
   if (innerBrightness > 0 || outerBrightness > 0) {
     cone->getUnmappedMesh()->clearColors();
     cone->getUnmappedMesh()->addColor(ofFloatColor(1,1,1,innerBrightness));

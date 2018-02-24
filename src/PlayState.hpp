@@ -6,6 +6,7 @@
 #include "ofMain.h"
 #include "Cone.hpp"
 #include "Generator.hpp"
+#include "GeneratorChannel.hpp"
 #include "ofxOsc.h"
 #include "ofxAudioAnalyzer.h"
 
@@ -18,8 +19,7 @@ class PlayState : public AppState {
 
 public:
   PlayState(
-            Cone* _cone,
-            vector<Generator*>* generators,
+            GeneratorChannel & channel,
             ofxIlda::Frame* _ildaFrame,
             bool _map,
             ofxAudioAnalyzer* audioAnalyzer);
@@ -31,14 +31,10 @@ public:
   }
   
 protected:
-  virtual void drawSynths();
-
   ofFbo canvas;
   ofxIlda::Frame* ildaFrame;
-  Cone* cone;
   ofxAudioAnalyzer* audioAnalyzer;
-  vector<Generator*>* generators;
-
+  GeneratorChannel & channel;
 private:
   bool map = true;
 

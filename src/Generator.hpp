@@ -30,11 +30,27 @@ public:
     parameters.add(param);
   }
   
-  virtual void draw(Cone* _cone, ofxIlda::Frame* _ildaFrame) {};
+  void mute() {
+    muted = true;
+  }
+  
+  void unmute() {
+    muted = false;
+  }
+  
+  void draw(Cone* cone, ofxIlda::Frame* ildaFrame) {
+    if (!muted) {
+      doDraw(cone, ildaFrame);
+    }
+  }
+  
+protected:
+  virtual void doDraw(Cone* _cone, ofxIlda::Frame* _ildaFrame) {};
   
 private:
   string name;
   ofParameterGroup parameters;
+  bool muted;
 };
 
 #endif /* VizSynth_h */

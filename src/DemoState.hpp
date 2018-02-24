@@ -15,28 +15,29 @@
 #include "Cone.hpp"
 #include "ofxOsc.h"
 #include "PlayState.hpp"
+#include "DemoGenerator.hpp"
 
 #ifndef ether
 #define ether
 #include "ofxEtherdream.h"
 #endif
 
-class DemoState : public PlayState {
+class DemoState : public AppState {
 
 public:
   DemoState(Cone* _cone,
             ofxIlda::Frame* _ildaFrame,
-            bool _map,
-            ofxAudioAnalyzer* _audioAnalyzer) : PlayState(_cone, nil, _ildaFrame, _map, _audioAnalyzer) {};
-  
+            bool _map) : cone(_cone), ildaFrame(_ildaFrame), map(_map) {};
+  void draw();
   string getName() {
     return "demo";
   }
 
 private:
-  void drawSynths();
-  int mode = 0;
-  float t = 0;
+  Cone* cone;
+  DemoGenerator demoGenerator;
+  ofxIlda::Frame* ildaFrame;
+  bool map;
 };
 
 #endif /* PlayState_hpp */

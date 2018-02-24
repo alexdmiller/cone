@@ -6,6 +6,7 @@
 #include "ofxAudioAnalyzer.h"
 #include "Generator.hpp"
 #include "OscRemoteControl.hpp"
+#include "GeneratorChannel.hpp"
 
 #ifndef ether
 #define ether
@@ -28,11 +29,12 @@ public:
   
 private:
   OscRemoteControl remote;
-  Cone* cone;
-  vector<Generator*> generators;
   ofxEtherdream etherdream;
   ofxIlda::Frame ildaFrame;
   AppState* state;
+  
+  Cone* cone;
+  GeneratorChannel* generatorChannel;
   
   ofSoundStream soundStream;
   ofxAudioAnalyzer audioAnalyzer;

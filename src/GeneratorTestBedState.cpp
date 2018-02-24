@@ -1,27 +1,27 @@
 #include "GeneratorTestBedState.hpp"
+#include "generator_utils.h"
 
 GeneratorTestBedState::GeneratorTestBedState(
-                     Cone* _cone,
-                     vector<Generator*>* _generators,
-                     ofxIlda::Frame* _ildaFrame,
-                     bool _map,
-                     ofxAudioAnalyzer* _audioAnalyzer): PlayState(_cone, _generators, _ildaFrame, _map, _audioAnalyzer) {
-
+                                             GeneratorChannel & _channel,
+                                             ofxIlda::Frame* _ildaFrame,
+                                             bool _map,
+                                             ofxAudioAnalyzer & _audioAnalyzer):
+channel(_channel), ildaFrame(_ildaFrame), map(_map), audioAnalyzer(_audioAnalyzer) {
   generatorList.setup();
   generatorList.setName("generators");
   
-  for (int i = 0; i < generators->size(); i++) {
+  for (int i = 0; i < channel.getGenerators().size(); i++) {
     ofxLabel* label = new ofxLabel();
-    generatorList.add(label->setup(generators->at(i)->getName()));
+    generatorList.add(label->setup(channel.getGenerators().at(i)->getName()));
     labels.push_back(label);
   }
   
   generatorPanel.setup();
-  generatorPanel.setPosition(cone->getRadius() * 2, 20);
+  generatorPanel.setPosition(channel.getCone()->getRadius() * 2, 20);
   generatorPanel.add(&generatorList);
   
   parameterPanel.setup();
-  parameterPanel.setPosition(cone->getRadius() * 2 + 200, 20);
+  parameterPanel.setPosition(channel.getCone()->getRadius() * 2 + 200, 20);
 
   selectGenerator(0);
 }
@@ -37,29 +37,28 @@ GeneratorTestBedState::~GeneratorTestBedState() {
 }
 
 void GeneratorTestBedState::draw() {
-  PlayState::draw();
+  channel.draw(ildaFrame, map);
   generatorPanel.draw();
   parameterPanel.draw();
 }
 
-void GeneratorTestBedState::drawSynths() {
-  generators->at(selectedGenerator)->draw(cone, ildaFrame);
-}
-
 void GeneratorTestBedState::keyPressed(int key) {
   if (key == 359) {
-    selectGenerator((selectedGenerator + 1) % generators->size());
+    selectGenerator((selectedGenerator + 1) % channel.numGenerators());
   }
 }
 
 void GeneratorTestBedState::selectGenerator(int index) {
+  channel.mute();
   parameterPanel.clear();
-  
+
   selectedGenerator = index;
+  channel.unmute(selectedGenerator);
+
   for (auto label : labels) {
     label->setBackgroundColor(ofFloatColor(0));
   }
   
-  parameterPanel.add(*generators->at(selectedGenerator)->getParameters());
+  parameterPanel.add(*channel.getGenerator(selectedGenerator)->getParameters());
   generatorList.getControl(index)->setBackgroundColor(ofFloatColor(0.5));
 }

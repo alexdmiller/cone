@@ -7,11 +7,11 @@
 
 class SoundReactiveGenerator : public Generator {
 public:
-  SoundReactiveGenerator(ofxAudioAnalyzer* _audioAnalyzer);
-  void draw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
-
+  SoundReactiveGenerator(ofxAudioAnalyzer & _audioAnalyzer);
+protected:
+  void doDraw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
 private:
-  ofxAudioAnalyzer* audioAnalyzer;
+  ofxAudioAnalyzer & audioAnalyzer;
 };
 
 #endif /* SoundReactiveGenerator_hpp */

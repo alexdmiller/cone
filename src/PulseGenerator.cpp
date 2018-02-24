@@ -12,7 +12,7 @@ void PulseGenerator::onPulse(bool & value) {
   pulses.push_back(0);
 }
 
-void PulseGenerator::draw(Cone* cone, ofxIlda::Frame* ildaFrame) {
+void PulseGenerator::doDraw(Cone* cone, ofxIlda::Frame* ildaFrame) {
   ildaFrame->params.output.color = ofFloatColor(color.get());
   for (int i = pulses.size() - 1; i >= 0; i--) {
     if (pulses[i] > cone->getRadius()) {

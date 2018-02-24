@@ -32,25 +32,28 @@ void ofApp::setup() {
   
   ofToggleFullscreen();
   
-  generators.push_back(new SoundReactiveGenerator(&audioAnalyzer));
-  generators.push_back(new ShaderGenerator());
-  generators.push_back(new PulseGenerator());
-  generators.push_back(new GradientGenerator());
-  
-  for (auto generator : generators) {
-    ofParameterGroup* group = generator->getParameters();
-    for (auto parameter : *group) {
-      remote.add("/" + group->getName() + "/" + parameter->getName(), parameter.get());
-    }
-  }
-  
   if (ofFile::doesFileExist(CONE_FILE)) {
     cone = Cone::fromFile(CONE_FILE);
   } else {
     cone = Cone::createCone(CODE_RADIUS);
   }
+
+  // TODO: refactor this.
+  generatorChannel = new GeneratorChannel(*cone);
   
-  state = new GeneratorTestBedState(cone, &generators, &ildaFrame, etherdream.stateIsFound(), &audioAnalyzer);
+  generatorChannel->addGenerator(new SoundReactiveGenerator(audioAnalyzer));
+  generatorChannel->addGenerator(new ShaderGenerator());
+  generatorChannel->addGenerator(new PulseGenerator());
+  generatorChannel->addGenerator(new GradientGenerator());
+    
+  for (auto generator : generatorChannel->getGenerators()) {
+    ofParameterGroup* group = generator->getParameters();
+    for (auto parameter : *group) {
+      remote.add("/" + group->getName() + "/" + parameter->getName(), parameter.get());
+    }
+  }
+
+  state = new GeneratorTestBedState(*generatorChannel, &ildaFrame, etherdream.stateIsFound(), audioAnalyzer);
 }
 
 void ofApp::audioIn(ofSoundBuffer &buffer) {
@@ -74,30 +77,32 @@ void ofApp::draw() {
   }
 }
 
+
+
 void ofApp::keyPressed(int key) {
   if (key == 't') {
     delete state;
-    state = new GeneratorTestBedState(cone, &generators, &ildaFrame, etherdream.stateIsFound(), &audioAnalyzer);
+    state = new GeneratorTestBedState(*generatorChannel, &ildaFrame, etherdream.stateIsFound(), audioAnalyzer);
   }
   
   if (key == 'p') {
     delete state;
-    state = new ProjectorEditState(cone->getProjectedMesh());
+    state = new ProjectorEditState(generatorChannel->getCone()->getProjectedMesh());
   }
   
   if (key == 'l') {
     delete state;
-    state = new LaserEditState(cone->getLaserMesh(), &ildaFrame);
+    state = new LaserEditState(generatorChannel->getCone()->getLaserMesh(), &ildaFrame);
   }
   
   if (key == ' ') {
     delete state;
-    state = new PlayState(cone, &generators, &ildaFrame, etherdream.stateIsFound(), &audioAnalyzer);
+    state = new PlayState(*generatorChannel, &ildaFrame, etherdream.stateIsFound(), &audioAnalyzer);
   }
   
   if (key == 'd') {
     delete state;
-    state = new DemoState(cone, &ildaFrame, etherdream.stateIsFound(), &audioAnalyzer);
+    state = new DemoState(cone, &ildaFrame, etherdream.stateIsFound());
   }
   
   if (state != nil) {
@@ -125,6 +130,6 @@ void ofApp::mouseReleased(int x, int y, int button){
 
 
 void ofApp::exit() {
-  cone->save(CONE_FILE);
+  generatorChannel->getCone()->save(CONE_FILE);
 }
 

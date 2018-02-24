@@ -7,8 +7,10 @@
 class PulseGenerator : public Generator {
 public:
   PulseGenerator();
-  void draw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
   void onPulse(bool & value);
+
+protected:
+  void doDraw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
   
 private:
   vector<float> pulses;

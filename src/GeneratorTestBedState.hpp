@@ -8,37 +8,40 @@
 #include "ofxAudioAnalyzer.h"
 #include "Cone.hpp"
 #include "ofxGui.h"
-#include "PlayState.hpp"
+#include "GeneratorChannel.hpp"
 
 #ifndef ether
 #define ether
 #include "ofxEtherdream.h"
 #endif
 
-class GeneratorTestBedState : public PlayState {
+class GeneratorTestBedState : public AppState {
 public:
   GeneratorTestBedState(
-            Cone* _cone,
-            vector<Generator*>* generators,
+            GeneratorChannel & _channel,
             ofxIlda::Frame* _ildaFrame,
             bool _map,
-            ofxAudioAnalyzer* audioAnalyzer);
+            ofxAudioAnalyzer & audioAnalyzer);
   ~GeneratorTestBedState();
   void draw();
   void keyPressed(int key);
-  void drawSynths();
   string getName() {
     return "test bed";
   }
 
 private:
+  void selectGenerator(int index);
+
+  bool map;
+  ofxAudioAnalyzer & audioAnalyzer;
+  ofxIlda::Frame* ildaFrame;
+  
+  GeneratorChannel & channel;
   int selectedGenerator;
   ofxPanel generatorPanel;
-  ofxGuiGroup generatorList;
   ofxPanel parameterPanel;
+  ofxGuiGroup generatorList;
   vector<ofxLabel*> labels;
-  
-  void selectGenerator(int index);
 };
 
 #endif /* GeneratorTestBedState_hpp */
