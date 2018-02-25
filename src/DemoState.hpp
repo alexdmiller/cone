@@ -25,16 +25,17 @@
 class DemoState : public AppState {
 
 public:
-  DemoState(Cone* _cone,
+  DemoState(GeneratorChannel & _channel,
             ofxIlda::Frame* _ildaFrame,
-            bool _map) : cone(_cone), ildaFrame(_ildaFrame), map(_map) {};
+            bool _map);
+  ~DemoState();
   void draw();
   string getName() {
     return "demo";
   }
 
 private:
-  Cone* cone;
+  GeneratorChannel & channel;
   DemoGenerator demoGenerator;
   ofxIlda::Frame* ildaFrame;
   bool map;

@@ -32,20 +32,19 @@ void ofApp::setup() {
   
   ofToggleFullscreen();
   
+  Cone* cone;
   if (ofFile::doesFileExist(CONE_FILE)) {
     cone = Cone::fromFile(CONE_FILE);
   } else {
     cone = Cone::createCone(CODE_RADIUS);
   }
 
-  // TODO: refactor this.
   generatorChannel = new GeneratorChannel(*cone);
-  
   generatorChannel->addGenerator(new SoundReactiveGenerator(audioAnalyzer));
   generatorChannel->addGenerator(new ShaderGenerator());
   generatorChannel->addGenerator(new PulseGenerator());
   generatorChannel->addGenerator(new GradientGenerator());
-    
+  
   for (auto generator : generatorChannel->getGenerators()) {
     ofParameterGroup* group = generator->getParameters();
     for (auto parameter : *group) {
@@ -63,21 +62,25 @@ void ofApp::audioIn(ofSoundBuffer &buffer) {
 void ofApp::draw() {
   remote.update();
   
+  ildaFrame.clear();
+
   if (state != nil) {
     state->draw();
     ofDrawBitmapString("current state: " + state->getName(), 10, ofGetHeight() - 30);
     ofDrawBitmapString("T: test bed / [SPACE]: run / P: projector calibration / L: laser calibration / D: demo", 10, ofGetHeight() - 10);
   }
+
+  cout << "draw: " << ildaFrame.getPolys().size() << "\n";
+
+  ildaFrame.update();
   
   if (etherdream.stateIsFound()) {
     etherdream.setPoints(ildaFrame);
   } else {
-    ildaFrame.params.output.color = ofFloatColor(1, 0, 1);
+    ildaFrame.params.output.color = ofFloatColor(1, 1, 1);
     ildaFrame.draw();
   }
 }
-
-
 
 void ofApp::keyPressed(int key) {
   if (key == 't') {
@@ -102,7 +105,7 @@ void ofApp::keyPressed(int key) {
   
   if (key == 'd') {
     delete state;
-    state = new DemoState(cone, &ildaFrame, etherdream.stateIsFound());
+    state = new DemoState(*generatorChannel, &ildaFrame, etherdream.stateIsFound());
   }
   
   if (state != nil) {

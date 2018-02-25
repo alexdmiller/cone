@@ -1,9 +1,17 @@
 #include "DemoState.hpp"
 #include "ofMain.h"
 
-// TODO: create a demo generator that has this code in it
-// RULE: all drawing happens in generators
+DemoState::DemoState(GeneratorChannel & _channel,
+                     ofxIlda::Frame* _ildaFrame,
+                     bool _map) : channel(_channel), ildaFrame(_ildaFrame), map(_map) {
+  channel.mute();
+  channel.addGenerator(&demoGenerator);
+};
+
+DemoState::~DemoState() {
+  channel.removeGenerator(channel.numGenerators() - 1);
+}
 
 void DemoState::draw() {
-  demoGenerator.draw(cone, ildaFrame);
+  channel.draw(ildaFrame, map);
 }

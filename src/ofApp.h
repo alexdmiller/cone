@@ -33,7 +33,6 @@ private:
   ofxIlda::Frame ildaFrame;
   AppState* state;
   
-  Cone* cone;
   GeneratorChannel* generatorChannel;
   
   ofSoundStream soundStream;

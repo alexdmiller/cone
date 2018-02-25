@@ -10,6 +10,7 @@ public:
   GeneratorChannel(Cone & _cone);
   void addGenerator(Generator* generator);
   void addAllGenerators(vector<Generator*> generators);
+  void removeGenerator(int index);
   int numGenerators();
   Generator* getGenerator(int index);
   vector<Generator*>& getGenerators();
@@ -20,7 +21,6 @@ public:
   void mute();
   void unmute();
   void unmute(int index);
-  
   
 private:
   void renderGenerators(ofxIlda::Frame* ildaFrame);

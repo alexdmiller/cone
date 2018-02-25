@@ -20,6 +20,10 @@ void GeneratorChannel::addAllGenerators(vector<Generator*> newGens) {
   }
 }
 
+void GeneratorChannel::removeGenerator(int index) {
+  generators.erase(generators.begin() + index);
+}
+
 void GeneratorChannel::clear() {
   generators.clear();
 }
@@ -27,6 +31,8 @@ void GeneratorChannel::clear() {
 void GeneratorChannel::draw(ofxIlda::Frame* ildaFrame, bool map) {
   ofBackground(0, 0, 0);
   ildaFrame->clear();
+  
+  cout << "map\n";
   
   // If mapping is turned on, both the projected image and the
   // point sent to the laser interface need to be transformed
@@ -84,11 +90,12 @@ void GeneratorChannel::draw(ofxIlda::Frame* ildaFrame, bool map) {
         }
       }
     }
-    
-    ildaFrame->update();
+
   } else {
     ofBackground(0, 0, 0);
     renderGenerators(ildaFrame);
+    
+    cout << "gen channel: " << ildaFrame->getPolys().size() << "\n";
     
     for (auto it = ildaFrame->getPolys().begin(); it != ildaFrame->getPolys().end(); it++) {
       auto vertices = &it->getVertices();
@@ -96,7 +103,6 @@ void GeneratorChannel::draw(ofxIlda::Frame* ildaFrame, bool map) {
         v->set(v->x / ofGetWidth(), v->y / ofGetHeight());
       }
     }
-    ildaFrame->update();
   }
 }
 
