@@ -8,7 +8,13 @@
 
 #include "LaserEditState.hpp"
 
-LaserEditState::LaserEditState(ofMesh* _mesh, ofxIlda::Frame* _ildaFrame): EditMeshState(_mesh), ildaFrame(_ildaFrame) {};
+LaserEditState::LaserEditState(ofMesh* _mesh, ofxIlda::Frame* _ildaFrame): EditMeshState(_mesh), ildaFrame(_ildaFrame) {
+  ofHideCursor();
+};
+
+LaserEditState::~LaserEditState() {
+  ofShowCursor();
+}
 
 void LaserEditState::keyPressed(int key) {
   if (key == 'n') {
@@ -29,11 +35,7 @@ void LaserEditState::mousePressed(float x, float y, int button) {
 }
 
 void LaserEditState::draw() {
-  
-  ildaFrame->clear();
-  
-  ildaFrame->addPoly(ofFloatColor(0.5, 0, 0)).arc(mesh->getVertex(visibleIndex), 0.005, 0.005, 0, 360);
+  ildaFrame->addPoly(ofFloatColor(0.5, 0, 0)).arc(mesh->getVertex(visibleIndex), 0.001, 0.001, 0, 360);
   ildaFrame->addPoly(ofFloatColor(0, 0, 0.5)).arc(ofGetMouseX() / (float) ofGetWidth(),
-                                                  ofGetMouseY() / (float) ofGetHeight(), 0.005, 0.005, 0, 360);
-  ildaFrame->update();
+                                                  ofGetMouseY() / (float) ofGetHeight(), 0.001, 0.001, 0, 360);
 }

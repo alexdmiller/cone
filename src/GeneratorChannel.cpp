@@ -3,7 +3,7 @@
 #include "Cone.hpp"
 #include "mapping.hpp"
 
-GeneratorChannel::GeneratorChannel(Cone & _cone) : cone(_cone) {
+GeneratorChannel::GeneratorChannel(int _channelIndex, Cone & _cone) : channelIndex(_channelIndex), cone(_cone) {
   canvas.allocate(cone.getRadius() * 2, cone.getRadius() * 2);
   canvas.begin();
   ofClear(0, 0, 0);
@@ -28,11 +28,8 @@ void GeneratorChannel::clear() {
   generators.clear();
 }
 
-void GeneratorChannel::draw(ofxIlda::Frame* ildaFrame, bool map) {
-  ofBackground(0, 0, 0);
-  ildaFrame->clear();
-  
-  cout << "map\n";
+void GeneratorChannel::draw(bool map) {
+  ildaFrame.clear();
   
   // If mapping is turned on, both the projected image and the
   // point sent to the laser interface need to be transformed
@@ -45,7 +42,7 @@ void GeneratorChannel::draw(ofxIlda::Frame* ildaFrame, bool map) {
     
     // Render all the visual synths. Synths can draw to both the
     // projector and the laser.
-    renderGenerators(ildaFrame);
+    renderGenerators();
     
     canvas.end();
     
@@ -57,7 +54,7 @@ void GeneratorChannel::draw(ofxIlda::Frame* ildaFrame, bool map) {
     
     // Transform the points sent to the laser from unprojected space
     // to projected space
-    for (auto it = ildaFrame->getPolys().begin(); it != ildaFrame->getPolys().end(); it++) {
+    for (auto it = ildaFrame.getPolys().begin(); it != ildaFrame.getPolys().end(); it++) {
       auto vertices = &it->getVertices();
       for (auto v = vertices->begin(); v != vertices->end(); v++) {
         ofMesh* unmapped = cone.getUnmappedMesh();
@@ -90,25 +87,26 @@ void GeneratorChannel::draw(ofxIlda::Frame* ildaFrame, bool map) {
         }
       }
     }
-
-  } else {
-    ofBackground(0, 0, 0);
-    renderGenerators(ildaFrame);
+  } else {    
+    ofPushMatrix();
+    ofTranslate(unmappedPosition.x, unmappedPosition.y);
+    renderGenerators();
+    ofPopMatrix();
     
-    cout << "gen channel: " << ildaFrame->getPolys().size() << "\n";
-    
-    for (auto it = ildaFrame->getPolys().begin(); it != ildaFrame->getPolys().end(); it++) {
+    for (auto it = ildaFrame.getPolys().begin(); it != ildaFrame.getPolys().end(); it++) {
       auto vertices = &it->getVertices();
       for (auto v = vertices->begin(); v != vertices->end(); v++) {
-        v->set(v->x / ofGetWidth(), v->y / ofGetHeight());
+        v->set((v->x + unmappedPosition.x) / ofGetWidth(), (v->y + unmappedPosition.y) / ofGetHeight());
       }
     }
   }
+  
+  ildaFrame.update();
 }
 
-void GeneratorChannel::renderGenerators(ofxIlda::Frame* ildaFrame) {
-  for (auto generator : generators) {
-    generator->draw(&cone, ildaFrame);
+void GeneratorChannel::renderGenerators() {
+  for (auto & generator : generators) {
+    generator->draw(&cone, &ildaFrame);
   }
 }
 
@@ -128,6 +126,10 @@ Cone* GeneratorChannel::getCone() {
   return &cone;
 }
 
+int GeneratorChannel::getIndex() {
+  return channelIndex;
+}
+
 void GeneratorChannel::mute() {
   for (auto generator : generators) {
     generator->mute();
@@ -144,3 +146,10 @@ void GeneratorChannel::unmute(int index) {
   generators.at(index)->unmute();
 }
 
+void GeneratorChannel::setUnmappedPosition(float x, float y) {
+  unmappedPosition.set(x, y);
+}
+
+ofxIlda::Frame & GeneratorChannel::getIldaFrame() {
+  return ildaFrame;
+}

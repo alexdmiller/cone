@@ -11,8 +11,10 @@
 #include "GeneratorTestBedState.hpp"
 #include "ofParameter.h"
 
-#define CONE_FILE "cone_data.csv"
-#define CODE_RADIUS 700
+#define NUM_CONES 2
+#define CONE_FILE(n) "cone_" n ".csv"
+#define CONE_RADIUS 400
+
 
 void ofApp::setup() {
   soundStream.printDeviceList();
@@ -32,27 +34,35 @@ void ofApp::setup() {
   
   ofToggleFullscreen();
   
-  Cone* cone;
-  if (ofFile::doesFileExist(CONE_FILE)) {
-    cone = Cone::fromFile(CONE_FILE);
-  } else {
-    cone = Cone::createCone(CODE_RADIUS);
-  }
-
-  generatorChannel = new GeneratorChannel(*cone);
-  generatorChannel->addGenerator(new SoundReactiveGenerator(audioAnalyzer));
-  generatorChannel->addGenerator(new ShaderGenerator());
-  generatorChannel->addGenerator(new PulseGenerator());
-  generatorChannel->addGenerator(new GradientGenerator());
   
-  for (auto generator : generatorChannel->getGenerators()) {
-    ofParameterGroup* group = generator->getParameters();
-    for (auto parameter : *group) {
-      remote.add("/" + group->getName() + "/" + parameter->getName(), parameter.get());
+  for (int i = 0; i < NUM_CONES; i++) {
+    Cone* cone;
+    if (ofFile::doesFileExist("cone_" + ofToString(i) + ".csv")) {
+      cone = Cone::fromFile("cone_" + ofToString(i) + ".csv");
+    } else {
+      cone = Cone::createCone(CONE_RADIUS);
     }
-  }
 
-  state = new GeneratorTestBedState(*generatorChannel, &ildaFrame, etherdream.stateIsFound(), audioAnalyzer);
+    GeneratorChannel channel(i, *cone);
+    channel.addGenerator(new SoundReactiveGenerator(audioAnalyzer));
+    channel.addGenerator(new ShaderGenerator());
+    channel.addGenerator(new PulseGenerator());
+    channel.addGenerator(new GradientGenerator());
+    
+    channel.setUnmappedPosition(CONE_RADIUS * 2 * i, 0);
+    
+    for (auto generator : channel.getGenerators()) {
+      ofParameterGroup* group = generator->getParameters();
+      for (auto parameter : *group) {
+        remote.add("/" + ofToString(i) + "/" + group->getName() + "/" + parameter->getName(), parameter.get());
+      }
+    }
+    
+    generatorChannels.push_back(channel);
+  }
+  
+
+  state = new GeneratorTestBedState(generatorChannels, etherdream.stateIsFound(), audioAnalyzer);
 }
 
 void ofApp::audioIn(ofSoundBuffer &buffer) {
@@ -61,23 +71,28 @@ void ofApp::audioIn(ofSoundBuffer &buffer) {
 
 void ofApp::draw() {
   remote.update();
-  
   ildaFrame.clear();
-
+  ofBackground(0, 0, 0);
+  
   if (state != nil) {
     state->draw();
-    ofDrawBitmapString("current state: " + state->getName(), 10, ofGetHeight() - 30);
-    ofDrawBitmapString("T: test bed / [SPACE]: run / P: projector calibration / L: laser calibration / D: demo", 10, ofGetHeight() - 10);
+    ofDrawBitmapString("current state: " + state->getName(), 10, ofGetHeight() - 50);
+    ofDrawBitmapString("selected cone: " + ofToString(selectedChannel), 10, ofGetHeight() - 30);
+    ofDrawBitmapString("T: test bed / [SPACE]: run / P: projector calibration / L: laser calibration / C: next cone / D: demo", 10, ofGetHeight() - 10);
   }
-
-  cout << "draw: " << ildaFrame.getPolys().size() << "\n";
-
-  ildaFrame.update();
   
+  ildaFrame.update();
+
+  etherdream.clear();
   if (etherdream.stateIsFound()) {
-    etherdream.setPoints(ildaFrame);
+    for (auto channel : generatorChannels) {
+      etherdream.addPoints(channel.getIldaFrame());
+    }
+    etherdream.addPoints(ildaFrame);
   } else {
-    ildaFrame.params.output.color = ofFloatColor(1, 1, 1);
+    for (auto channel : generatorChannels) {
+      channel.getIldaFrame().draw();
+    }
     ildaFrame.draw();
   }
 }
@@ -85,27 +100,31 @@ void ofApp::draw() {
 void ofApp::keyPressed(int key) {
   if (key == 't') {
     delete state;
-    state = new GeneratorTestBedState(*generatorChannel, &ildaFrame, etherdream.stateIsFound(), audioAnalyzer);
+    state = new GeneratorTestBedState(generatorChannels, etherdream.stateIsFound(), audioAnalyzer);
   }
   
   if (key == 'p') {
     delete state;
-    state = new ProjectorEditState(generatorChannel->getCone()->getProjectedMesh());
+    state = new ProjectorEditState(generatorChannels.at(selectedChannel).getCone()->getProjectedMesh());
   }
   
   if (key == 'l') {
     delete state;
-    state = new LaserEditState(generatorChannel->getCone()->getLaserMesh(), &ildaFrame);
+    state = new LaserEditState(generatorChannels.at(selectedChannel).getCone()->getLaserMesh(), &ildaFrame);
   }
   
   if (key == ' ') {
     delete state;
-    state = new PlayState(*generatorChannel, &ildaFrame, etherdream.stateIsFound(), &audioAnalyzer);
+    state = new PlayState(generatorChannels, etherdream.stateIsFound(), &audioAnalyzer);
   }
   
   if (key == 'd') {
     delete state;
-    state = new DemoState(*generatorChannel, &ildaFrame, etherdream.stateIsFound());
+    state = new DemoState(generatorChannels, etherdream.stateIsFound());
+  }
+  
+  if (key == 'c') {
+    selectedChannel = (selectedChannel + 1) % generatorChannels.size();
   }
   
   if (state != nil) {
@@ -133,6 +152,8 @@ void ofApp::mouseReleased(int x, int y, int button){
 
 
 void ofApp::exit() {
-  generatorChannel->getCone()->save(CONE_FILE);
+  for (auto channel : generatorChannels) {
+    channel.getCone()->save("cone_" + ofToString(channel.getIndex()) + ".csv");
+  }
 }
 

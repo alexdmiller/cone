@@ -19,8 +19,7 @@ class PlayState : public AppState {
 
 public:
   PlayState(
-            GeneratorChannel & channel,
-            ofxIlda::Frame* _ildaFrame,
+            vector<GeneratorChannel> & _channels,
             bool _map,
             ofxAudioAnalyzer* audioAnalyzer);
   void draw();
@@ -32,9 +31,8 @@ public:
   
 protected:
   ofFbo canvas;
-  ofxIlda::Frame* ildaFrame;
   ofxAudioAnalyzer* audioAnalyzer;
-  GeneratorChannel & channel;
+  vector<GeneratorChannel> & channels;
 private:
   bool map = true;
 

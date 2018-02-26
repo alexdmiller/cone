@@ -19,7 +19,7 @@ void OscRemoteControl::update() {
     receiver.getNextMessage(&message);
     std::string address = message.getAddress();
     ofAbstractParameter* parameter = addressToParameter[address];
-    if (parameter != nil ) {
+    if (parameter != nil) {
       if (parameter->type() == typeid(ofParameter<float>).name()) {
         parameter->cast<float>() = message.getArgAsFloat(0);
       } else if (parameter->type() == typeid(ofParameter<bool>).name()) {

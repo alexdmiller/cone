@@ -4,9 +4,8 @@ DemoGenerator::DemoGenerator() : Generator("demo") {
 
 };
 
-void DemoGenerator::doDraw(Cone* cone, ofxIlda::Frame* ildaFrame) {
+void DemoGenerator::doDraw(Cone* cone, ofxIlda::Frame* ildaFrame) {  
   t += 0.1;
-  
   
   switch (mode) {
     case 0: {

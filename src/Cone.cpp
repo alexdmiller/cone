@@ -28,10 +28,14 @@ Cone* Cone::createCone(float radius) {
   }
   
   cone->projectedMesh.addVertices(cone->unmappedMesh.getVertices());
+  for (int i = 0; i < cone->projectedMesh.getNumVertices(); i++) {
+    ofPoint v = cone->projectedMesh.getVertex(i);
+    cone->projectedMesh.setVertex(i, ofPoint(v.x, v.y));
+  }
+
   cone->laserMesh.addVertices(cone->unmappedMesh.getVertices());
-  
   for (int i = 0; i < cone->laserMesh.getNumVertices(); i++) {
-    ofPoint v = cone->laserMesh.getVertex(i);
+    ofPoint v = cone->projectedMesh.getVertex(i);
     cone->laserMesh.setVertex(i, ofPoint(v.x / ofGetWidth() / 2, v.y / ofGetHeight() / 2));
   }
   

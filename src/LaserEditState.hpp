@@ -22,6 +22,7 @@ class LaserEditState : public EditMeshState {
   
 public:
   LaserEditState(ofMesh* _mesh, ofxIlda::Frame* _ildaFrame);
+  ~LaserEditState();
   void draw();
   void mouseDragged(float x, float y, int button);
   void mousePressed(float x, float y, int button);

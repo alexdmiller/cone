@@ -1,14 +1,21 @@
 #include "GeneratorTestBedState.hpp"
 #include "generator_utils.h"
 
+
+
+// TODO: individually control cones w sliders
+
+
+
 GeneratorTestBedState::GeneratorTestBedState(
-                                             GeneratorChannel & _channel,
-                                             ofxIlda::Frame* _ildaFrame,
+                                             vector<GeneratorChannel> & _channels,
                                              bool _map,
                                              ofxAudioAnalyzer & _audioAnalyzer):
-channel(_channel), ildaFrame(_ildaFrame), map(_map), audioAnalyzer(_audioAnalyzer) {
+channels(_channels), map(_map), audioAnalyzer(_audioAnalyzer) {
   generatorList.setup();
   generatorList.setName("generators");
+  
+  GeneratorChannel & channel = channels[0];
   
   for (int i = 0; i < channel.getGenerators().size(); i++) {
     ofxLabel* label = new ofxLabel();
@@ -37,28 +44,34 @@ GeneratorTestBedState::~GeneratorTestBedState() {
 }
 
 void GeneratorTestBedState::draw() {
-  channel.draw(ildaFrame, map);
+  for (auto channel : channels) {
+    channel.draw(map);
+  }
+  
   generatorPanel.draw();
   parameterPanel.draw();
 }
 
 void GeneratorTestBedState::keyPressed(int key) {
   if (key == 359) {
-    selectGenerator((selectedGenerator + 1) % channel.numGenerators());
+    selectGenerator((selectedGenerator + 1) % channels.at(0).numGenerators());
   }
 }
 
 void GeneratorTestBedState::selectGenerator(int index) {
-  channel.mute();
+  selectedGenerator = index;
+
   parameterPanel.clear();
 
-  selectedGenerator = index;
-  channel.unmute(selectedGenerator);
+  for (auto channel : channels) {
+    channel.mute();
+    channel.unmute(selectedGenerator);
+  }
 
   for (auto label : labels) {
     label->setBackgroundColor(ofFloatColor(0));
   }
   
-  parameterPanel.add(*channel.getGenerator(selectedGenerator)->getParameters());
+  parameterPanel.add(*channels.at(0).getGenerator(selectedGenerator)->getParameters());
   generatorList.getControl(index)->setBackgroundColor(ofFloatColor(0.5));
 }

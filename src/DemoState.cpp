@@ -1,17 +1,22 @@
 #include "DemoState.hpp"
 #include "ofMain.h"
 
-DemoState::DemoState(GeneratorChannel & _channel,
-                     ofxIlda::Frame* _ildaFrame,
-                     bool _map) : channel(_channel), ildaFrame(_ildaFrame), map(_map) {
-  channel.mute();
-  channel.addGenerator(&demoGenerator);
+DemoState::DemoState(vector<GeneratorChannel> & _channels,
+                     bool _map) : channels(_channels), map(_map) {
+  for (auto & channel : channels) {
+    channel.mute();
+    channel.addGenerator(new DemoGenerator());
+  }
 };
 
 DemoState::~DemoState() {
-  channel.removeGenerator(channel.numGenerators() - 1);
+  for (auto & channel : channels) {
+    channel.removeGenerator(channel.numGenerators() - 1);
+  }
 }
 
 void DemoState::draw() {
-  channel.draw(ildaFrame, map);
+  for (auto & channel : channels) {
+    channel.draw(map);
+  }
 }

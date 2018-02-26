@@ -25,8 +25,7 @@
 class DemoState : public AppState {
 
 public:
-  DemoState(GeneratorChannel & _channel,
-            ofxIlda::Frame* _ildaFrame,
+  DemoState(vector<GeneratorChannel> & _channels,
             bool _map);
   ~DemoState();
   void draw();
@@ -35,9 +34,7 @@ public:
   }
 
 private:
-  GeneratorChannel & channel;
-  DemoGenerator demoGenerator;
-  ofxIlda::Frame* ildaFrame;
+  vector<GeneratorChannel> & channels;
   bool map;
 };
 

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <array>
+
 #include "ofMain.h"
 #include "AppState.hpp"
 #include "Cone.hpp"
@@ -32,8 +34,9 @@ private:
   ofxEtherdream etherdream;
   ofxIlda::Frame ildaFrame;
   AppState* state;
+  int selectedChannel = 0;
   
-  GeneratorChannel* generatorChannel;
+  vector<GeneratorChannel> generatorChannels;
   
   ofSoundStream soundStream;
   ofxAudioAnalyzer audioAnalyzer;

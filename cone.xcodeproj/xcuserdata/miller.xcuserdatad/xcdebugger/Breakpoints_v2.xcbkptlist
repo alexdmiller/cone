@@ -19,5 +19,101 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "src/GeneratorChannel.cpp"
+            timestampString = "541319715.5327899"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "GeneratorChannel::renderGenerators()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeneratorChannel::renderGenerators(ofxIlda::Frame*)"
+                  moduleName = "coneDebug"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miller/Projects/cone/src/GeneratorChannel.cpp"
+                  timestampString = "541316652.6659811"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "43">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeneratorChannel::renderGenerators(ofxIlda::Frame*)"
+                  moduleName = "coneDebug"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miller/Projects/cone/src/GeneratorChannel.cpp"
+                  timestampString = "541316652.667274"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "379">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "src/DemoState.cpp"
+            timestampString = "541319833.223279"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6"
+            landmarkName = "DemoState::DemoState(vector&lt;GeneratorChannel&gt; &amp; _channels, bool _map)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DemoState::DemoState(std::__1::vector&lt;GeneratorChannel, std::__1::allocator&lt;GeneratorChannel&gt; &gt;&amp;, ofxIlda::Frame*, bool)"
+                  moduleName = "coneDebug"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miller/Projects/cone/src/DemoState.cpp"
+                  timestampString = "541316902.630384"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DemoState::DemoState(std::__1::vector&lt;GeneratorChannel, std::__1::allocator&lt;GeneratorChannel&gt; &gt;&amp;, ofxIlda::Frame*, bool)"
+                  moduleName = "coneDebug"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miller/Projects/cone/src/DemoState.cpp"
+                  timestampString = "541316902.6305031"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "8"
+                  endingLineNumber = "8"
+                  offsetFromSymbolStart = "492">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

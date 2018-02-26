@@ -18,8 +18,7 @@
 class GeneratorTestBedState : public AppState {
 public:
   GeneratorTestBedState(
-            GeneratorChannel & _channel,
-            ofxIlda::Frame* _ildaFrame,
+            vector<GeneratorChannel> & _channels,
             bool _map,
             ofxAudioAnalyzer & audioAnalyzer);
   ~GeneratorTestBedState();
@@ -34,9 +33,8 @@ private:
 
   bool map;
   ofxAudioAnalyzer & audioAnalyzer;
-  ofxIlda::Frame* ildaFrame;
   
-  GeneratorChannel & channel;
+  vector<GeneratorChannel> & channels;
   int selectedGenerator;
   ofxPanel generatorPanel;
   ofxPanel parameterPanel;

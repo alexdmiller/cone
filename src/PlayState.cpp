@@ -3,19 +3,21 @@
 #include "mapping.hpp"
 
 PlayState::PlayState(
-                     GeneratorChannel & _channel,
-                     ofxIlda::Frame* _ildaFrame,
+                     vector<GeneratorChannel> & _channels,
                      bool _map,
                      ofxAudioAnalyzer* _audioAnalyzer):
-channel(_channel),
-ildaFrame(_ildaFrame),
+channels(_channels),
 map(_map),
 audioAnalyzer(_audioAnalyzer) {
-  channel.unmute();
+  for (auto channel : channels) {
+    channel.unmute();
+  }
 }
 
 void PlayState::draw() {
-  channel.draw(ildaFrame, map);
+  for (auto channel : channels) {
+    channel.draw(map);
+  }
 }
 
 void PlayState::keyPressed(int key) {
