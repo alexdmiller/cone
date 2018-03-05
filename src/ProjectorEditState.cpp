@@ -8,6 +8,6 @@ void ProjectorEditState::draw() {
   mesh->draw(OF_MESH_WIREFRAME);
   
   ofSetLineWidth(5);
-  ofSetColor(255, 255, 255);
+  ofSetColor(255, 0, 0);
   ofDrawLine(mesh->getVertex(0), mesh->getVertex(1));
 }

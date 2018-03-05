@@ -9,6 +9,9 @@
 #include "PulseGenerator.hpp"
 #include "GradientGenerator.hpp"
 #include "GeneratorTestBedState.hpp"
+#include "PanelGenerator.hpp"
+#include "OutlineGenerator.hpp"
+#include "WarpLines.hpp"
 #include "ofParameter.h"
 
 #define NUM_CONES 2
@@ -18,11 +21,12 @@
 
 void ofApp::setup() {
   soundStream.printDeviceList();
-  soundStream.setDeviceID(2);
+  soundStream.setDeviceID(3);
   
   sampleRate = 44100;
   bufferSize = 256;
   channels = 2;
+  
   
   soundStream.setup(this, 0, channels, sampleRate, bufferSize, 4);
   audioAnalyzer.setup(sampleRate, bufferSize, channels);
@@ -44,14 +48,18 @@ void ofApp::setup() {
     }
 
     GeneratorChannel channel(i, *cone);
+    channel.addGenerator(new WarpLines());
+    channel.addGenerator(new OutlineGenerator());
+    channel.addGenerator(new PanelGenerator());
     channel.addGenerator(new SoundReactiveGenerator(audioAnalyzer));
     channel.addGenerator(new ShaderGenerator());
     channel.addGenerator(new PulseGenerator());
     channel.addGenerator(new GradientGenerator());
     
+    
     channel.setUnmappedPosition(CONE_RADIUS * 2 * i, 0);
     
-    for (auto generator : channel.getGenerators()) {
+    for (auto & generator : channel.getGenerators()) {
       ofParameterGroup* group = generator->getParameters();
       for (auto parameter : *group) {
         remote.add("/" + ofToString(i) + "/" + group->getName() + "/" + parameter->getName(), parameter.get());
@@ -61,7 +69,6 @@ void ofApp::setup() {
     generatorChannels.push_back(channel);
   }
   
-
   state = new GeneratorTestBedState(generatorChannels, etherdream.stateIsFound(), audioAnalyzer);
 }
 
@@ -74,27 +81,33 @@ void ofApp::draw() {
   ildaFrame.clear();
   ofBackground(0, 0, 0);
   
+  ofSetColor(ofColor(255));
+
   if (state != nil) {
     state->draw();
-    ofDrawBitmapString("current state: " + state->getName(), 10, ofGetHeight() - 50);
-    ofDrawBitmapString("selected cone: " + ofToString(selectedChannel), 10, ofGetHeight() - 30);
-    ofDrawBitmapString("T: test bed / [SPACE]: run / P: projector calibration / L: laser calibration / C: next cone / D: demo", 10, ofGetHeight() - 10);
+    
+    if (state->getName() != "run") {
+      ofDrawBitmapString("current state: " + state->getName(), 10, ofGetHeight() - 50);
+      ofDrawBitmapString("selected cone: " + ofToString(selectedChannel), 10, ofGetHeight() - 30);
+      ofDrawBitmapString("T: test bed / [SPACE]: run / P: projector calibration / L: laser calibration / C: next cone / D: demo", 10, ofGetHeight() - 10);
+    }
   }
   
   ildaFrame.update();
 
   etherdream.clear();
   if (etherdream.stateIsFound()) {
-    for (auto channel : generatorChannels) {
+    for (auto & channel : generatorChannels) {
       etherdream.addPoints(channel.getIldaFrame());
     }
     etherdream.addPoints(ildaFrame);
   } else {
-    for (auto channel : generatorChannels) {
+    for (auto & channel : generatorChannels) {
       channel.getIldaFrame().draw();
     }
     ildaFrame.draw();
   }
+  
 }
 
 void ofApp::keyPressed(int key) {
@@ -148,11 +161,15 @@ void ofApp::mouseReleased(int x, int y, int button){
   if (state != nil) {
     state->mouseReleased((float) x, (float) y, button);
   }
+  
+  for (auto & channel : generatorChannels) {
+    channel.getCone()->save("cone_" + ofToString(channel.getIndex()) + ".csv");
+  }
 }
 
 
 void ofApp::exit() {
-  for (auto channel : generatorChannels) {
+  for (auto & channel : generatorChannels) {
     channel.getCone()->save("cone_" + ofToString(channel.getIndex()) + ".csv");
   }
 }

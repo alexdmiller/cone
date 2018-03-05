@@ -12,8 +12,8 @@ protected:
   void doDraw(Cone* _cone, ofxIlda::Frame* _ildaFrame);
 
 private:
-  ofParameter<float> innerBrightness = 0;
-  ofParameter<float> outerBrightness = 0;
+  ofParameter<ofColor> innerColor = ofColor(0, 0, 0, 0);
+  ofParameter<ofColor> outerColor = ofColor(0, 0, 0, 0);
 };
 
 

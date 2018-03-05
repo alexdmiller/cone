@@ -44,6 +44,14 @@ public:
     }
   }
   
+  void setChannelIndex(int _channelIndex) {
+    channelIndex = _channelIndex;
+  }
+  
+  int getChannelIndex() {
+    return channelIndex;
+  }
+  
 protected:
   virtual void doDraw(Cone* _cone, ofxIlda::Frame* _ildaFrame) {};
   
@@ -51,6 +59,7 @@ private:
   string name;
   ofParameterGroup parameters;
   bool muted;
+  int channelIndex = 0;
 };
 
 #endif /* VizSynth_h */

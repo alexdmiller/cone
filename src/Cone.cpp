@@ -21,7 +21,7 @@ Cone* Cone::createCone(float radius) {
   ofPoint center = ofPoint(radius, radius);
   cone->unmappedMesh.addVertex(center);
   
-  for (int i = 1; i < 16; i++) {
+  for (int i = 0; i < 15; i++) {
     cone->unmappedMesh.addVertex(ofPoint(
                                    center.x + cos(i * (2 * PI / 15)) * radius,
                                    center.y + sin(i * (2 * PI / 15)) * radius, 0));

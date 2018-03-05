@@ -25,10 +25,12 @@ public:
   void unmute();
   void unmute(int index);
   
+protected:
+  ofxIlda::Frame ildaFrame;
+  
 private:
   void renderGenerators();
-  
-  ofxIlda::Frame ildaFrame;
+
   ofPoint unmappedPosition;
   ofFbo canvas;
   Cone & cone;

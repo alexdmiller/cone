@@ -44,7 +44,7 @@ GeneratorTestBedState::~GeneratorTestBedState() {
 }
 
 void GeneratorTestBedState::draw() {
-  for (auto channel : channels) {
+  for (auto & channel : channels) {
     channel.draw(map);
   }
   
@@ -63,7 +63,7 @@ void GeneratorTestBedState::selectGenerator(int index) {
 
   parameterPanel.clear();
 
-  for (auto channel : channels) {
+  for (auto & channel : channels) {
     channel.mute();
     channel.unmute(selectedGenerator);
   }

@@ -13,6 +13,8 @@ protected:
   
 private:
   ofShader shader;
+  ofParameter<float> scale = 0;
+  ofParameter<float> alpha = 0;
 };
 
 #endif /* ShaderGenerator_hpp */

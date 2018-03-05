@@ -11,6 +11,7 @@ GeneratorChannel::GeneratorChannel(int _channelIndex, Cone & _cone) : channelInd
 }
 
 void GeneratorChannel::addGenerator(Generator* generator) {
+  generator->setChannelIndex(channelIndex);
   generators.push_back(generator);
 }
 

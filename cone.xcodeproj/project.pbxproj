@@ -53,6 +53,9 @@
 		C617359B203DE537006392F0 /* OscRemoteControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6173599203DE537006392F0 /* OscRemoteControl.cpp */; };
 		C617359D203DEEE7006392F0 /* utils.h in Sources */ = {isa = PBXBuildFile; fileRef = C617359C203DEEE7006392F0 /* utils.h */; };
 		C69222CD203F7BDA00B4AE3A /* DemoGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69222CB203F7BDA00B4AE3A /* DemoGenerator.cpp */; };
+		C69AF291204720C5000B1BE7 /* PanelGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C69AF28F204720C5000B1BE7 /* PanelGenerator.cpp */; };
+		C6CDE5552049CF9C0053C3BB /* OutlineGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6CDE5532049CF9C0053C3BB /* OutlineGenerator.cpp */; };
+		C6CDE5582049F9C40053C3BB /* WarpLines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6CDE5562049F9C40053C3BB /* WarpLines.cpp */; };
 		C6DB133C203E704700C274ED /* GeneratorChannel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6DB133A203E704700C274ED /* GeneratorChannel.cpp */; };
 		CCCE87582520E4832F15C342 /* ProjectorEditState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 218611AE897D6A358C4FFF80 /* ProjectorEditState.cpp */; };
 		DB56DE6A271653B7BDD6A38D /* Cone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E7C2A7821E86493C47B39B9 /* Cone.cpp */; };
@@ -316,6 +319,12 @@
 		C63EE7EDA12B7D84435496DC /* mapping.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = mapping.cpp; path = src/mapping.cpp; sourceTree = SOURCE_ROOT; };
 		C69222CB203F7BDA00B4AE3A /* DemoGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DemoGenerator.cpp; sourceTree = "<group>"; };
 		C69222CC203F7BDA00B4AE3A /* DemoGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DemoGenerator.hpp; sourceTree = "<group>"; };
+		C69AF28F204720C5000B1BE7 /* PanelGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PanelGenerator.cpp; sourceTree = "<group>"; };
+		C69AF290204720C5000B1BE7 /* PanelGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PanelGenerator.hpp; sourceTree = "<group>"; };
+		C6CDE5532049CF9C0053C3BB /* OutlineGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OutlineGenerator.cpp; sourceTree = "<group>"; };
+		C6CDE5542049CF9C0053C3BB /* OutlineGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OutlineGenerator.hpp; sourceTree = "<group>"; };
+		C6CDE5562049F9C40053C3BB /* WarpLines.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WarpLines.cpp; sourceTree = "<group>"; };
+		C6CDE5572049F9C40053C3BB /* WarpLines.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WarpLines.hpp; sourceTree = "<group>"; };
 		C6DB133A203E704700C274ED /* GeneratorChannel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GeneratorChannel.cpp; sourceTree = "<group>"; };
 		C6DB133B203E704700C274ED /* GeneratorChannel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GeneratorChannel.hpp; sourceTree = "<group>"; };
 		C9651D51CF110EC49DABB730 /* ofSoundPlayerExtended.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofSoundPlayerExtended.h; path = ../of_v0.9.8_osx_release/addons/ofxAudioAnalyzer/src/ofSoundPlayerExtended.h; sourceTree = SOURCE_ROOT; };
@@ -1038,6 +1047,8 @@
 			isa = PBXGroup;
 			children = (
 				7C37DF14457BC29A3FFE9990 /* Generator.hpp */,
+				C69AF28F204720C5000B1BE7 /* PanelGenerator.cpp */,
+				C69AF290204720C5000B1BE7 /* PanelGenerator.hpp */,
 				16D535A0D739F86ECFB2D84F /* GradientGenerator.cpp */,
 				B9A040312EB91A67202EDA11 /* GradientGenerator.hpp */,
 				66E2BAFE654A0007499C3ACA /* PulseGenerator.cpp */,
@@ -1050,6 +1061,10 @@
 				C69222CC203F7BDA00B4AE3A /* DemoGenerator.hpp */,
 				C6DB133A203E704700C274ED /* GeneratorChannel.cpp */,
 				C6DB133B203E704700C274ED /* GeneratorChannel.hpp */,
+				C6CDE5532049CF9C0053C3BB /* OutlineGenerator.cpp */,
+				C6CDE5542049CF9C0053C3BB /* OutlineGenerator.hpp */,
+				C6CDE5562049F9C40053C3BB /* WarpLines.cpp */,
+				C6CDE5572049F9C40053C3BB /* WarpLines.hpp */,
 			);
 			name = generator;
 			sourceTree = "<group>";
@@ -1296,6 +1311,7 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				C6CDE5552049CF9C0053C3BB /* OutlineGenerator.cpp in Sources */,
 				DB56DE6A271653B7BDD6A38D /* Cone.cpp in Sources */,
 				E405DE8B79A0F03CDB37CD34 /* ControllerThread.cpp in Sources */,
 				530DFDCB51277AF868566AF9 /* DemoState.cpp in Sources */,
@@ -1336,6 +1352,7 @@
 				0E50C5A7BF564C8ADF1F5EA1 /* ofxLabel.cpp in Sources */,
 				5E8372419354DC91ACF64158 /* ofxPanel.cpp in Sources */,
 				EA0FEA95DC03ACE3DB82A901 /* ofxSlider.cpp in Sources */,
+				C69AF291204720C5000B1BE7 /* PanelGenerator.cpp in Sources */,
 				86DB2512D93A40CC26FD5300 /* ofxSliderGroup.cpp in Sources */,
 				EBEAA6AAB36ADDF4AE522D7F /* ofxToggle.cpp in Sources */,
 				8622E35967DA5C1D1304C268 /* ofxOscBundle.cpp in Sources */,
@@ -1343,6 +1360,7 @@
 				C6DB133C203E704700C274ED /* GeneratorChannel.cpp in Sources */,
 				9F3E34C6E9C79775EB915198 /* ofxOscParameterSync.cpp in Sources */,
 				3A134F4E01D92B3CEF179509 /* ofxOscReceiver.cpp in Sources */,
+				C6CDE5582049F9C40053C3BB /* WarpLines.cpp in Sources */,
 				12FD93178A84B684E2590518 /* ofxOscSender.cpp in Sources */,
 				DF0EED927FAB55076942E95B /* IpEndpointName.cpp in Sources */,
 				7D5E1E199EFB03223EF46095 /* NetworkingUtils.cpp in Sources */,

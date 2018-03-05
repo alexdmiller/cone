@@ -9,13 +9,13 @@ PlayState::PlayState(
 channels(_channels),
 map(_map),
 audioAnalyzer(_audioAnalyzer) {
-  for (auto channel : channels) {
+  for (auto & channel : channels) {
     channel.unmute();
   }
 }
 
 void PlayState::draw() {
-  for (auto channel : channels) {
+  for (auto & channel : channels) {
     channel.draw(map);
   }
 }

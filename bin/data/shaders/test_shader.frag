@@ -2,6 +2,7 @@
 
 out vec4 outputColor;
 uniform float scale;
+uniform float alpha;
 
 void main()
 {
@@ -16,6 +17,6 @@ void main()
     float r = sin(gl_FragCoord.x * scale / windowWidth);
     float g = gl_FragCoord.y / windowHeight;
     float b = 1.0;
-    float a = 1.0;
+    float a = alpha;
     outputColor = vec4(r, g, b, a);
 }
